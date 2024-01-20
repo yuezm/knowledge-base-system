@@ -1,0 +1,7 @@
+@import "./katex.css";
+
+#starlight__sidebar {
+  .large {
+    font-weight: 500;
+  }
+}

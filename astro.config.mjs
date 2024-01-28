@@ -5,17 +5,29 @@ import path from "node:path";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 
+const DirectoryOrder = 1;
+const FileOrder = 10;
+
 const excludes = ["Home.md", "index.mdx"];
+
+const orderMap = {
+  "/ToBeContinue": 2,
+};
 
 const docPrefix = "./src/content/docs";
 
 function serializedPath(str) {
-  return str.replaceAll(" ", "-").replaceAll(".", "").toLowerCase();
+  return str
+    .replaceAll(" ", "-")
+    .replaceAll(".", "")
+    .replaceAll(",", "")
+    .toLowerCase();
 }
 
 function generateSlider(p) {
   const ap = path.join(docPrefix, p);
-  if (!fs.existsSync(ap) || excludes.includes(path.basename)) {
+
+  if (!fs.existsSync(ap) || excludes.includes(path.basename(ap))) {
     return undefined;
   }
 
@@ -27,7 +39,7 @@ function generateSlider(p) {
     return {
       label: path.basename(p),
       collapsed: true,
-      order: 1,
+      order: orderMap[p] || DirectoryOrder,
       items: files
         .map((file) => {
           return generateSlider(p + "/" + file);
@@ -46,7 +58,7 @@ function generateSlider(p) {
   return {
     label: path.basename(p, ext),
     link: serializedPath(p.replace(ext, "/")),
-    order: 2,
+    order: FileOrder,
   };
 }
 

@@ -913,16 +913,23 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Utils/Git/Git Hooks、husky、lint-staged.md": {
-	id: "Utils/Git/Git Hooks、husky、lint-staged.md";
-  slug: "utils/git/git-hookshuskylint-staged";
+"Utils/Git/Git hooks husky lint-staged.md": {
+	id: "Utils/Git/Git hooks husky lint-staged.md";
+  slug: "utils/git/git-hooks-husky-lint-staged";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Utils/Git/Git.md": {
-	id: "Utils/Git/Git.md";
-  slug: "utils/git/git";
+"Utils/Git/Git原理.md": {
+	id: "Utils/Git/Git原理.md";
+  slug: "utils/git/git原理";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Utils/Git/Git命令.md": {
+	id: "Utils/Git/Git命令.md";
+  slug: "utils/git/git命令";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -969,6 +976,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"跨平台/Electron/Electron 优化.md": {
+	id: "跨平台/Electron/Electron 优化.md";
+  slug: "跨平台/electron/electron-优化";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 };
 
 	};

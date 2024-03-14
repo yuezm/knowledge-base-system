@@ -1,9 +1,7 @@
 ---
-title: Git Hooks、husky、lint-staged
-description: Git Hooks、husky、lint-staged
+title: Git hooks husky lint-staged
+description: Git hooks husky lint-staged
 ---
-
-# Git Hooks、husky、lint-staged
 
 ## Git Hooks
 
@@ -66,12 +64,12 @@ husky 总共分为 3 个操作
 
 1. install：初始化
 
-- 在项目根目录创建一个 _.husky_ 文件夹，并复制 _husky.sh_ 进入 _.husky__ 内 。
+- 在项目根目录创建一个 _.husky_ 文件夹，并复制 _husky.sh_ 进入 \_.husky\_\_ 内 。
 - 设置 git 配置，将 _.husky_ 添加为 hooks 路径，`git config core.hooksPath .husky`
 
 2. set、add：添加 Git Hooks。set 和 add 功能都是添加 Git Hooks，但是对于已经添加过的 Git Hooks 则由不同
 
-- set 对于已经存在的Git Hooks，直接覆盖
+- set 对于已经存在的 Git Hooks，直接覆盖
 - add 对弈已经存在的 Git Hooks，会在在后面添加
 
 ```shell
@@ -82,7 +80,7 @@ npx husky set .husky/pre-commit "npm test1" # 会直接将 pre-commit 文件内�
 npx husky add .husky/pre-commit "npm test2" # 会直接在 pre-commit 末尾处再增加一行代码 npm test2
 ```
 
-1. uninstall：删除钩子，这里的删除钩子，并非是删除 .husky* 的钩子文件，而是删除 git 的配置，将 .husky 从 hooks 的路径中移除，`git config --unset core.hooksPath`
+1. uninstall：删除钩子，这里的删除钩子，并非是删除 .husky\* 的钩子文件，而是删除 git 的配置，将 .husky 从 hooks 的路径中移除，`git config --unset core.hooksPath`
 
 可以使用 `git config --local --list | grep "core.hookspath"` 来查看你配置的 Git Hooks 路径情况
 

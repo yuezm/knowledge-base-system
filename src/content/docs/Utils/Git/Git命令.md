@@ -47,7 +47,7 @@ git remote prune origin # 清理本地分支，如果远程分支被删除，则
 git stash # 存储当前修改
 git stash -u # 保存当前状态，包含 untracked
 
-git stash list 
+git stash list
 git stash apply <stash@{n}> # 取指定的某个记录
 git stash pop # 取得最后一个记录
 git stash drop # 删除最后一条记录
@@ -85,7 +85,6 @@ git ls-files --others  # 展示未追踪的文件（未追踪文件不等于忽�
 git status --ignored # 展示忽略的文件
 git ls-files --others -i --exclude-standard # 展示忽略的文件
 ```
-
 
 ### clean
 
@@ -126,6 +125,7 @@ git blame <file-name> # 查看某段代码谁写的
 ```
 
 ### gc
+
 ```git
 git gc # 清除git无效引用，例如分支，commit等等，且会压缩文件，以达节省空间
 git gc --auto // 让git自动决定是否进行回收
@@ -133,13 +133,12 @@ git gc --auto // 让git自动决定是否进行回收
 
 ### config
 
-## git 原理
-
-### git存储
-
-### git merge 和 git rebase
+```bash
+git config --global user.name # 设置全局用户名
+```
 
 ## 常用的操作
+
 ### 查看已删除的文件提交
 
 ```shell
@@ -156,4 +155,3 @@ git log --diff-filter=D --summary | grep delete
 # 查看产出文件是谁提交的
 git log --diff-filter=D --summary | grep -C 10 <file_name>
 ```
-

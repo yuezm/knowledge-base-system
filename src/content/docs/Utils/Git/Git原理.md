@@ -208,7 +208,7 @@ A,B 分支同文件，同代码行数的代码不一致
 
 在 master 分支和 dev 分支都对于 Base 来说存在变化，则此时就会出现冲突
 
-## Git merge 策略
+### Git merge 策略
 
 git merge 有几种不同的模式，git 会智能的选取某个模式，当然也可以直接指定 git merge -s $策略，常见的如下
 

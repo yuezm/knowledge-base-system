@@ -745,20 +745,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"ToBeContinue/date20230618.md": {
-	id: "ToBeContinue/date20230618.md";
-  slug: "tobecontinue/date20230618";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"ToBeContinue/date20231016.md": {
-	id: "ToBeContinue/date20231016.md";
-  slug: "tobecontinue/date20231016";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "ToBeContinue/为啥react没有keep-alive.md": {
 	id: "ToBeContinue/为啥react没有keep-alive.md";
   slug: "tobecontinue/为啥react没有keep-alive";

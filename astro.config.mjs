@@ -33,6 +33,7 @@ function generateSlider(p) {
 
   const state = fs.statSync(ap);
 
+  // 文件夹
   if (state.isDirectory()) {
     const files = fs.readdirSync(ap);
 
@@ -45,7 +46,17 @@ function generateSlider(p) {
           return generateSlider(p + "/" + file);
         })
         .filter((item) => !!item)
-        .sort((a, b) => a.order - b.order),
+        .sort((a, b) => {
+          if (a.order !== b.order) {
+            return a.order - b.order;
+          }
+
+          if (a.ctimeMs && b.ctimeMs) {
+            return a.ctimeMs - b.ctimeMs;
+          }
+
+          return a.label - b.label;
+        }),
     };
   }
 
@@ -55,28 +66,13 @@ function generateSlider(p) {
     return undefined;
   }
 
+  // 文件
   return {
     label: path.basename(p, ext),
     link: serializedPath(p.replace(ext, "/")),
     order: FileOrder,
+    ctimeMs: state.ctimeMs,
   };
-}
-
-export function getDirs() {
-  const dirs = fs.readdirSync("./src/content/docs");
-  return dirs
-    .filter((item) => {
-      return !excludes.includes(item);
-    })
-    .map((item) => {
-      return {
-        label: item,
-        collapsed: true,
-        autogenerate: {
-          directory: item,
-        },
-      };
-    });
 }
 
 const sidebar = generateSlider("").items;
@@ -91,13 +87,7 @@ export default defineConfig({
         // github: "https://github.com/withastro/starlight",
       },
 
-      // {
-      //   label: 'Guides',
-      //   // 自动生成一个链接分组，用于 'guides' 目录。
-      //   autogenerate: { directory: 'guides' },
-      // },
-
-      sidebar,
+      sidebar: sidebar,
     }),
   ],
   image: {

@@ -423,6 +423,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"FAQ/JS如何获取精确的时间戳.md": {
+	id: "FAQ/JS如何获取精确的时间戳.md";
+  slug: "faq/js如何获取精确的时间戳";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "FAQ/node.js内存泄漏.md": {
 	id: "FAQ/node.js内存泄漏.md";
   slug: "faq/nodejs内存泄漏";
@@ -440,6 +447,20 @@ declare module 'astro:content' {
 "FAQ/常见的问题及解决方案.md": {
 	id: "FAQ/常见的问题及解决方案.md";
   slug: "faq/常见的问题及解决方案";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"FAQ/开源如何保证收入.md": {
+	id: "FAQ/开源如何保证收入.md";
+  slug: "faq/开源如何保证收入";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"FAQ/网页如何唤醒本地程序.md": {
+	id: "FAQ/网页如何唤醒本地程序.md";
+  slug: "faq/网页如何唤醒本地程序";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -689,6 +710,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"React/Headless UI 和 React Hooks.md": {
+	id: "React/Headless UI 和 React Hooks.md";
+  slug: "react/headless-ui-和-react-hooks";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "ToBeContinue/Base64编码.md": {
 	id: "ToBeContinue/Base64编码.md";
   slug: "tobecontinue/base64编码";
@@ -916,6 +944,13 @@ declare module 'astro:content' {
 "Utils/Git/Git命令.md": {
 	id: "Utils/Git/Git命令.md";
   slug: "utils/git/git命令";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Utils/Git/Git工作流.md": {
+	id: "Utils/Git/Git工作流.md";
+  slug: "utils/git/git工作流";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

@@ -1,8 +1,7 @@
 ---
 title: 知识库
-description: Welcome to knowledge base system.
+description: 明的知识库
 sidebar:
   hidden: true
 ---
 
-Welcome to knowledge base system.

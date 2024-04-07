@@ -703,6 +703,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Performance/preload, prefetch, prerender.md": {
+	id: "Performance/preload, prefetch, prerender.md";
+  slug: "performance/preload-prefetch-prerender";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "React/API.md": {
 	id: "React/API.md";
   slug: "react/api";

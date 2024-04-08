@@ -1,13 +1,13 @@
 ---
-title: node.js 特性
-description: node.js 特性
+title: Node.js 特性
+description: Node.js 特性
 ---
 
-## 什么是 node.js
+## 什么是 Node.js
 
-node.js 是一个 脱离浏览器执行环境的 javascript runtime。说的再明确些，node.js 是一个服务器程序，旨在提供一个基于事件驱动、异步 I/O 的高性能 web 服务器。
+Node.js 是一个 脱离浏览器执行环境的 javascript runtime。说的再明确些，node.js 是一个服务器程序，旨在提供一个基于事件驱动、异步 I/O 的高性能 web 服务器。
 
-node.js 最初只是单纯的开发一个高性能的 web 服务器，但最后变成了一个构建网络应用的基础框架，例如：服务器、客户端、命令行工具...，非常容易扩展来达成构建大型网络应用的目的，每个 node 进程都构成这个网络应用的一个节点，这也是它名字的含义。
+Node.js 最初只是单纯的开发一个高性能的 web 服务器，但最后变成了一个构建网络应用的基础框架，例如：服务器、客户端、命令行工具...，非常容易扩展来达成构建大型网络应用的目的，每个 node 进程都构成这个网络应用的一个节点，这也是它名字的含义。
 
 ## Node.js 架构
 
@@ -46,6 +46,7 @@ v8 是 node 的核心之一，v8 主要负责 javascript 的代码解析及运�
 2. GC：v8 借鉴 JVM 的精确垃圾回收管理，使用 Scavenge、Mark-Sweep 和 Mark-Compact 算法
 3. 内联缓存：使用内联缓存来提高属性的访问效率，例如访问 `this.name`，如果不存在内联缓存，则每次取 name 时都需要对 hash 表进行一次寻址，而加入内联缓存可以立刻知道该属性偏移量，不需要再次计算寻址
 4. 隐藏类：由于 Javascript 是一门动态语言，开发者可以任意在对象上增加、删除属性。如下所示
+
 ```javascript
 var obj = {};
 
@@ -68,22 +69,22 @@ libuv 是 node 的核心之一，libuv 提供 1.事件循环；2.跨平台；3.�
 // 流抽象 Buffer（Uint8Array）
 // class Socket extends stream.Duplex {}
 
-const net = require('net');
+const net = require("net");
 const server = net.createServer().listen(9001);
 
-server.on('connection', (socket) => {
+server.on("connection", (socket) => {
   console.log(
     `有一个新的 tcp 连接进来了，连接ip为：${socket.remoteAddress} 连接端口为：{socket.remotePort}`
   );
 
-  socket.on('data', (data) => {
+  socket.on("data", (data) => {
     console.log(data.toString());
   });
 });
 
 // 句柄抽象 句柄是一个非负整数，用标识一个对象、资源或一个服务。
-const fs = require('fs');
-const fd = fs.openSync('./package.json', 'r');
+const fs = require("fs");
+const fd = fs.openSync("./package.json", "r");
 console.log(fd); // 此时fd代表的数字标识了node.js文件资源，可以通过fs.read读取
 ```
 
@@ -133,7 +134,7 @@ libuv 对 I/O 分为 Network I/O 和 File I/O、User Code...（参照 libuv 架�
 
 1. 对于 NetWork I/O：由操作系统自身实现
 2. 对于 File I/O、User Code...：让一个线程负责计算处理（主线程），让其他线程进行阻塞 I/O 或者非阻塞 I/O 加轮询技术来获取数据（I/O 线程池）。libuv 线程池默认是 4 个，可以通过 _UV_THREADPOOL_SIZE_ 环境变量来设置，
-但不能超过最大 `MAX_THREADPOOL_SIZE = 1024` 个
+   但不能超过最大 `MAX_THREADPOOL_SIZE = 1024` 个
 
 ![](https://cdn.nlark.com/yuque/0/2021/png/262797/1610076993796-935ad4ed-44a8-4463-9fa9-d56064eefc24.png#align=left&display=inline&height=1652&originHeight=1652&originWidth=1274&size=0&status=done&style=none&width=1274)
 

@@ -486,6 +486,153 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"JSRuntime/Deno/JSR.md": {
+	id: "JSRuntime/Deno/JSR.md";
+  slug: "jsruntime/deno/jsr";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Javascript运行时.md": {
+	id: "JSRuntime/Javascript运行时.md";
+  slug: "jsruntime/javascript运行时";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/Error.md": {
+	id: "JSRuntime/Node.js/API/Error.md";
+  slug: "jsruntime/nodejs/api/error";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/Module.md": {
+	id: "JSRuntime/Node.js/API/Module.md";
+  slug: "jsruntime/nodejs/api/module";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/buffer.md": {
+	id: "JSRuntime/Node.js/API/buffer.md";
+  slug: "jsruntime/nodejs/api/buffer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/child_process.md": {
+	id: "JSRuntime/Node.js/API/child_process.md";
+  slug: "jsruntime/nodejs/api/child_process";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/cluster.md": {
+	id: "JSRuntime/Node.js/API/cluster.md";
+  slug: "jsruntime/nodejs/api/cluster";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/console.md": {
+	id: "JSRuntime/Node.js/API/console.md";
+  slug: "jsruntime/nodejs/api/console";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/process.md": {
+	id: "JSRuntime/Node.js/API/process.md";
+  slug: "jsruntime/nodejs/api/process";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/string_decoder.md": {
+	id: "JSRuntime/Node.js/API/string_decoder.md";
+  slug: "jsruntime/nodejs/api/string_decoder";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/API/timer.md": {
+	id: "JSRuntime/Node.js/API/timer.md";
+  slug: "jsruntime/nodejs/api/timer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/CommonJS.md": {
+	id: "JSRuntime/Node.js/CommonJS.md";
+  slug: "jsruntime/nodejs/commonjs";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Deploy/node使用docker部署.md": {
+	id: "JSRuntime/Node.js/Deploy/node使用docker部署.md";
+  slug: "jsruntime/nodejs/deploy/node使用docker部署";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Framework/Egg.md": {
+	id: "JSRuntime/Node.js/Framework/Egg.md";
+  slug: "jsruntime/nodejs/framework/egg";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Node.js 特性.md": {
+	id: "JSRuntime/Node.js/Node.js 特性.md";
+  slug: "jsruntime/nodejs/nodejs-特性";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/NPM.md": {
+	id: "JSRuntime/Node.js/Packages/NPM.md";
+  slug: "jsruntime/nodejs/packages/npm";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/PNPM.md": {
+	id: "JSRuntime/Node.js/Packages/PNPM.md";
+  slug: "jsruntime/nodejs/packages/pnpm";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/Yarn.md": {
+	id: "JSRuntime/Node.js/Packages/Yarn.md";
+  slug: "jsruntime/nodejs/packages/yarn";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/npm和yarn的区别.md": {
+	id: "JSRuntime/Node.js/Packages/npm和yarn的区别.md";
+  slug: "jsruntime/nodejs/packages/npm和yarn的区别";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/package.json.md": {
+	id: "JSRuntime/Node.js/Packages/package.json.md";
+  slug: "jsruntime/nodejs/packages/packagejson";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/包管理.md": {
+	id: "JSRuntime/Node.js/Packages/包管理.md";
+  slug: "jsruntime/nodejs/packages/包管理";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Javascript/Function.md": {
 	id: "Javascript/Function.md";
   slug: "javascript/function";
@@ -566,139 +713,6 @@ declare module 'astro:content' {
 "Javascript/执行上下文.md": {
 	id: "Javascript/执行上下文.md";
   slug: "javascript/执行上下文";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/Error.md": {
-	id: "Node.js/API/Error.md";
-  slug: "nodejs/api/error";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/Module.md": {
-	id: "Node.js/API/Module.md";
-  slug: "nodejs/api/module";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/buffer.md": {
-	id: "Node.js/API/buffer.md";
-  slug: "nodejs/api/buffer";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/child_process.md": {
-	id: "Node.js/API/child_process.md";
-  slug: "nodejs/api/child_process";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/cluster.md": {
-	id: "Node.js/API/cluster.md";
-  slug: "nodejs/api/cluster";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/console.md": {
-	id: "Node.js/API/console.md";
-  slug: "nodejs/api/console";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/process.md": {
-	id: "Node.js/API/process.md";
-  slug: "nodejs/api/process";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/string_decoder.md": {
-	id: "Node.js/API/string_decoder.md";
-  slug: "nodejs/api/string_decoder";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/API/timer.md": {
-	id: "Node.js/API/timer.md";
-  slug: "nodejs/api/timer";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/CommonJS.md": {
-	id: "Node.js/CommonJS.md";
-  slug: "nodejs/commonjs";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Deploy/node使用docker部署.md": {
-	id: "Node.js/Deploy/node使用docker部署.md";
-  slug: "nodejs/deploy/node使用docker部署";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Framework/Egg.md": {
-	id: "Node.js/Framework/Egg.md";
-  slug: "nodejs/framework/egg";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Node.js 特性.md": {
-	id: "Node.js/Node.js 特性.md";
-  slug: "nodejs/nodejs-特性";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/NPM.md": {
-	id: "Node.js/Packages/NPM.md";
-  slug: "nodejs/packages/npm";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/PNPM.md": {
-	id: "Node.js/Packages/PNPM.md";
-  slug: "nodejs/packages/pnpm";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/Yarn.md": {
-	id: "Node.js/Packages/Yarn.md";
-  slug: "nodejs/packages/yarn";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/npm和yarn的区别.md": {
-	id: "Node.js/Packages/npm和yarn的区别.md";
-  slug: "nodejs/packages/npm和yarn的区别";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/package.json.md": {
-	id: "Node.js/Packages/package.json.md";
-  slug: "nodejs/packages/packagejson";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Node.js/Packages/包管理.md": {
-	id: "Node.js/Packages/包管理.md";
-  slug: "nodejs/packages/包管理";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

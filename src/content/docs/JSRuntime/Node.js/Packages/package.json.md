@@ -26,40 +26,6 @@ npm 将版本分为 **主版本.次版本.补丁号（X.Y.Z）**，例如 1.0.0
 1. 版本只允许升，不允许降
 2. 主版本为 0 起始的，一般为测试、开发版本；正式版本一般从 1.0.0 开始
 
-#### 标签
-
-有时候为了语义，还会在版本后添加**标签**，例如** vue@3.0.0-alpha.0**，常用的标签有
-
-```
-dev: 开发版本
-
-alpha: 阿尔法版本，内测或测试人员使用
-beta: 贝塔版本，较alpha有较大改进，但还是处理内侧阶段
-gamma: 伽马版本，较beta有较大改进
-
-trial: 试用版本
-experimental: 试验版本
-
-stable: 稳定版本
-csp: 内容安全版本
-latest: 最新版本
-
-next: 下个版本
-```
-
-可以使用  `npm dist-tag package-name` 查看某个包的标签
-
-#### 管理
-
-```shell
-npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
-
-// major 增加一个主版本
-// minor 增加一个次版本
-// patch 增加一个补丁号
-// premajor 增加主版本及先行版本，举个栗子 0.0.1 ==> 1.0.0-0
-```
-
 #### 语义化版本
 
 ```
@@ -84,6 +50,29 @@ npm version [<newversion> | major | minor | patch | premajor | preminor | prepat
 
 *、x、省略: 可以表示在此值的任意范围，例如 1.x ==> >=1.0.0 <2.0.0-0、1.2.x ==> <=1.2.0 <2.0.0-0
 ```
+
+#### 标签
+
+有时候为了语义，还会在版本后添加**标签**，例如** vue@3.0.0-alpha.0**，常用的标签有
+
+```
+dev: 开发版本
+
+alpha: 阿尔法版本，内测或测试人员使用
+beta: 贝塔版本，较alpha有较大改进，但还是处理内侧阶段
+gamma: 伽马版本，较beta有较大改进
+
+trial: 试用版本
+experimental: 试验版本
+
+stable: 稳定版本
+csp: 内容安全版本
+latest: 最新版本
+
+next: 下个版本
+```
+
+可以使用  `npm dist-tag package-name` 查看某个包的标签
 
 ### dependencies
 

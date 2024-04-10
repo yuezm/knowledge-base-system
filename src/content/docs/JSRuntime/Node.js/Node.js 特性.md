@@ -11,7 +11,7 @@ Node.js 最初只是单纯的开发一个高性能的 web 服务器，但最后�
 
 ## Node.js 架构
 
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/262797/1610076992832-3646b977-ec43-4ddf-9a3d-f60782f3acb2.jpeg#align=left&display=inline&height=534&originHeight=534&originWidth=822&size=0&status=done&style=none&width=822)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/4bb4bd22bd03cd84ac323d8557421087b9a8bc74da3204553fe3200d54747f18.jpeg)
 
 1. Node Standard Library: 以 javascript 呈现的 node modules，平时用的最多的模块
 2. Node Bindings: Node Standard Library 和底层 c++ 代码沟通的桥梁，隐藏底层实现
@@ -38,7 +38,7 @@ uv_fs_open()、uv_fs_read(); // libuv 根据各个平台，调用不同的API
 
 ### V8
 
-![](https://cdn.nlark.com/yuque/0/2021/png/262797/1610076992201-a4607d0b-a81a-4e1f-a9a9-194ca947f537.png#align=left&display=inline&height=380&originHeight=380&originWidth=802&size=0&status=done&style=none&width=802)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/cc84eec4b7db65775a9deffc9ceb17f0d864093da44d7baa8b38c65d1d2b0aa1.png)
 
 v8 是 node 的核心之一，v8 主要负责 javascript 的代码解析及运行。
 
@@ -61,7 +61,7 @@ delete obj.name;
 
 ### Libuv
 
-![](https://cdn.nlark.com/yuque/0/2021/png/262797/1610076993133-a6716484-4dfd-4c25-a0fb-a3fe942e17d3.png#align=left&display=inline&height=493&originHeight=493&originWidth=1020&size=0&status=done&style=none&width=1020)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/e997d85b9dbf5fdb822c2b62ac00c53eb8751703df4c0592d217c37c0c75b680.png)
 
 libuv 是 node 的核心之一，libuv 提供 1.事件循环；2.跨平台；3.异步 I/O；4.对 I/O 抽象，将 I/O 抽象为句柄或流
 
@@ -136,7 +136,7 @@ libuv 对 I/O 分为 Network I/O 和 File I/O、User Code...（参照 libuv 架�
 2. 对于 File I/O、User Code...：让一个线程负责计算处理（主线程），让其他线程进行阻塞 I/O 或者非阻塞 I/O 加轮询技术来获取数据（I/O 线程池）。libuv 线程池默认是 4 个，可以通过 _UV_THREADPOOL_SIZE_ 环境变量来设置，
    但不能超过最大 `MAX_THREADPOOL_SIZE = 1024` 个
 
-![](https://cdn.nlark.com/yuque/0/2021/png/262797/1610076993796-935ad4ed-44a8-4463-9fa9-d56064eefc24.png#align=left&display=inline&height=1652&originHeight=1652&originWidth=1274&size=0&status=done&style=none&width=1274)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/87b23f539fe7448fd6be83dc1269eb44459d4410bfab07db4a5321cd37a79ac1.png)
 
 ```cpp
 // 举例 fs.open
@@ -188,4 +188,4 @@ child_process，worker_threads，master-worker 工作模式
 
 ### 跨平台
 
-![](https://cdn.nlark.com/yuque/0/2021/png/262797/1610076992839-120f6f1a-60d3-4ca5-be7e-1c5822f05000.png#align=left&display=inline&height=716&originHeight=716&originWidth=628&size=0&status=done&style=none&width=628)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/c82d2cee97f9ff02d0133ee8377af1effd882b06fa070916ca9ecc07f738b7f6.png)

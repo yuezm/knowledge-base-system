@@ -5,3 +5,9 @@
     font-weight: normal;
   }
 }
+
+.right-sidebar-panel {
+  .sl-container {
+    width: 100%;
+  }
+}

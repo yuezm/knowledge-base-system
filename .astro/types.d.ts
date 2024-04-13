@@ -248,6 +248,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"CS/Algorithm/快速幂.md": {
+	id: "CS/Algorithm/快速幂.md";
+  slug: "cs/algorithm/快速幂";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "CS/Algorithm/树形常用算法.md": {
 	id: "CS/Algorithm/树形常用算法.md";
   slug: "cs/algorithm/树形常用算法";

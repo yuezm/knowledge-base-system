@@ -234,6 +234,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Browser/浏览器指纹.md": {
+	id: "Browser/浏览器指纹.md";
+  slug: "browser/浏览器指纹";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "CS/Algorithm/DP/经典扔鸡蛋.md": {
 	id: "CS/Algorithm/DP/经典扔鸡蛋.md";
   slug: "cs/algorithm/dp/经典扔鸡蛋";
@@ -370,6 +377,13 @@ declare module 'astro:content' {
 "CS/NetWork/Application/HTTP/URI、URL、URN、Data URI、Object URL.md": {
 	id: "CS/NetWork/Application/HTTP/URI、URL、URN、Data URI、Object URL.md";
   slug: "cs/network/application/http/uriurlurndata-uriobject-url";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"CS/NetWork/Network.md": {
+	id: "CS/NetWork/Network.md";
+  slug: "cs/network/network";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

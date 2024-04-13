@@ -1,6 +1,6 @@
 ---
-title: javascript浮点数
-description: javascript浮点数
+title: Javascript浮点数
+description: Javascript浮点数
 ---
 
 有一道很常见的面试题

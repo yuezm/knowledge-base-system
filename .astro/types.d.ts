@@ -619,6 +619,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"JSRuntime/Node.js/Packages/NPM和Yarn的区别.md": {
+	id: "JSRuntime/Node.js/Packages/NPM和Yarn的区别.md";
+  slug: "jsruntime/nodejs/packages/npm和yarn的区别";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/PNPM.md": {
 	id: "JSRuntime/Node.js/Packages/PNPM.md";
   slug: "jsruntime/nodejs/packages/pnpm";
@@ -633,23 +640,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"JSRuntime/Node.js/Packages/npm和yarn的区别.md": {
-	id: "JSRuntime/Node.js/Packages/npm和yarn的区别.md";
-  slug: "jsruntime/nodejs/packages/npm和yarn的区别";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/package.json.md": {
 	id: "JSRuntime/Node.js/Packages/package.json.md";
   slug: "jsruntime/nodejs/packages/packagejson";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"JSRuntime/Node.js/Packages/包管理.md": {
-	id: "JSRuntime/Node.js/Packages/包管理.md";
-  slug: "jsruntime/nodejs/packages/包管理";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

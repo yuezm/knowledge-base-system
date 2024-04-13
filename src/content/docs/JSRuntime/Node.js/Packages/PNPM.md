@@ -3,13 +3,13 @@ title: PNPM
 description: PNPM
 ---
 
-## monorepo
+## pnpm-workspace.yaml
 
-pnpm 天然支持 monorepo，需要添加如下文件
+### packages
+
+pnpm 天然支持 monorepo，使用 packages 指定目录
 
 ```yaml
-# pnpm-workspace.yaml
-
 packages:
   - "packages/*"
 ```

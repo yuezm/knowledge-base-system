@@ -103,7 +103,8 @@ JSON.parse('{"n":{"$$bigint":"1234"}}', function reviver(key, value) {
 ```js
 1234n == 1234; // true
 1234n !== 1234; // false
-Object.is(1234n, 1234); //false
+Object.is(1234n, 1234); // false
+Object.is(0n, -0n); // true，零值处理和Number不同
 
 1234n > 123; // true
 1234n < 12345; // true

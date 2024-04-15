@@ -234,6 +234,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Browser/Performance.md": {
+	id: "Browser/Performance.md";
+  slug: "browser/performance";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Browser/浏览器指纹.md": {
 	id: "Browser/浏览器指纹.md";
   slug: "browser/浏览器指纹";
@@ -647,6 +654,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Javascript/ArrayBuffer.md": {
+	id: "Javascript/ArrayBuffer.md";
+  slug: "javascript/arraybuffer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Javascript/Function.md": {
 	id: "Javascript/Function.md";
   slug: "javascript/function";
@@ -654,16 +668,23 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Javascript/Number/Number.md": {
-	id: "Javascript/Number/Number.md";
-  slug: "javascript/number/number";
+"Javascript/Number/Bigint.md": {
+	id: "Javascript/Number/Bigint.md";
+  slug: "javascript/number/bigint";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Javascript/Number/javascript浮点数.md": {
-	id: "Javascript/Number/javascript浮点数.md";
+"Javascript/Number/Javascript浮点数.md": {
+	id: "Javascript/Number/Javascript浮点数.md";
   slug: "javascript/number/javascript浮点数";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Javascript/Number/Number.md": {
+	id: "Javascript/Number/Number.md";
+  slug: "javascript/number/number";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

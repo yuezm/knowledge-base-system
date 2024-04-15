@@ -19,7 +19,7 @@ Javascript 中不存在整型和浮点型之分，只有一个类型 _Number_，
 
 **1. 双精度浮点数使用 64 位存储**
 
-![](https://user-gold-cdn.xitu.io/2019/9/8/16d102b50b9f66d8?w=594&h=96&f=png&s=1504#id=OVyRd&originHeight=96&originWidth=594&originalType=binary&ratio=1&status=done&style=none)
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/143078c4ad479934f360ee8d6ba609358ad3cf022b5ff6c40b6a44cef2b999a5.png)
 
 - sign（S）：符号位，长度为 1，0 代表数字为正，1 代表数字为负
 - exponent（E）：指数位，长度为 11，二进制科学计数法的指数位

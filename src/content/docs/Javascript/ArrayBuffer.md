@@ -6,6 +6,8 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 
 ArrayBuffer[^ArrayBuffer]（数组缓冲区）用来表示原始二进制数据的缓冲区（缓冲区可以理解为临时开辟的内存区域）
 
+ArrayBuffer 给 Javascript 提供了操作内存的能力，常用于 文件流，Web3D 等等
+
 ## 初始化
 
 ```js
@@ -112,6 +114,13 @@ const int16Buffer = new Int16Array(buf);
 
 int8Buffer[0] = 0; // 相应的 int16Buffer[0]值也会改变
 ```
+
+## 示例
+
+1. 将大端序的数转换为小端序
+2. 将 Int8[] 数据两两组合转换为 Int16[]
+
+## 其他
 
 [^ArrayBuffer]: [MDN ArrayBuffer](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 [^DataView]: [MDN DataView](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView#%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7)

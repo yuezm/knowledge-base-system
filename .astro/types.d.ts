@@ -493,6 +493,34 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Graphics/WebGPU/WGSL.md": {
+	id: "Graphics/WebGPU/WGSL.md";
+  slug: "graphics/webgpu/wgsl";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/WebGPU/概览.md": {
+	id: "Graphics/WebGPU/概览.md";
+  slug: "graphics/webgpu/概览";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/WebGPU/渲染管线.md": {
+	id: "Graphics/WebGPU/渲染管线.md";
+  slug: "graphics/webgpu/渲染管线";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/WebGPU/计算管线.md": {
+	id: "Graphics/WebGPU/计算管线.md";
+  slug: "graphics/webgpu/计算管线";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/图形学.md": {
 	id: "Graphics/图形学.md";
   slug: "graphics/图形学";

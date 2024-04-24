@@ -106,12 +106,6 @@ let arr1 = array<f32>(1.0, 2.0);
 let arr2 = array<vec4f>(vec4f(1.0), vec4f(2.0));
 ```
 
-#### API
-
-```wgsl
-arrayLength(); // 返回数组长度
-```
-
 ### Struct（结构体）
 
 ```wgsl
@@ -130,15 +124,15 @@ fn add(a: f32, b: f32) -> f32 {
 }
 ```
 
-## 内置关键字和变量
-
-### 内置变量
+## 关键字
 
 ```wgsl
-position; // 顶点数据
+position; // 内置变量，顶点数据
 ```
 
-### 关键字
+```wgsl
+arrayLength(); // 内置方法，返回数组长度
+```
 
 ```wgsl
 var<uniform> // 参数由unifrom传递而来
@@ -150,7 +144,7 @@ var<uniform> // 参数由unifrom传递而来
 @binding // 绑定unifrom指定的binding
 ```
 
-## 声明变量
+## 声明
 
 ```wgsl
 // 变量声明

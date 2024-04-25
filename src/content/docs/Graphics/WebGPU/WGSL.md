@@ -126,9 +126,30 @@ fn add(a: f32, b: f32) -> f32 {
 
 ## 关键字
 
-```wgsl
-position; // 内置变量，顶点数据
-```
+内置变量
+
+| Predeclared Name | Stage  | Direction | Type      |
+| ---------------- | ------ | --------- | --------- |
+| vertex_index     | vertex | input     | u32       |
+| instance_index   | vertex | input     | u32       |
+| position         | vertex | output    | vec4<f32> |
+
+| Predeclared Name | Stage    | Direction | Type      |
+| ---------------- | -------- | --------- | --------- |
+| position         | fragment | input     | vec4<f32> |
+| front_facing     | fragment | input     | bool      |
+| frag_depth       | fragment | output    | f32       |
+| sample_index     | fragment | input     | u32       |
+| sample_mask      | fragment | input     | u32       |
+| sample_mask      | fragment | output    | u32       |
+
+| Predeclared Name       | Stage   | Direction | Type      |
+| ---------------------- | ------- | --------- | --------- |
+| local_invocation_id    | compute | input     | vec3<u32> |
+| local_invocation_index | compute | input     | u32       |
+| global_invocation_id   | compute | input     | vec3<u32> |
+| workgroup_id           | compute | input     | vec3<u32> |
+| num_workgroups         | compute | input     | vec3<u32> |
 
 ```wgsl
 arrayLength(); // 内置方法，返回数组长度
@@ -138,7 +159,8 @@ arrayLength(); // 内置方法，返回数组长度
 var<uniform> // 参数由unifrom传递而来
 @vertex // 顶点着色器
 @fragment // 片元着色器
-@location // 指定缓冲的顶点数据 @location(0)的这个0标识，和pipeline中创建时的shaderLocation保持一致
+@compute // 计算着色器
+@location // 指定缓冲的顶点数据
 @builtin // 和内置变量一起使用，如 @builtin(position)
 @group // 绑定uniform指定的group
 @binding // 绑定unifrom指定的binding
@@ -192,6 +214,7 @@ strut Input {
   @location(0) p1: vec3<f32>,
   @location(1) p2: vec3<f32>
 }
+
 @vertex
 fn main(i: Input) -> @builtin(position) vec4<f32> {
     return vec4<f32>(0, 0, 0, 0);
@@ -240,9 +263,60 @@ fn main() -> @builtin(position) vec4<f32> {
 ## Fragment Shader
 
 ```wgsl
-
+// @fragment 指定片元着色器
+// main 位入口函数，与 fragment.entryPoint 保持一致
+// @location(0) 指定返回顶点的颜色
+@fragment
+fn main() -> @location(0) vec4<f32> {
+    return vec4<f32>(0, 1 , 0, 1.0);
+}
 ```
 
 ### 参数和返回值
 
-### 传值
+多个参数
+
+```
+@fragment
+fn main(
+  @builtin(position) frag_coord: vec4<f32>, // 片元的位置
+  @location(0) originPos: vec3<f32>,  // vertex 自定义传值（插值）
+  @location(1) color:vec3<f32> // 自定义传值（插值）
+) -> @location(0) vec4<f32> {
+    return vec4<f32>(0, 1 , 0, 1.0);
+}
+```
+
+参数为结构体
+
+```
+struct Input {
+  @builtin(position) frag_coord: vec4<f32>,
+  @location(0) originPos: vec3<f32>,
+  @location(1) color:vec3<f32>
+}
+
+@fragment
+fn main(i: Input) -> @location(0) vec4<f32> {
+    return vec4<f32>(0, 1 , 0, 1.0);
+}
+```
+
+返回值为结构体
+
+```wgsl
+struct Out {
+  @location(0) albedo: vec4f;
+}
+
+@fragment
+fn main(i: Input) -> Out {
+  var out: Out;
+  out.albedo = vec4<f32>(0, 1 , 0, 1.0);
+  return out;
+}
+```
+
+## 其他
+
+[WGSL 官网文档](https://www.w3.org/TR/WGSL)

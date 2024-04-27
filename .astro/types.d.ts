@@ -493,6 +493,83 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"GIS/GIS数据/3D Tiles.md": {
+	id: "GIS/GIS数据/3D Tiles.md";
+  slug: "gis/gis数据/3d-tiles";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/GIS数据/Tiles.md": {
+	id: "GIS/GIS数据/Tiles.md";
+  slug: "gis/gis数据/tiles";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/GIS数据/概览.md": {
+	id: "GIS/GIS数据/概览.md";
+  slug: "gis/gis数据/概览";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/坐标系.md": {
+	id: "GIS/坐标系.md";
+  slug: "gis/坐标系";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Algebra.md": {
+	id: "Graphics/Babylon/Algebra.md";
+  slug: "graphics/babylon/algebra";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Camera.md": {
+	id: "Graphics/Babylon/Camera.md";
+  slug: "graphics/babylon/camera";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Engine.md": {
+	id: "Graphics/Babylon/Engine.md";
+  slug: "graphics/babylon/engine";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Light.md": {
+	id: "Graphics/Babylon/Light.md";
+  slug: "graphics/babylon/light";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Mesh.md": {
+	id: "Graphics/Babylon/Mesh.md";
+  slug: "graphics/babylon/mesh";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Scene.md": {
+	id: "Graphics/Babylon/Scene.md";
+  slug: "graphics/babylon/scene";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Sound.md": {
+	id: "Graphics/Babylon/Sound.md";
+  slug: "graphics/babylon/sound";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/WebGPU/WGSL.md": {
 	id: "Graphics/WebGPU/WGSL.md";
   slug: "graphics/webgpu/wgsl";

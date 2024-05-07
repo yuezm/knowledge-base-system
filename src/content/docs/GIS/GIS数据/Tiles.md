@@ -103,13 +103,54 @@ Google Maps / OpenStreetMap 坐标系如下
 
 将大地坐标转换投影坐标
 
+```ts
+// 投影，经纬度转投影坐标
+function lonLatToMeters(lon: number, lat: number) {
+  const x = (EarthRadius * lon * Math.PI) / 180;
+  const y = EarthRadius * Math.atanh(Math.sin((lat * Math.PI) / 180));
+  return [x, y];
+}
+
+// 投影坐标转经纬度
+function metersToLonLat(x: number, y: number) {
+  const lon = x / ((EarthRadius * Math.PI) / 180);
+  const lat = (180 / Math.PI) * Math.atan2(Math.sinh(y / EarthRadius), Math.cos(lon));
+
+  return [lon, lat];
+}
+```
+
 #### 坐标系修正
 
 根据地图服务商进行坐标系修正
 
+```ts
+const Perimeter = 2 * Math.PI * EarthRadius; // 地球周长
+
+const [x, y] = lonLatToMeters(lng, lat);
+
+// 修正坐标系，假设是Google Map，即原点为左上角
+x = x + Perimeter / 2;
+y = -y + Perimeter / 2;
+```
+
 #### 计算瓦片位置
 
 根据地图层级，投影坐标，瓦片分辨率计算出瓦片位置，并根据瓦片位置，从地图服务商获取瓦片
+
+```ts
+const EarthRadius = 6378137; // 地球半径
+const TileSize = 256;
+
+const n = Math.pow(2, z); // 计算一侧有多少张瓦片
+
+// 知道了总共有多少张图片，每张图片分辨率是多大，则可以计算出1px表示多少m
+const resolution = Perimeter / n / TileSize;
+
+// 知道了1px表示多少m，那么x米需要多少px即可算出，一张图片的像素大小知道，则可计算出需要图片位置
+const X = Math.floor(x / resolution / TileSize);
+const Y = Math.floor(y / resolution / TileSize);
+```
 
 #### 多域名
 

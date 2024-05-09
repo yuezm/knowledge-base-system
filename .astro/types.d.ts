@@ -528,6 +528,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Graphics/Babylon/Audio.md": {
+	id: "Graphics/Babylon/Audio.md";
+  slug: "graphics/babylon/audio";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/Babylon/Camera.md": {
 	id: "Graphics/Babylon/Camera.md";
   slug: "graphics/babylon/camera";
@@ -563,9 +570,16 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Graphics/Babylon/Sound.md": {
-	id: "Graphics/Babylon/Sound.md";
-  slug: "graphics/babylon/sound";
+"Graphics/Babylon/SceneLoader.md": {
+	id: "Graphics/Babylon/SceneLoader.md";
+  slug: "graphics/babylon/sceneloader";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Vec.md": {
+	id: "Graphics/Babylon/Vec.md";
+  slug: "graphics/babylon/vec";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

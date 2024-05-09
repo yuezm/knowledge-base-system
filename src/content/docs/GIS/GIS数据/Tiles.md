@@ -59,7 +59,7 @@ Web Mercator 投影有如下特点
 
 OGC 定义的协议，用于请求任意区域的渲染地图图像。服务端根据客户端提供的限制条件，返回符合限制条件的地图图像。
 
-WMS 主要属于动态地图服务，即地图是服务器在每次接到客户请求时立刻生成的，特别适用于数据在不断被更新的地图服务
+WMS 主要属于动态地图服务，即地图是服务器在每次接到客户请求时立刻生成的，特别适用于数据在不断被更新的地图服务，当然对服务器的压力比较大
 
 #### WMS-C
 
@@ -114,7 +114,8 @@ function lonLatToMeters(lon: number, lat: number) {
 // 投影坐标转经纬度
 function metersToLonLat(x: number, y: number) {
   const lon = x / ((EarthRadius * Math.PI) / 180);
-  const lat = (180 / Math.PI) * Math.atan2(Math.sinh(y / EarthRadius), Math.cos(lon));
+  const lat =
+    (180 / Math.PI) * Math.atan2(Math.sinh(y / EarthRadius), Math.cos(lon));
 
   return [lon, lat];
 }
@@ -125,6 +126,7 @@ function metersToLonLat(x: number, y: number) {
 根据地图服务商进行坐标系修正
 
 ```ts
+const EarthRadius = 6378137; // 地球半径
 const Perimeter = 2 * Math.PI * EarthRadius; // 地球周长
 
 const [x, y] = lonLatToMeters(lng, lat);
@@ -139,7 +141,6 @@ y = -y + Perimeter / 2;
 根据地图层级，投影坐标，瓦片分辨率计算出瓦片位置，并根据瓦片位置，从地图服务商获取瓦片
 
 ```ts
-const EarthRadius = 6378137; // 地球半径
 const TileSize = 256;
 
 const n = Math.pow(2, z); // 计算一侧有多少张瓦片

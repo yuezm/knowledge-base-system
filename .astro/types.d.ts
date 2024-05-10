@@ -871,6 +871,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Performance/Javascript优化.md": {
+	id: "Performance/Javascript优化.md";
+  slug: "performance/javascript优化";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Performance/preload, prefetch, prerender.md": {
 	id: "Performance/preload, prefetch, prerender.md";
   slug: "performance/preload-prefetch-prerender";

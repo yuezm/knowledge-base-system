@@ -56,5 +56,4 @@ prerender：表示会访问该页面，Chrome 可以获取该资源，并预先�
 
 目前浏览器只能支持同站站点的预渲染，例如 `https://1.conardli.com` 可以预 `https://17.conardli.com` 上的页面。注意如果是非同源的情况，需要预渲染的页面必须包括一个 `Supports-Loading-Mode: credentialed-prerender Header`。
 
-
 [https://developer.chrome.com/docs/web-platform/prerender-pages](https://developer.chrome.com/docs/web-platform/prerender-pages)

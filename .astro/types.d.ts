@@ -780,6 +780,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Javascript/Audio.md": {
+	id: "Javascript/Audio.md";
+  slug: "javascript/audio";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Javascript/Function.md": {
 	id: "Javascript/Function.md";
   slug: "javascript/function";

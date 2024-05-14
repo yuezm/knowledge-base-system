@@ -11,3 +11,16 @@
     width: 100%;
   }
 }
+
+.footnotes {
+  padding: 4px 0;
+  background: var(--ec-codeBg);
+  ol {
+    padding-left: 32px;
+    
+    li {
+      text-decoration: none;
+      list-style: decimal;
+    }
+  }
+}

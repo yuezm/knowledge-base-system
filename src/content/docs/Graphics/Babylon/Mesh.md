@@ -1,6 +1,6 @@
 ---
-title: Light
-description: Light
+title: Mesh
+description: Mesh
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ---
 

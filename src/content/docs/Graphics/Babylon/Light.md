@@ -8,12 +8,60 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 
 ### HemisphericLight
 
-半球灯光
+半球灯光，模拟环境光
 
 ```ts
-const light = new BABYLON.HemisphericLight(); // 半球灯光
+const light = new BABYLON.HemisphericLight(
+  name: string,
+  direction: Vector3,
+  scene?: Scene
+);
 
-light.intensity = 0.5; // 光照强度
+light.diffuse = BABYLON.Color3.White(); // 漫反射颜色
+light.intensity = 0.5; // 光线强度
+```
+
+### PointLight
+
+点光源
+
+```ts
+const light = new BABYLON.PointLight(
+  name: string,
+  position: Vector3,
+  scene?: Scene
+);
+```
+
+### SpotLight
+
+聚光灯，类似于路灯
+
+```ts
+const light = new BABYLON.SpotLight(
+  name: string,
+  position: Vector3,
+  direction: Vector3,
+  angle: number,
+  exponent: number,
+  scene?: Scene
+);
+
+light.position = new BABYLON.Vec3(0, 0, 0); // 修改光源位置
+```
+
+### DirectionalLight
+
+直射光源，类似于太阳光
+
+```ts
+const light = new BABYLON.DirectionalLight(
+  name: string,
+  direction: Vector3,
+  scene?: Scene
+);
+
+light.position = new BABYLON.Vec3(0, 0, 0); // 修改光源位置
 ```
 
 ## 参考

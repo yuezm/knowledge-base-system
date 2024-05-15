@@ -22,6 +22,7 @@ shadowGenerator.addShadowCaster(
   includeDescendants?: boolean, // 是否添加后代，默认为 true
 );
 
+// 物体设置接收阴影
 mesh.receiveShadows = true;
 ```
 

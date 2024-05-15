@@ -190,1015 +190,1022 @@ declare module 'astro:content' {
   slug: "architecture/build/sourcemap";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/MicroFE/微前端.md": {
 	id: "Architecture/MicroFE/微前端.md";
   slug: "architecture/microfe/微前端";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/Monorepo/Lerna.md": {
 	id: "Architecture/Monorepo/Lerna.md";
   slug: "architecture/monorepo/lerna";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/SPA VS MPA.md": {
 	id: "Architecture/SPA VS MPA.md";
   slug: "architecture/spa-vs-mpa";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/Separation/前后端分离.md": {
 	id: "Architecture/Separation/前后端分离.md";
   slug: "architecture/separation/前后端分离";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/权限设计.md": {
 	id: "Architecture/权限设计.md";
   slug: "architecture/权限设计";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Architecture/架构.md": {
 	id: "Architecture/架构.md";
   slug: "architecture/架构";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Browser/Performance.md": {
 	id: "Browser/Performance.md";
   slug: "browser/performance";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Browser/浏览器指纹.md": {
 	id: "Browser/浏览器指纹.md";
   slug: "browser/浏览器指纹";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Algorithm/DP/经典扔鸡蛋.md": {
 	id: "CS/Algorithm/DP/经典扔鸡蛋.md";
   slug: "cs/algorithm/dp/经典扔鸡蛋";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Algorithm/DP/股票算法.md": {
 	id: "CS/Algorithm/DP/股票算法.md";
   slug: "cs/algorithm/dp/股票算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Algorithm/快速幂.md": {
 	id: "CS/Algorithm/快速幂.md";
   slug: "cs/algorithm/快速幂";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Algorithm/树形常用算法.md": {
 	id: "CS/Algorithm/树形常用算法.md";
   slug: "cs/algorithm/树形常用算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Algorithm/线形常用算法.md": {
 	id: "CS/Algorithm/线形常用算法.md";
   slug: "cs/algorithm/线形常用算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Linear/线形.md": {
 	id: "CS/Database/Linear/线形.md";
   slug: "cs/database/linear/线形";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Map/图形.md": {
 	id: "CS/Database/Map/图形.md";
   slug: "cs/database/map/图形";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Tree/单词查找树.md": {
 	id: "CS/Database/Tree/单词查找树.md";
   slug: "cs/database/tree/单词查找树";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Tree/堆.md": {
 	id: "CS/Database/Tree/堆.md";
   slug: "cs/database/tree/堆";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Tree/并查集.md": {
 	id: "CS/Database/Tree/并查集.md";
   slug: "cs/database/tree/并查集";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Tree/构建树.md": {
 	id: "CS/Database/Tree/构建树.md";
   slug: "cs/database/tree/构建树";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/Tree/树形.md": {
 	id: "CS/Database/Tree/树形.md";
   slug: "cs/database/tree/树形";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Database/数学.md": {
 	id: "CS/Database/数学.md";
   slug: "cs/database/数学";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Docker/Docker.md": {
 	id: "CS/Docker/Docker.md";
   slug: "cs/docker/docker";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Encoding/BOM.md": {
 	id: "CS/Encoding/BOM.md";
   slug: "cs/encoding/bom";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/Encoding/Unicode.md": {
 	id: "CS/Encoding/Unicode.md";
   slug: "cs/encoding/unicode";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/NetWork/Application/GRPC/GRPC.md": {
 	id: "CS/NetWork/Application/GRPC/GRPC.md";
   slug: "cs/network/application/grpc/grpc";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/NetWork/Application/HTTP/HTTP.md": {
 	id: "CS/NetWork/Application/HTTP/HTTP.md";
   slug: "cs/network/application/http/http";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/NetWork/Application/HTTP/RESTful API.md": {
 	id: "CS/NetWork/Application/HTTP/RESTful API.md";
   slug: "cs/network/application/http/restful-api";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/NetWork/Application/HTTP/URI、URL、URN、Data URI、Object URL.md": {
 	id: "CS/NetWork/Application/HTTP/URI、URL、URN、Data URI、Object URL.md";
   slug: "cs/network/application/http/uriurlurndata-uriobject-url";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/NetWork/Network.md": {
 	id: "CS/NetWork/Network.md";
   slug: "cs/network/network";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/OS/Linux.md": {
 	id: "CS/OS/Linux.md";
   slug: "cs/os/linux";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CS/OS/OS.md": {
 	id: "CS/OS/OS.md";
   slug: "cs/os/os";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "CSS/CSS.md": {
 	id: "CSS/CSS.md";
   slug: "css/css";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "DB/MongoDB/API.md": {
 	id: "DB/MongoDB/API.md";
   slug: "db/mongodb/api";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "DB/MongoDB/MongoDB.md": {
 	id: "DB/MongoDB/MongoDB.md";
   slug: "db/mongodb/mongodb";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "DB/MongoDB/权限.md": {
 	id: "DB/MongoDB/权限.md";
   slug: "db/mongodb/权限";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "DB/MongoDB/索引.md": {
 	id: "DB/MongoDB/索引.md";
   slug: "db/mongodb/索引";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/Chrome调试.md": {
 	id: "FAQ/Chrome调试.md";
   slug: "faq/chrome调试";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/JS如何获取精确的时间戳.md": {
 	id: "FAQ/JS如何获取精确的时间戳.md";
   slug: "faq/js如何获取精确的时间戳";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/node.js内存泄漏.md": {
 	id: "FAQ/node.js内存泄漏.md";
   slug: "faq/nodejs内存泄漏";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/内存泄漏及排查.md": {
 	id: "FAQ/内存泄漏及排查.md";
   slug: "faq/内存泄漏及排查";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/常见的问题及解决方案.md": {
 	id: "FAQ/常见的问题及解决方案.md";
   slug: "faq/常见的问题及解决方案";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/开源如何保证收入.md": {
 	id: "FAQ/开源如何保证收入.md";
   slug: "faq/开源如何保证收入";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "FAQ/网页如何唤醒本地程序.md": {
 	id: "FAQ/网页如何唤醒本地程序.md";
   slug: "faq/网页如何唤醒本地程序";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "GIS/GIS数据/3D Tiles.md": {
 	id: "GIS/GIS数据/3D Tiles.md";
   slug: "gis/gis数据/3d-tiles";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "GIS/GIS数据/Tiles.md": {
 	id: "GIS/GIS数据/Tiles.md";
   slug: "gis/gis数据/tiles";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "GIS/GIS数据/概览.md": {
 	id: "GIS/GIS数据/概览.md";
   slug: "gis/gis数据/概览";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "GIS/坐标系.md": {
 	id: "GIS/坐标系.md";
   slug: "gis/坐标系";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Algebra.md": {
 	id: "Graphics/Babylon/Algebra.md";
   slug: "graphics/babylon/algebra";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Audio.md": {
 	id: "Graphics/Babylon/Audio.md";
   slug: "graphics/babylon/audio";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Camera.md": {
 	id: "Graphics/Babylon/Camera.md";
   slug: "graphics/babylon/camera";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Engine.md": {
 	id: "Graphics/Babylon/Engine.md";
   slug: "graphics/babylon/engine";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Light.md": {
 	id: "Graphics/Babylon/Light.md";
   slug: "graphics/babylon/light";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Material.md": {
+	id: "Graphics/Babylon/Material.md";
+  slug: "graphics/babylon/material";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Mesh.md": {
 	id: "Graphics/Babylon/Mesh.md";
   slug: "graphics/babylon/mesh";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Scene.md": {
 	id: "Graphics/Babylon/Scene.md";
   slug: "graphics/babylon/scene";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/SceneLoader.md": {
 	id: "Graphics/Babylon/SceneLoader.md";
   slug: "graphics/babylon/sceneloader";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Shadow.md": {
 	id: "Graphics/Babylon/Shadow.md";
   slug: "graphics/babylon/shadow";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/Babylon/Vec.md": {
 	id: "Graphics/Babylon/Vec.md";
   slug: "graphics/babylon/vec";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/WebGPU/WGSL.md": {
 	id: "Graphics/WebGPU/WGSL.md";
   slug: "graphics/webgpu/wgsl";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/WebGPU/概览.md": {
 	id: "Graphics/WebGPU/概览.md";
   slug: "graphics/webgpu/概览";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/WebGPU/渲染管线.md": {
 	id: "Graphics/WebGPU/渲染管线.md";
   slug: "graphics/webgpu/渲染管线";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/WebGPU/计算管线.md": {
 	id: "Graphics/WebGPU/计算管线.md";
   slug: "graphics/webgpu/计算管线";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Graphics/图形学.md": {
 	id: "Graphics/图形学.md";
   slug: "graphics/图形学";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "HTML/HTML.md": {
 	id: "HTML/HTML.md";
   slug: "html/html";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Home.md": {
 	id: "Home.md";
   slug: "home";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Deno/JSR.md": {
 	id: "JSRuntime/Deno/JSR.md";
   slug: "jsruntime/deno/jsr";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Javascript运行时.md": {
 	id: "JSRuntime/Javascript运行时.md";
   slug: "jsruntime/javascript运行时";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/Error.md": {
 	id: "JSRuntime/Node.js/API/Error.md";
   slug: "jsruntime/nodejs/api/error";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/Module.md": {
 	id: "JSRuntime/Node.js/API/Module.md";
   slug: "jsruntime/nodejs/api/module";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/buffer.md": {
 	id: "JSRuntime/Node.js/API/buffer.md";
   slug: "jsruntime/nodejs/api/buffer";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/child_process.md": {
 	id: "JSRuntime/Node.js/API/child_process.md";
   slug: "jsruntime/nodejs/api/child_process";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/cluster.md": {
 	id: "JSRuntime/Node.js/API/cluster.md";
   slug: "jsruntime/nodejs/api/cluster";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/console.md": {
 	id: "JSRuntime/Node.js/API/console.md";
   slug: "jsruntime/nodejs/api/console";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/process.md": {
 	id: "JSRuntime/Node.js/API/process.md";
   slug: "jsruntime/nodejs/api/process";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/string_decoder.md": {
 	id: "JSRuntime/Node.js/API/string_decoder.md";
   slug: "jsruntime/nodejs/api/string_decoder";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/API/timer.md": {
 	id: "JSRuntime/Node.js/API/timer.md";
   slug: "jsruntime/nodejs/api/timer";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/CommonJS.md": {
 	id: "JSRuntime/Node.js/CommonJS.md";
   slug: "jsruntime/nodejs/commonjs";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Deploy/node使用docker部署.md": {
 	id: "JSRuntime/Node.js/Deploy/node使用docker部署.md";
   slug: "jsruntime/nodejs/deploy/node使用docker部署";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Framework/Egg.md": {
 	id: "JSRuntime/Node.js/Framework/Egg.md";
   slug: "jsruntime/nodejs/framework/egg";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Node.js 特性.md": {
 	id: "JSRuntime/Node.js/Node.js 特性.md";
   slug: "jsruntime/nodejs/nodejs-特性";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/NPM.md": {
 	id: "JSRuntime/Node.js/Packages/NPM.md";
   slug: "jsruntime/nodejs/packages/npm";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/NPM和Yarn的区别.md": {
 	id: "JSRuntime/Node.js/Packages/NPM和Yarn的区别.md";
   slug: "jsruntime/nodejs/packages/npm和yarn的区别";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/PNPM.md": {
 	id: "JSRuntime/Node.js/Packages/PNPM.md";
   slug: "jsruntime/nodejs/packages/pnpm";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/Yarn.md": {
 	id: "JSRuntime/Node.js/Packages/Yarn.md";
   slug: "jsruntime/nodejs/packages/yarn";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "JSRuntime/Node.js/Packages/package.json.md": {
 	id: "JSRuntime/Node.js/Packages/package.json.md";
   slug: "jsruntime/nodejs/packages/packagejson";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/ArrayBuffer.md": {
 	id: "Javascript/ArrayBuffer.md";
   slug: "javascript/arraybuffer";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Audio.md": {
 	id: "Javascript/Audio.md";
   slug: "javascript/audio";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Function.md": {
 	id: "Javascript/Function.md";
   slug: "javascript/function";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Number/Bigint.md": {
 	id: "Javascript/Number/Bigint.md";
   slug: "javascript/number/bigint";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Number/Javascript浮点数.md": {
 	id: "Javascript/Number/Javascript浮点数.md";
   slug: "javascript/number/javascript浮点数";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Number/Number.md": {
 	id: "Javascript/Number/Number.md";
   slug: "javascript/number/number";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/Array.md": {
 	id: "Javascript/Object/Array.md";
   slug: "javascript/object/array";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/Javascript.md": {
 	id: "Javascript/Object/Javascript.md";
   slug: "javascript/object/javascript";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/Javascript面向对象.md": {
 	id: "Javascript/Object/Javascript面向对象.md";
   slug: "javascript/object/javascript面向对象";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/Javscript 属性、方法.md": {
 	id: "Javascript/Object/Javscript 属性、方法.md";
   slug: "javascript/object/javscript-属性方法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/RegExp.md": {
 	id: "Javascript/Object/RegExp.md";
   slug: "javascript/object/regexp";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Object/This.md": {
 	id: "Javascript/Object/This.md";
   slug: "javascript/object/this";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/Promise.md": {
 	id: "Javascript/Promise.md";
   slug: "javascript/promise";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/作用域.md": {
 	id: "Javascript/作用域.md";
   slug: "javascript/作用域";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Javascript/执行上下文.md": {
 	id: "Javascript/执行上下文.md";
   slug: "javascript/执行上下文";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Performance/Javascript优化.md": {
 	id: "Performance/Javascript优化.md";
   slug: "performance/javascript优化";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Performance/preload, prefetch, prerender.md": {
 	id: "Performance/preload, prefetch, prerender.md";
   slug: "performance/preload-prefetch-prerender";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "React/API.md": {
 	id: "React/API.md";
   slug: "react/api";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "React/Headless UI 和 React Hooks.md": {
 	id: "React/Headless UI 和 React Hooks.md";
   slug: "react/headless-ui-和-react-hooks";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/Base64编码.md": {
 	id: "ToBeContinue/Base64编码.md";
   slug: "tobecontinue/base64编码";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/CJS, ESM, Webpack.md": {
 	id: "ToBeContinue/CJS, ESM, Webpack.md";
   slug: "tobecontinue/cjs-esm-webpack";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/Heap.md": {
 	id: "ToBeContinue/Heap.md";
   slug: "tobecontinue/heap";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/Import maps.md": {
 	id: "ToBeContinue/Import maps.md";
   slug: "tobecontinue/import-maps";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/JSON和Javascript.md": {
 	id: "ToBeContinue/JSON和Javascript.md";
   slug: "tobecontinue/json和javascript";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/Javascript正则.md": {
 	id: "ToBeContinue/Javascript正则.md";
   slug: "tobecontinue/javascript正则";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/React 事件.md": {
 	id: "ToBeContinue/React 事件.md";
   slug: "tobecontinue/react-事件";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/React 的错误捕获.md": {
 	id: "ToBeContinue/React 的错误捕获.md";
   slug: "tobecontinue/react-的错误捕获";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/为啥react没有keep-alive.md": {
 	id: "ToBeContinue/为啥react没有keep-alive.md";
   slug: "tobecontinue/为啥react没有keep-alive";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/二分法.md": {
 	id: "ToBeContinue/二分法.md";
   slug: "tobecontinue/二分法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/从d.ts了解typescript.md": {
 	id: "ToBeContinue/从d.ts了解typescript.md";
   slug: "tobecontinue/从dts了解typescript";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/前后端实时通信.md": {
 	id: "ToBeContinue/前后端实时通信.md";
   slug: "tobecontinue/前后端实时通信";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/单调栈.md": {
 	id: "ToBeContinue/单调栈.md";
   slug: "tobecontinue/单调栈";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/博弈算法.md": {
 	id: "ToBeContinue/博弈算法.md";
   slug: "tobecontinue/博弈算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/多米诺和托米诺平铺.md": {
 	id: "ToBeContinue/多米诺和托米诺平铺.md";
   slug: "tobecontinue/多米诺和托米诺平铺";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/大文件如何上传.md": {
 	id: "ToBeContinue/大文件如何上传.md";
   slug: "tobecontinue/大文件如何上传";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/子序列问题.md": {
 	id: "ToBeContinue/子序列问题.md";
   slug: "tobecontinue/子序列问题";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/寻找中位数.md": {
 	id: "ToBeContinue/寻找中位数.md";
   slug: "tobecontinue/寻找中位数";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/时区.md": {
 	id: "ToBeContinue/时区.md";
   slug: "tobecontinue/时区";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/树状数组.md": {
 	id: "ToBeContinue/树状数组.md";
   slug: "tobecontinue/树状数组";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/格雷码.md": {
 	id: "ToBeContinue/格雷码.md";
   slug: "tobecontinue/格雷码";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/直播流.md": {
 	id: "ToBeContinue/直播流.md";
   slug: "tobecontinue/直播流";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/贡献度算法.md": {
 	id: "ToBeContinue/贡献度算法.md";
   slug: "tobecontinue/贡献度算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/进制转换.md": {
 	id: "ToBeContinue/进制转换.md";
   slug: "tobecontinue/进制转换";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "ToBeContinue/随机算法.md": {
 	id: "ToBeContinue/随机算法.md";
   slug: "tobecontinue/随机算法";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Tutorial/从egg-helper学习egg源码.md": {
 	id: "Tutorial/从egg-helper学习egg源码.md";
   slug: "tutorial/从egg-helper学习egg源码";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Tutorial/我的大前端世界观.md": {
 	id: "Tutorial/我的大前端世界观.md";
   slug: "tutorial/我的大前端世界观";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Tutorial/面试复习.md": {
 	id: "Tutorial/面试复习.md";
   slug: "tutorial/面试复习";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Typescript/Typescript.md": {
 	id: "Typescript/Typescript.md";
   slug: "typescript/typescript";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Typescript/类型.md": {
 	id: "Typescript/类型.md";
   slug: "typescript/类型";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Git/Git hooks husky lint-staged.md": {
 	id: "Utils/Git/Git hooks husky lint-staged.md";
   slug: "utils/git/git-hooks-husky-lint-staged";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Git/Git原理.md": {
 	id: "Utils/Git/Git原理.md";
   slug: "utils/git/git原理";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Git/Git命令.md": {
 	id: "Utils/Git/Git命令.md";
   slug: "utils/git/git命令";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Git/Git工作流.md": {
 	id: "Utils/Git/Git工作流.md";
   slug: "utils/git/git工作流";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Playwright/Playwright.md": {
 	id: "Utils/Playwright/Playwright.md";
   slug: "utils/playwright/playwright";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Utils/Puppetter/Puppetter优化.md": {
 	id: "Utils/Puppetter/Puppetter优化.md";
   slug: "utils/puppetter/puppetter优化";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Vue/Vue Router.md": {
 	id: "Vue/Vue Router.md";
   slug: "vue/vue-router";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Vue/响应式系统.md": {
 	id: "Vue/响应式系统.md";
   slug: "vue/响应式系统";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "Vue/组件.md": {
 	id: "Vue/组件.md";
   slug: "vue/组件";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "跨平台/Electron/Electron 优化.md": {
 	id: "跨平台/Electron/Electron 优化.md";
   slug: "跨平台/electron/electron-优化";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 };
 
@@ -1210,5 +1217,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

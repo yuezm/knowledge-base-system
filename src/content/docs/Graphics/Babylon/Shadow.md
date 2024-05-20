@@ -28,4 +28,4 @@ mesh.receiveShadows = true;
 
 ## 参考
 
-[ShadowGenerator](https://doc.babylonjs.com/typedoc/classes/BABYLON.ShadowGenerator)
+- [ShadowGenerator](https://doc.babylonjs.com/typedoc/classes/BABYLON.ShadowGenerator)

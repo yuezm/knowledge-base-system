@@ -71,4 +71,4 @@ box.material = material;
 
 ## 参考
 
-[DeepDive skybox](https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox)
+- [DeepDive skybox](https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox)

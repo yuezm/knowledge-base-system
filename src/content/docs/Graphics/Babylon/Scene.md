@@ -10,6 +10,12 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 
 ```ts
 const scene = new BABYLON.Scene(engine);
+
+// 设置场景背景色
+scene.clearColor = new BABYLON.Color4(84 / 255, 84 / 255, 84 / 255, 1);
+
+// 设置环境色
+scene.ambientColor = new BABYLON.Color4(84 / 255, 84 / 255, 84 / 255, 1);
 ```
 
 ### 事件

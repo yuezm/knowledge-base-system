@@ -6,6 +6,10 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 
 ## API
 
+### Material
+
+材质基类
+
 ### StandardMaterial
 
 标准材质
@@ -15,9 +19,11 @@ const material = new BABYLON.StandardMaterial(name: string, scene?: Scene);
 
 // 漫反射
 material.diffuseColor = BABYLON.Color3.Green();
+
 // 高光
 material.specularColor = BABYLON.Color3.Green();
-// 环境色
+
+// 环境色，当scene设置了环境色时，该颜色生效
 material.ambientColor = BABYLON.Color3.Green();
 
 // 设置mesh的材质

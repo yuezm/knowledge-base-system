@@ -19,6 +19,9 @@ const light = new BABYLON.HemisphericLight(
 
 light.diffuse = BABYLON.Color3.White(); // 漫反射颜色
 light.intensity = 0.5; // 光线强度
+
+// 修改光源方向，半球的光源的direction指的不是光源的入射方向，而是物体的漫反射方向
+light.direction = new BABYLON.Vec3(0, 1, 0);
 ```
 
 ### PointLight
@@ -47,13 +50,14 @@ const light = new BABYLON.SpotLight(
   scene?: Scene
 );
 
-light.position = new BABYLON.Vec3(0, 0, 0); // 修改光源位置
+// 修改光源位置
+light.position = new BABYLON.Vec3(0, 0, 0); 
 ```
 
 ### DirectionalLight
 
 直射光源，类似于太阳光
-
+  
 ```ts
 const light = new BABYLON.DirectionalLight(
   name: string,
@@ -61,7 +65,11 @@ const light = new BABYLON.DirectionalLight(
   scene?: Scene
 );
 
-light.position = new BABYLON.Vec3(0, 0, 0); // 修改光源位置
+// 修改光源方向，直射光源的direction指的是光源的入射方向
+light.direction = new BABYLON.Vec3(0, 1, 0);
+
+// 修改光源位置
+light.position = new BABYLON.Vec3(0, 0, 0); 
 ```
 
 ## 参考

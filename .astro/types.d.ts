@@ -493,6 +493,27 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"GIS/Cesium/Imagery.md": {
+	id: "GIS/Cesium/Imagery.md";
+  slug: "gis/cesium/imagery";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/Cesium/Terrain.md": {
+	id: "GIS/Cesium/Terrain.md";
+  slug: "gis/cesium/terrain";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/Cesium/坐标和投影.md": {
+	id: "GIS/Cesium/坐标和投影.md";
+  slug: "gis/cesium/坐标和投影";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "GIS/GIS数据/3D Tiles.md": {
 	id: "GIS/GIS数据/3D Tiles.md";
   slug: "gis/gis数据/3d-tiles";
@@ -524,6 +545,20 @@ declare module 'astro:content' {
 "Graphics/Babylon/Algebra.md": {
 	id: "Graphics/Babylon/Algebra.md";
   slug: "graphics/babylon/algebra";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Animation.md": {
+	id: "Graphics/Babylon/Animation.md";
+  slug: "graphics/babylon/animation";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/AssetsManager.md": {
+	id: "Graphics/Babylon/AssetsManager.md";
+  slug: "graphics/babylon/assetsmanager";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -570,6 +605,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Graphics/Babylon/Particle.md": {
+	id: "Graphics/Babylon/Particle.md";
+  slug: "graphics/babylon/particle";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/Babylon/Scene.md": {
 	id: "Graphics/Babylon/Scene.md";
   slug: "graphics/babylon/scene";
@@ -587,6 +629,13 @@ declare module 'astro:content' {
 "Graphics/Babylon/Shadow.md": {
 	id: "Graphics/Babylon/Shadow.md";
   slug: "graphics/babylon/shadow";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Babylon/Sprite.md": {
+	id: "Graphics/Babylon/Sprite.md";
+  slug: "graphics/babylon/sprite";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

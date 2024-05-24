@@ -75,6 +75,37 @@ TMS（Tile map service）支持 EPSG:4326（Web Mercator），坐标系如下
 - X 轴：向东（右）为正
 - Y 轴：向北（上）为正
 
+请求示例，TMS 常常返回一个 XML 文件
+
+```xml
+https://sandcastle.cesium.com/CesiumUnminified/Assets/Textures/NaturalEarthII/tilemapresource.xml
+
+<TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
+  <Title>NE2_HR_LC_SR_W_DR_recolored.tif</Title>
+  <Abstract></Abstract>
+  <SRS>EPSG:4326</SRS>
+  <BoundingBox
+    miny="-90.00000000000000"
+    minx="-180.00000000000000"
+    maxy="90.00000000000000"
+    maxx="180.00000000000000"
+  />
+  <Origin y="-90.00000000000000" x="-180.00000000000000" />
+  <TileFormat width="256" height="256" mime-type="image/jpg" extension="jpg" />
+  <TileSets profile="geodetic">
+    <TileSet href="0" units-per-pixel="0.70312500000000" order="0" />
+    <TileSet href="1" units-per-pixel="0.35156250000000" order="1" />
+    <TileSet href="2" units-per-pixel="0.17578125000000" order="2" />
+  </TileSets>
+</TileMap>;
+```
+
+实际请求的 URL
+
+```sh
+https://sandcastle.cesium.com/CesiumUnminified/Assets/Textures/NaturalEarthII/0/1/0.jpg
+```
+
 #### WMTS
 
 WMTS（Web map tile service）是 OGC 创建的协议。支持 EPSG:3857（WGS84） and EPSG:4326（Web Mercator）
@@ -89,6 +120,27 @@ WMTS 的地图是服务器预先制作好的瓦片，这种方法可以提高 We
 
 瓦片等级（zoom level）最小为 0，最大为 24
 
+请求示例
+
+```ts
+https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/WMTS?tilematrix=3&layer=World_Imagery&style=default&tilerow=2&tilecol=6&tilematrixset=default028mm&format=image%2Fjpeg&service=WMTS&version=1.0.0&request=GetTile
+```
+
+queryString 如下所示
+
+| 参数名        | 参数值 | 示例          | 意义                                                                                           |
+| ------------- | ------ | ------------- | ---------------------------------------------------------------------------------------------- |
+| layer         | string | World_Imagery | 图层，例如街道图，卫星图                                                                       |
+| style         | string | default       | 样式，某些服务可能存在预设样式，例如 night                                                     |
+| tilematrixset | string | default028mm  | 瓦片集，定义了一套规则，说明了如何将地图划分为一系列标准化的瓦片，可包含瓦片大小，切分规则等等 |
+| tilematrix    | number | 3             | 当前级别的瓦片级别，可以参照 zoomLevel 来理解                                                  |
+| tilerow       | number | 2             | 瓦片第几行                                                                                     |
+| tilecol       | number | 6             | 瓦片第几列                                                                                     |
+| format        | string | image/jpeg    | 图片格式                                                                                       |
+| service       | string | WMTS          | 服务类型                                                                                       |
+| version       | string | 1.0.0         | 服务版本                                                                                       |
+| request       | string | GetTile       | 方法                                                                                           |
+
 #### XYZ
 
 XYZ 没有标准的元数据机制，图像通过 REST API 提供，URL 为 `http://.../Z/X/Y.png`，其中 Z 为层级，X、Y 为瓦片编号
@@ -96,6 +148,12 @@ XYZ 没有标准的元数据机制，图像通过 REST API 提供，URL 为 `htt
 Google Maps / OpenStreetMap 坐标系如下
 
 ![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/61a3e61227afe2e95580695e48e6b570ec596d41dd5ddfcd72e4ea9c0b074661.png)
+
+请求示例
+
+```txt
+https://tile.openstreetmap.org/7/45/59.png
+```
 
 ### 加载
 

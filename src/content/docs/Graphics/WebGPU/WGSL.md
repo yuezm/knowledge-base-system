@@ -317,6 +317,6 @@ fn main(i: Input) -> Out {
 }
 ```
 
-## 其他
+## 参考
 
 [WGSL 官网文档](https://www.w3.org/TR/WGSL)

@@ -120,7 +120,7 @@ int8Buffer[0] = 0; // 相应的 int16Buffer[0]值也会改变
 1. 将大端序的数转换为小端序
 2. 将 Int8[] 数据两两组合转换为 Int16[]
 
-## 其他
+## 参考
 
 [^ArrayBuffer]: [MDN ArrayBuffer](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 [^DataView]: [MDN DataView](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView#%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7)

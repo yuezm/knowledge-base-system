@@ -223,7 +223,7 @@ const Y = Math.floor(y / resolution / TileSize);
 
 ### 矢量瓦片
 
-## 其他
+## 参考
 
 - [Tiled web map](https://en.wikipedia.org/wiki/Tiled_web_map)
 - [Tile Map Service](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification)

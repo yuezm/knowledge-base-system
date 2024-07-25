@@ -16,7 +16,7 @@ new Cesium.Material(options);
 
 ### MaterialProperty
 
-做为抽象类，常用的实现如下
+抽象类，即使 Property 也是 Material，常用的实现如下
 
 #### ColorMaterialProperty
 

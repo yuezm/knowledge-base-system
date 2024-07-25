@@ -30,12 +30,25 @@ camera.range: number; 距离目标的距离
 
 ```ts
 // 聚焦某个实体或实体集合
-viewer.flyTo;
+viewer.flyTo(target, {
+  offset: {
+    heading: number, 
+    pitch: number, 
+    roll: number
+  }
+});
 
 camera.setView;
+
 camera.lookAt;
+
 camera.lookAtTransform;
-camera.flyTo;
+
+camera.flyTo({
+  destination: Cartesian3 | Rectangle,
+  orientation: object, // 描述相机的朝向，例如 {heading, pitch, roll} 或者 { direction, up }
+});
+
 camera.flyToBoundingSphere;
 ```
 

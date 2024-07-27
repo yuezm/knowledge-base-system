@@ -920,6 +920,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Javascript/File System API.md": {
+	id: "Javascript/File System API.md";
+  slug: "javascript/file-system-api";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Javascript/Function.md": {
 	id: "Javascript/Function.md";
   slug: "javascript/function";
@@ -993,6 +1000,13 @@ declare module 'astro:content' {
 "Javascript/Promise.md": {
 	id: "Javascript/Promise.md";
   slug: "javascript/promise";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Javascript/Reflect.md": {
+	id: "Javascript/Reflect.md";
+  slug: "javascript/reflect";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -1319,6 +1333,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"杂谈/软件开发周期.md": {
+	id: "杂谈/软件开发周期.md";
+  slug: "杂谈/软件开发周期";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "跨平台/Electron/Electron 优化.md": {
 	id: "跨平台/Electron/Electron 优化.md";
   slug: "跨平台/electron/electron-优化";

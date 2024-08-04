@@ -1,6 +1,6 @@
 ---
-title: Javscript 属性、方法
-description: Javscript 属性、方法
+title: Javscript 属性和方法
+description: Javscript 属性和方法
 ---
 
 #### 

@@ -416,6 +416,20 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"CSS/Color.md": {
+	id: "CSS/Color.md";
+  slug: "css/color";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"CSS/Selector.md": {
+	id: "CSS/Selector.md";
+  slug: "css/selector";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "DB/MongoDB/API.md": {
 	id: "DB/MongoDB/API.md";
   slug: "db/mongodb/api";
@@ -601,6 +615,27 @@ declare module 'astro:content' {
 "GIS/GIS数据/概览.md": {
 	id: "GIS/GIS数据/概览.md";
   slug: "gis/gis数据/概览";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/Leaflet/Layer.md": {
+	id: "GIS/Leaflet/Layer.md";
+  slug: "gis/leaflet/layer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/Leaflet/投影.md": {
+	id: "GIS/Leaflet/投影.md";
+  slug: "gis/leaflet/投影";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"GIS/Leaflet/源码学习.md": {
+	id: "GIS/Leaflet/源码学习.md";
+  slug: "gis/leaflet/源码学习";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -976,9 +1011,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Javascript/Object/Javscript 属性、方法.md": {
-	id: "Javascript/Object/Javscript 属性、方法.md";
-  slug: "javascript/object/javscript-属性方法";
+"Javascript/Object/Javscript 属性和方法.md": {
+	id: "Javascript/Object/Javscript 属性和方法.md";
+  slug: "javascript/object/javscript-属性和方法";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

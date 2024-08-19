@@ -181,7 +181,17 @@ function metersToLonLat(x: number, y: number) {
 
 #### 坐标系修正
 
-根据地图服务商进行坐标系修正
+根据地图服务商进行坐标系修正，以 Google Map 和 Web 墨卡托投影为例
+
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/d68c7001f55659bc2d4c83aa29478765708aa0d0091bc8c6f1596a3cf64c45f5.jpg)  
+
+
+可以看到，地图服务商（Google Map）的原点位于左上角，而 Web 墨卡托投影的原点位于中心，因此需要修正坐标系
+
+1. X 坐标：以投影坐标 X + 地球横向长度 / 2 ，即为地图服务商 X 坐标
+2. Y 坐标：地球纵向周长/ 2- 以投影坐标 Y ，即为地图服务商的 Y 坐标
+
+由于在 Web 墨卡托投影中，将地球看作球体，则横、纵向的周长一致，因此可以简化为如下计算公式
 
 ```ts
 const EarthRadius = 6378137; // 地球半径
@@ -210,6 +220,8 @@ const resolution = Perimeter / n / TileSize;
 const X = Math.floor(x / resolution / TileSize);
 const Y = Math.floor(y / resolution / TileSize);
 ```
+
+以此就可以计算出中心的瓦片，再根据视口大小，计算出需要加载的周围瓦片
 
 #### 多域名
 

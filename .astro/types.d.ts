@@ -409,6 +409,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"CS/OS/Ubuntu/包管理.md": {
+	id: "CS/OS/Ubuntu/包管理.md";
+  slug: "cs/os/ubuntu/包管理";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "CSS/CSS.md": {
 	id: "CSS/CSS.md";
   slug: "css/css";

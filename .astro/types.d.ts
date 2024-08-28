@@ -1095,6 +1095,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"React/Hooks.md": {
+	id: "React/Hooks.md";
+  slug: "react/hooks";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "ToBeContinue/Base64编码.md": {
 	id: "ToBeContinue/Base64编码.md";
   slug: "tobecontinue/base64编码";

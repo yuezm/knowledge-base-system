@@ -170,3 +170,8 @@ const { pending, data, method, action } = useFormStatus();
 ```ts
 const value = use(resource);
 ```
+
+
+## 参考
+
+- [React Hooks](https://zh-hans.react.dev/reference/react/useActionState)

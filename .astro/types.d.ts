@@ -430,6 +430,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"CSS/Grid.md": {
+	id: "CSS/Grid.md";
+  slug: "css/grid";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "CSS/Selector.md": {
 	id: "CSS/Selector.md";
   slug: "css/selector";

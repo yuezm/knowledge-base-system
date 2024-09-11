@@ -500,6 +500,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"FAQ/如何处理循环引用.md": {
+	id: "FAQ/如何处理循环引用.md";
+  slug: "faq/如何处理循环引用";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "FAQ/常见的问题及解决方案.md": {
 	id: "FAQ/常见的问题及解决方案.md";
   slug: "faq/常见的问题及解决方案";
@@ -517,6 +524,13 @@ declare module 'astro:content' {
 "FAQ/网页如何唤醒本地程序.md": {
 	id: "FAQ/网页如何唤醒本地程序.md";
   slug: "faq/网页如何唤醒本地程序";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"FAQ/解决ESM Import 过多.md": {
+	id: "FAQ/解决ESM Import 过多.md";
+  slug: "faq/解决esm-import-过多";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -1305,6 +1319,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Tutorial/软件开发周期.md": {
+	id: "Tutorial/软件开发周期.md";
+  slug: "tutorial/软件开发周期";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Tutorial/面试复习.md": {
 	id: "Tutorial/面试复习.md";
   slug: "tutorial/面试复习";
@@ -1396,13 +1417,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"杂谈/软件开发周期.md": {
-	id: "杂谈/软件开发周期.md";
-  slug: "杂谈/软件开发周期";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "跨平台/Electron/Electron 优化.md": {
 	id: "跨平台/Electron/Electron 优化.md";
   slug: "跨平台/electron/electron-优化";

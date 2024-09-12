@@ -521,6 +521,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"GIS/Cesium/Viewer.md": {
+	id: "GIS/Cesium/Viewer.md";
+  slug: "gis/cesium/viewer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "GIS/Cesium/Widget.md": {
 	id: "GIS/Cesium/Widget.md";
   slug: "gis/cesium/widget";

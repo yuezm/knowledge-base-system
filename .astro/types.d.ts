@@ -416,34 +416,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"CSS/CSS.md": {
-	id: "CSS/CSS.md";
-  slug: "css/css";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"CSS/Color.md": {
-	id: "CSS/Color.md";
-  slug: "css/color";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"CSS/Grid.md": {
-	id: "CSS/Grid.md";
-  slug: "css/grid";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"CSS/Selector.md": {
-	id: "CSS/Selector.md";
-  slug: "css/selector";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "DB/MongoDB/API.md": {
 	id: "DB/MongoDB/API.md";
   slug: "db/mongodb/api";
@@ -468,69 +440,6 @@ declare module 'astro:content' {
 "DB/MongoDB/索引.md": {
 	id: "DB/MongoDB/索引.md";
   slug: "db/mongodb/索引";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/Chrome调试.md": {
-	id: "FAQ/Chrome调试.md";
-  slug: "faq/chrome调试";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/JS如何获取精确的时间戳.md": {
-	id: "FAQ/JS如何获取精确的时间戳.md";
-  slug: "faq/js如何获取精确的时间戳";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/node.js内存泄漏.md": {
-	id: "FAQ/node.js内存泄漏.md";
-  slug: "faq/nodejs内存泄漏";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/内存泄漏及排查.md": {
-	id: "FAQ/内存泄漏及排查.md";
-  slug: "faq/内存泄漏及排查";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/如何处理循环引用.md": {
-	id: "FAQ/如何处理循环引用.md";
-  slug: "faq/如何处理循环引用";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/常见的问题及解决方案.md": {
-	id: "FAQ/常见的问题及解决方案.md";
-  slug: "faq/常见的问题及解决方案";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/开源如何保证收入.md": {
-	id: "FAQ/开源如何保证收入.md";
-  slug: "faq/开源如何保证收入";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/网页如何唤醒本地程序.md": {
-	id: "FAQ/网页如何唤醒本地程序.md";
-  slug: "faq/网页如何唤醒本地程序";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"FAQ/解决ESM Import 过多.md": {
-	id: "FAQ/解决ESM Import 过多.md";
-  slug: "faq/解决esm-import-过多";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -815,13 +724,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"HTML/HTML.md": {
-	id: "HTML/HTML.md";
-  slug: "html/html";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "Home.md": {
 	id: "Home.md";
   slug: "home";
@@ -969,125 +871,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Javascript/ArrayBuffer.md": {
-	id: "Javascript/ArrayBuffer.md";
-  slug: "javascript/arraybuffer";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Audio.md": {
-	id: "Javascript/Audio.md";
-  slug: "javascript/audio";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/File System API.md": {
-	id: "Javascript/File System API.md";
-  slug: "javascript/file-system-api";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Function.md": {
-	id: "Javascript/Function.md";
-  slug: "javascript/function";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Number/Bigint.md": {
-	id: "Javascript/Number/Bigint.md";
-  slug: "javascript/number/bigint";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Number/Javascript浮点数.md": {
-	id: "Javascript/Number/Javascript浮点数.md";
-  slug: "javascript/number/javascript浮点数";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Number/Number.md": {
-	id: "Javascript/Number/Number.md";
-  slug: "javascript/number/number";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/Array.md": {
-	id: "Javascript/Object/Array.md";
-  slug: "javascript/object/array";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/Javascript.md": {
-	id: "Javascript/Object/Javascript.md";
-  slug: "javascript/object/javascript";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/Javascript面向对象.md": {
-	id: "Javascript/Object/Javascript面向对象.md";
-  slug: "javascript/object/javascript面向对象";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/Javscript 属性和方法.md": {
-	id: "Javascript/Object/Javscript 属性和方法.md";
-  slug: "javascript/object/javscript-属性和方法";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/RegExp.md": {
-	id: "Javascript/Object/RegExp.md";
-  slug: "javascript/object/regexp";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Object/This.md": {
-	id: "Javascript/Object/This.md";
-  slug: "javascript/object/this";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Promise.md": {
-	id: "Javascript/Promise.md";
-  slug: "javascript/promise";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/Reflect.md": {
-	id: "Javascript/Reflect.md";
-  slug: "javascript/reflect";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/作用域.md": {
-	id: "Javascript/作用域.md";
-  slug: "javascript/作用域";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Javascript/执行上下文.md": {
-	id: "Javascript/执行上下文.md";
-  slug: "javascript/执行上下文";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "Performance/Javascript优化.md": {
 	id: "Performance/Javascript优化.md";
   slug: "performance/javascript优化";
@@ -1098,34 +881,6 @@ declare module 'astro:content' {
 "Performance/preload, prefetch, prerender.md": {
 	id: "Performance/preload, prefetch, prerender.md";
   slug: "performance/preload-prefetch-prerender";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"React/API.md": {
-	id: "React/API.md";
-  slug: "react/api";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"React/Headless UI 和 React Hooks.md": {
-	id: "React/Headless UI 和 React Hooks.md";
-  slug: "react/headless-ui-和-react-hooks";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"React/Hooks.md": {
-	id: "React/Hooks.md";
-  slug: "react/hooks";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"React/Utils.md": {
-	id: "React/Utils.md";
-  slug: "react/utils";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -1305,48 +1060,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Tutorial/从egg-helper学习egg源码.md": {
-	id: "Tutorial/从egg-helper学习egg源码.md";
-  slug: "tutorial/从egg-helper学习egg源码";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Tutorial/我的大前端世界观.md": {
-	id: "Tutorial/我的大前端世界观.md";
-  slug: "tutorial/我的大前端世界观";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Tutorial/软件开发周期.md": {
-	id: "Tutorial/软件开发周期.md";
-  slug: "tutorial/软件开发周期";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Tutorial/面试复习.md": {
-	id: "Tutorial/面试复习.md";
-  slug: "tutorial/面试复习";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Typescript/Typescript.md": {
-	id: "Typescript/Typescript.md";
-  slug: "typescript/typescript";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Typescript/类型.md": {
-	id: "Typescript/类型.md";
-  slug: "typescript/类型";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "Utils/Git/Git hooks husky lint-staged.md": {
 	id: "Utils/Git/Git hooks husky lint-staged.md";
   slug: "utils/git/git-hooks-husky-lint-staged";
@@ -1389,27 +1102,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Vue/Vue Router.md": {
-	id: "Vue/Vue Router.md";
-  slug: "vue/vue-router";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Vue/响应式系统.md": {
-	id: "Vue/响应式系统.md";
-  slug: "vue/响应式系统";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Vue/组件.md": {
-	id: "Vue/组件.md";
-  slug: "vue/组件";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -1417,6 +1109,314 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"前端/CSS/CSS.md": {
+	id: "前端/CSS/CSS.md";
+  slug: "前端/css/css";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/CSS/Color.md": {
+	id: "前端/CSS/Color.md";
+  slug: "前端/css/color";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/CSS/Grid.md": {
+	id: "前端/CSS/Grid.md";
+  slug: "前端/css/grid";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/CSS/Selector.md": {
+	id: "前端/CSS/Selector.md";
+  slug: "前端/css/selector";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/HTML/HTML.md": {
+	id: "前端/HTML/HTML.md";
+  slug: "前端/html/html";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/ArrayBuffer.md": {
+	id: "前端/Javascript/ArrayBuffer.md";
+  slug: "前端/javascript/arraybuffer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Audio.md": {
+	id: "前端/Javascript/Audio.md";
+  slug: "前端/javascript/audio";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/File System API.md": {
+	id: "前端/Javascript/File System API.md";
+  slug: "前端/javascript/file-system-api";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Function.md": {
+	id: "前端/Javascript/Function.md";
+  slug: "前端/javascript/function";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Number/Bigint.md": {
+	id: "前端/Javascript/Number/Bigint.md";
+  slug: "前端/javascript/number/bigint";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Number/Javascript浮点数.md": {
+	id: "前端/Javascript/Number/Javascript浮点数.md";
+  slug: "前端/javascript/number/javascript浮点数";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Number/Number.md": {
+	id: "前端/Javascript/Number/Number.md";
+  slug: "前端/javascript/number/number";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/Array.md": {
+	id: "前端/Javascript/Object/Array.md";
+  slug: "前端/javascript/object/array";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/Javascript.md": {
+	id: "前端/Javascript/Object/Javascript.md";
+  slug: "前端/javascript/object/javascript";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/Javascript面向对象.md": {
+	id: "前端/Javascript/Object/Javascript面向对象.md";
+  slug: "前端/javascript/object/javascript面向对象";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/Javscript 属性和方法.md": {
+	id: "前端/Javascript/Object/Javscript 属性和方法.md";
+  slug: "前端/javascript/object/javscript-属性和方法";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/RegExp.md": {
+	id: "前端/Javascript/Object/RegExp.md";
+  slug: "前端/javascript/object/regexp";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Object/This.md": {
+	id: "前端/Javascript/Object/This.md";
+  slug: "前端/javascript/object/this";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Promise.md": {
+	id: "前端/Javascript/Promise.md";
+  slug: "前端/javascript/promise";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/Reflect.md": {
+	id: "前端/Javascript/Reflect.md";
+  slug: "前端/javascript/reflect";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/作用域.md": {
+	id: "前端/Javascript/作用域.md";
+  slug: "前端/javascript/作用域";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Javascript/执行上下文.md": {
+	id: "前端/Javascript/执行上下文.md";
+  slug: "前端/javascript/执行上下文";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/React/API.md": {
+	id: "前端/React/API.md";
+  slug: "前端/react/api";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/React/Headless UI 和 React Hooks.md": {
+	id: "前端/React/Headless UI 和 React Hooks.md";
+  slug: "前端/react/headless-ui-和-react-hooks";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/React/Hooks.md": {
+	id: "前端/React/Hooks.md";
+  slug: "前端/react/hooks";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/React/Utils.md": {
+	id: "前端/React/Utils.md";
+  slug: "前端/react/utils";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Typescript/Typescript.md": {
+	id: "前端/Typescript/Typescript.md";
+  slug: "前端/typescript/typescript";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Typescript/类型.md": {
+	id: "前端/Typescript/类型.md";
+  slug: "前端/typescript/类型";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Vue/Vue Router.md": {
+	id: "前端/Vue/Vue Router.md";
+  slug: "前端/vue/vue-router";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Vue/响应式系统.md": {
+	id: "前端/Vue/响应式系统.md";
+  slug: "前端/vue/响应式系统";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"前端/Vue/组件.md": {
+	id: "前端/Vue/组件.md";
+  slug: "前端/vue/组件";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/Chrome调试.md": {
+	id: "杂谈/Chrome调试.md";
+  slug: "杂谈/chrome调试";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/JS如何获取精确的时间戳.md": {
+	id: "杂谈/JS如何获取精确的时间戳.md";
+  slug: "杂谈/js如何获取精确的时间戳";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/node.js内存泄漏.md": {
+	id: "杂谈/node.js内存泄漏.md";
+  slug: "杂谈/nodejs内存泄漏";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/从egg-helper学习egg源码.md": {
+	id: "杂谈/从egg-helper学习egg源码.md";
+  slug: "杂谈/从egg-helper学习egg源码";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/内存泄漏及排查.md": {
+	id: "杂谈/内存泄漏及排查.md";
+  slug: "杂谈/内存泄漏及排查";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/如何处理循环引用.md": {
+	id: "杂谈/如何处理循环引用.md";
+  slug: "杂谈/如何处理循环引用";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/常见的问题及解决方案.md": {
+	id: "杂谈/常见的问题及解决方案.md";
+  slug: "杂谈/常见的问题及解决方案";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/开源如何保证收入.md": {
+	id: "杂谈/开源如何保证收入.md";
+  slug: "杂谈/开源如何保证收入";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/我的大前端世界观.md": {
+	id: "杂谈/我的大前端世界观.md";
+  slug: "杂谈/我的大前端世界观";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/网页如何唤醒本地程序.md": {
+	id: "杂谈/网页如何唤醒本地程序.md";
+  slug: "杂谈/网页如何唤醒本地程序";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/解决ESM Import 过多.md": {
+	id: "杂谈/解决ESM Import 过多.md";
+  slug: "杂谈/解决esm-import-过多";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/软件开发周期.md": {
+	id: "杂谈/软件开发周期.md";
+  slug: "杂谈/软件开发周期";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/面试复习.md": {
+	id: "杂谈/面试复习.md";
+  slug: "杂谈/面试复习";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "跨平台/Electron/Electron 优化.md": {
 	id: "跨平台/Electron/Electron 优化.md";
   slug: "跨平台/electron/electron-优化";

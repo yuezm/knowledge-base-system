@@ -112,6 +112,8 @@ const cylinder = new THREE.CylinderGeometry(
 )
 ```
 
+## 法向量
+
 ## 参考
 
 - [BufferGeometry](https://threejs.org/docs/index.html?q=Geo#api/en/core/BufferGeometry)

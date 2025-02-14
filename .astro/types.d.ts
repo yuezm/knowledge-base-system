@@ -766,6 +766,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Graphics/Three/Raycaster.md": {
+	id: "Graphics/Three/Raycaster.md";
+  slug: "graphics/three/raycaster";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/Three/Renderer.md": {
 	id: "Graphics/Three/Renderer.md";
   slug: "graphics/three/renderer";
@@ -794,9 +801,37 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"Graphics/Three/动画.md": {
+	id: "Graphics/Three/动画.md";
+  slug: "graphics/three/动画";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/Three/变换.md": {
 	id: "Graphics/Three/变换.md";
   slug: "graphics/three/变换";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Three/坐标系.md": {
+	id: "Graphics/Three/坐标系.md";
+  slug: "graphics/three/坐标系";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Three/模型.md": {
+	id: "Graphics/Three/模型.md";
+  slug: "graphics/three/模型";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/Three/纹理.md": {
+	id: "Graphics/Three/纹理.md";
+  slug: "graphics/three/纹理";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

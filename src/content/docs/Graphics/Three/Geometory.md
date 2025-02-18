@@ -112,7 +112,65 @@ const cylinder = new THREE.CylinderGeometry(
 )
 ```
 
+### WireframeGeometry
+
+将几何体转换为线框体
+
+```ts
+const wire = new THREE.WireframeGeometry(box1);
+const lineMesh = new THREE.LineSegments(wire);
+
+scene.add(lineMesh);
+```
+
+### EdgesGeometry
+
+展示集合体的边界
+
+```ts
+const wire = new THREE.EdgesGeometry(box1);
+const lineMesh = new THREE.LineSegments(wire);
+
+scene.add(lineMesh);
+```
+
+### 包围盒
+
+计算集合体包围盒。例如可以用于碰撞检测
+
+```ts
+const box = new THREE.BoxGeometry(1, 1, 1);
+
+box.computeBoundingBox(); // 计算长方体包围盒
+box.computeBoundingSphere(); // 计算圆形包围盒
+
+// 取包围盒
+box.boundingBox;
+box.boundingSphere;
+
+// 展示某个集合体的包围盒
+if (box.boundingBox) {
+  scene.add(new THREE.Box3Helper(box.boundingBox, 0xffff00));
+}
+
+// 多个物体的包围盒
+const bb1 = box1.boundingBox;
+const bb2 = box2.boundingBox;
+
+const unionBoundingBox = new THREE.Box3().union(bb1).union(bb2);
+scene.add(new THREE.Box3Helper(unionBoundingBox, 0xffff00));
+```
+
 ## 法向量
+
+法向量，可以用来计算光线的反射，法向量在使用 THREE 的几何体方法创建时会自带的，但是通过顶点来创建的集合体不会带法向量，此时就需要自己计算或者设置
+
+可使用[法向量辅助器](/graphics/three/helper/#vertexnormalshelper)查看
+
+```ts
+// 通过指定顶点创建的集合体，需要自行计算法向量
+box1.computeVertexNormals();
+```
 
 ## 参考
 

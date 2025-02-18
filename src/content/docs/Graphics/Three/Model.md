@@ -1,6 +1,6 @@
 ---
-title: 变换
-description: 变换
+title: 模型
+description: 模型
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ---
 

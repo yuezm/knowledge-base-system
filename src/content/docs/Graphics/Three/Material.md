@@ -46,6 +46,14 @@ const material = new THREE.MeshNormalMaterial();
 const material = new THREE.MeshStandardMaterial();
 ```
 
+### LineBasicMaterial
+
+```ts
+const lineMat = new THREE.LineBasicMaterial({
+  color: 0xffffff,
+});
+```
+
 ## 色彩空间
 
 色彩空间是一种数学模型，用值来表示颜色。THREE 将色彩空间分为如下

@@ -12,13 +12,21 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 
 以 WebGL 渲染场景
 
-```js
-const renderer = new THREE.WebGLRenderer();
+```ts
+const renderer = new THREE.WebGLRenderer({
+  antialias: true, // 抗锯齿
+});
 
 renderer.setSize(window.innerWidth, window.innerHeight); // 适应画布大小
 document.body.appendChild(renderer.domElement); // 插入HTML
 
 renderer.render(scene, camera); // 渲染至canvas
+```
+
+#### shadowMap
+
+```ts
+renderer.shadowMap.enabled = true; // 开启阴影
 ```
 
 ## 参考

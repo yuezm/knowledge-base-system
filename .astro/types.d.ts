@@ -1578,9 +1578,16 @@ declare module 'astro:content' {
   collection: "docs";
   data: any
 } & { render(): Render[".md"] };
-"跨平台/RN/NativeModule.md": {
-	id: "跨平台/RN/NativeModule.md";
-  slug: "跨平台/rn/nativemodule";
+"跨平台/RN/ADB.md": {
+	id: "跨平台/RN/ADB.md";
+  slug: "跨平台/rn/adb";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"跨平台/RN/三方库.md": {
+	id: "跨平台/RN/三方库.md";
+  slug: "跨平台/rn/三方库";
   body: string;
   collection: "docs";
   data: any
@@ -1599,9 +1606,23 @@ declare module 'astro:content' {
   collection: "docs";
   data: any
 } & { render(): Render[".md"] };
+"跨平台/RN/模块.md": {
+	id: "跨平台/RN/模块.md";
+  slug: "跨平台/rn/模块";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
 "跨平台/RN/组件.md": {
 	id: "跨平台/RN/组件.md";
   slug: "跨平台/rn/组件";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"跨平台/RN/踩坑.md": {
+	id: "跨平台/RN/踩坑.md";
+  slug: "跨平台/rn/踩坑";
   body: string;
   collection: "docs";
   data: any

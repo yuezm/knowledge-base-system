@@ -48,6 +48,8 @@ const material = new THREE.MeshStandardMaterial();
 
 ### LineBasicMaterial
 
+线材质
+
 ```ts
 const lineMat = new THREE.LineBasicMaterial({
   color: 0xffffff,

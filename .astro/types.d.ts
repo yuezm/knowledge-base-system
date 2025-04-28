@@ -262,6 +262,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"CS/Algorithm/压缩算法.md": {
+	id: "CS/Algorithm/压缩算法.md";
+  slug: "cs/algorithm/压缩算法";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "CS/Algorithm/快速幂.md": {
 	id: "CS/Algorithm/快速幂.md";
   slug: "cs/algorithm/快速幂";
@@ -598,6 +605,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"GIS/概览.md": {
+	id: "GIS/概览.md";
+  slug: "gis/概览";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "Graphics/Babylon/Algebra.md": {
 	id: "Graphics/Babylon/Algebra.md";
   slug: "graphics/babylon/algebra";
@@ -699,6 +713,13 @@ declare module 'astro:content' {
 "Graphics/Babylon/Vec.md": {
 	id: "Graphics/Babylon/Vec.md";
   slug: "graphics/babylon/vec";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"Graphics/CANON/API.md": {
+	id: "Graphics/CANON/API.md";
+  slug: "graphics/canon/api";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -1284,6 +1305,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"前端/HTML/meta.md": {
+	id: "前端/HTML/meta.md";
+  slug: "前端/html/meta";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "前端/Javascript/ArrayBuffer.md": {
 	id: "前端/Javascript/ArrayBuffer.md";
   slug: "前端/javascript/arraybuffer";
@@ -1445,6 +1473,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"前端/React/React状态管理.md": {
+	id: "前端/React/React状态管理.md";
+  slug: "前端/react/react状态管理";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "前端/React/Utils.md": {
 	id: "前端/React/Utils.md";
   slug: "前端/react/utils";
@@ -1553,6 +1588,13 @@ declare module 'astro:content' {
 "杂谈/我的大前端世界观.md": {
 	id: "杂谈/我的大前端世界观.md";
   slug: "杂谈/我的大前端世界观";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"杂谈/编程珠玑.md": {
+	id: "杂谈/编程珠玑.md";
+  slug: "杂谈/编程珠玑";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

@@ -123,3 +123,7 @@ const state = makeAutoObservable({
 ## 局部状态
 
 ## State Hooks
+
+```ts
+const [state, setState] = useState(0);
+```

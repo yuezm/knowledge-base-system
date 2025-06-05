@@ -137,6 +137,14 @@ git gc --auto // 让git自动决定是否进行回收
 git config --global user.name # 设置全局用户名
 ```
 
+### merge
+
+```bash
+git merge $branch -m "Merger 信息"
+
+git merge --no-ff $branch # 以非快速模式来合并
+```
+
 ## 常用的操作
 
 ### 查看已删除的文件提交

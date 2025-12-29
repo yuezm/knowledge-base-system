@@ -134,6 +134,63 @@ const lineMesh = new THREE.LineSegments(wire);
 scene.add(lineMesh);
 ```
 
+### RingGeometry
+
+圆环
+
+```ts
+const mcGeo = new THREE.RingGeometry(
+  innerRadius?: number,
+  outerRadius?: number,
+  thetaSegments?: number,
+  phiSegments?: number,
+  thetaStart?: number,
+  thetaLength?: number,
+);
+```
+
+### SphereGeometry
+
+球体
+
+```ts
+const moonGeo = new THREE.SphereGeometry(
+  radius?: number,
+  widthSegments?: number,
+  heightSegments?: number,
+  phiStart?: number,
+  phiLength?: number,
+  thetaStart?: number,
+  thetaLength?: number,
+);
+```
+
+### TextGeometry
+
+根据文字的顶点信息，来渲染文字
+
+```ts
+import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
+import { FontLoader } from "three/addons/loaders/FontLoader.js";
+
+const fontLoader = new FontLoader();
+
+// gentilis_regular.typeface.json 表示的是每个文字的顶点
+fontLoader.load("/fonts/gentilis_regular.typeface.json", (font) => {
+  const textGeo = new TextGeometry("Hello World", {
+    font: font,
+    size: 5,
+    depth: 1,
+    curveSegments: 12,
+  });
+  const textMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  const textMesh = new THREE.Mesh(textGeo, textMaterial);
+
+  textMesh.position.set(0, 0, 0);
+  scene.add(textMesh);
+});
+```
+
 ### 包围盒
 
 计算集合体包围盒。例如可以用于碰撞检测

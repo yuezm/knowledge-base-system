@@ -62,6 +62,36 @@ const mat1 = new THREE.MeshBasicMaterial({
 });
 ```
 
+### FontLoader
+
+文字加载器，加载一些，内部存储了文字顶点文件
+
+```ts
+import { FontLoader } from "three/addons/loaders/FontLoader.js";
+
+const loader = new FontLoader();
+
+const font = loader.load(
+  // resource URL
+  "fonts/helvetiker_bold.typeface.json",
+
+  // onLoad callback
+  function (font) {
+    // 此时，就可以使用 TextGeometry 去绘制文字了
+  },
+
+  // onProgress callback
+  function (xhr) {
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  },
+
+  // onError callback
+  function (err) {
+    console.log("An error happened");
+  }
+);
+```
+
 ## 参考
 
 - [Loader](https://threejs.org/docs/index.html?q=Loader#api/en/loaders/Loader)

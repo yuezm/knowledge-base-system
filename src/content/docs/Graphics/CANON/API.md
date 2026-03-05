@@ -94,7 +94,65 @@ World.shape: Shape;
 
 ### velocity
 
-速度
+设置初始速度
+
+```ts
+body.velocity = new CANNON.Vec3(0, 10, 0);
+```
+
+### angularVelocity
+
+角速率
+
+```ts
+body.angularVelocity.set(0, 0, 0); // 设置刚体的角速率，设置为0时，即为禁止旋转
+```
+
+### 休眠
+
+休眠的条件
+
+1. 世界允许休眠：`world.allowSleep = true;`
+2. 刚体允许休眠：`body.allowSleep = true;`
+
+```ts
+body.sleepSpeedLimit = 1.0; // 设置多少速度内休眠
+
+body.sleepState; // 当前休眠状态
+
+body.sleep(); // 主动休眠
+body.wakeup(); // 唤醒
+```
+
+休眠事件
+
+1. sleepy ——> sleepyEvent
+2. sleep ——> sleepEvent
+3. wakeup ——> wakeupEvent
+
+### 施加力
+
+```ts
+body.applyForce(); // 施加力的时候，如果不设置施加点，则视为重心施加
+body.applyLocalForce();
+```
+
+### 施加脉冲
+
+在一帧内施加力
+
+```ts
+body.applyImpulse();
+body.applyLocalImpulse();
+```
+
+### 施加扭矩
+
+```ts
+body.applyTorque();
+
+body.torque = new CANNON.Vec3(0, 10, 0);
+```
 
 ## Shape
 
@@ -104,6 +162,14 @@ World.shape: Shape;
 
 ```ts
 new CANNON.Box(halfExtents: Vec3);
+```
+
+### Sphere
+
+球形
+
+```ts
+const sphere = new CANNON.Sphere(1);
 ```
 
 ### Plane
@@ -120,6 +186,51 @@ new CANNON.Plane();
 
 ```ts
 new Cylinder(radiusTop?: number, radiusBottom?: number, height?: number, numSegments?: number): Cylinder
+```
+
+### ConvexPolyhedron
+
+凸多面体
+
+### Particle
+
+粒子
+
+### Heightfield
+
+高度场
+
+### Trimesh
+
+复杂模型
+
+## Material
+
+设置材质后，就可以计算作用力。例如摩擦力，弹性
+
+```ts
+const physicalSphereMat = new CANNON.Material("sphereMat");
+physicalSphereMat.friction = 1; // 摩擦系数
+physicalSphereMat.restitution = 0.2; // 弹性系数
+
+// 给刚体增加材质，可以计算摩擦和弹性
+this.physicalSphereBody.material = physicalSphereMat;
+// 设置阻尼
+this.physicalSphereBody.linearDamping = 0.1;
+```
+
+### ContactMaterial
+
+定义接触材质（2 个材质在接触时候的材质）
+
+```ts
+const contactMaterial new CANNON.ContactMaterial(
+  mat1,
+  mat2,
+  {
+
+  }
+);
 ```
 
 ## RaycastVehicle
@@ -208,6 +319,81 @@ for (let i = 0; i < 4; i++) {
   wheelBody.addShape(cylinderShape, new CANNON.Vec3(), total);
 }
 vehicle.addToWorld(world);
+```
+
+## 碰撞
+
+碰撞需要具有如下 3 个条件
+
+`const G1 = 1, G2 = 2, G3 = 4;`
+
+1. 刚体类型可碰撞：`body.type = CANNON.Body.KINEMATIC`
+2. 设置碰撞组： `body.collisionFilterGroup = G1;`
+3. 设置可以和哪一组碰撞： `body.collisionFilterMask = G2 | G3;`
+
+监听碰撞事件
+
+```ts
+body.addEventListener("collide", (ev: ContactEquation) => {});
+```
+
+如何忽略碰撞
+
+1. 静态物体或刚体质量为 0
+2. 设置不可碰撞组
+3. 启用休眠，`body.sleep()`
+
+## Ray
+
+创建一条射线，且可以获取和场景内物体的交点
+
+```ts
+const ray = new CANNON.Ray(startPoint, direction);
+
+// ray.intersectBody
+// ray.intersectBodies
+// ray.intersectWorld
+ray.intersectWorld(
+  world,
+  {
+    collisionFilterGroup: -1,
+    collisionFilterMask: -1,
+  },
+  function () {
+    if (rayResult.hasHit) {
+      console.log(
+        "相交点坐标:",
+        rayResult.point.x,
+        rayResult.point.y,
+        rayResult.point.z
+      );
+      console.log(
+        "相交点法线:",
+        rayResult.normal.x,
+        rayResult.normal.y,
+        rayResult.normal.z
+      );
+      console.log("相交物体:", rayResult.body);
+      console.log("相交距离:", rayResult.distance);
+    } else {
+      console.log("射线未与物体相交");
+    }
+  }
+);
+```
+
+### RaycastResult
+
+```ts
+raycastResult.distance; // 从射线起点到碰撞点的距离，未碰撞则返回-1
+raycastResult.hasHit; // 是否碰撞
+raycastResult.hitFaceIndex; //
+raycastResult.hitNormalWorld; // 碰撞面的法线
+raycastResult.hitPointWorld; // 碰撞点的世界坐标
+raycastResult.rayFromWorld;
+raycastResult.rayToWorld;
+raycastResult.shape;
+raycastResult.shouldStop;
 ```
 
 ## CANNON 同步 THREE

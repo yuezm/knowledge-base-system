@@ -4,6 +4,19 @@ description: Camera
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ---
 
+## 姿态方向
+
+| 方式     | 长度   | 形式               | 是否能表示任意 3D 旋转 | 描述                       |
+| -------- | ------ | ------------------ | ---------------------- | -------------------------- |
+| 欧拉角   | 3      | `(roll,pitch,yaw)` | 是                     | 直观，但存在万向锁         |
+| 四元素   | 4      | `[x,y,z,w]`        | 是                     | 不直观，差值计算简单       |
+| 旋转矩阵 | 9      | 3×3 矩阵           | 是                     | 用于变换                   |
+| 轴角     | 3 或 4 |                    | 是                     |                            |
+| 方向向量 | 3      | `(x,y,z)`          | 否                     | 只能表示朝向，不能表示旋转 |
+
+- 欧拉角存在“**万向节锁**”，当一个角度到达 $90^°$时，无法单独表示两外两个角度
+- 四元素以超球面来描述旋转，即 $x^2 + y^2 + z^2 + w^2 = 1$，任意两个点之间都存在一个最短路径，所以好计算差值
+
 ## API
 
 ### PerspectiveCamera
@@ -58,6 +71,27 @@ const camera = new THREE.OrthographicCamera(
   1,
   1000
 );
+```
+
+## 其他
+
+### 动态相机跟随
+
+```ts
+// 获取跟随物体的方向
+const quaternion = mesh.getWorldQuaternion(new THREE.Quaternion());
+const carDirection = new THREE.Vector3(1, 0, 0);
+carDirection.applyQuaternion(quaternion);
+
+// 相机放在跟随在前进方向之后
+const targetCameraPos = new THREE.Vector3()
+  .copy(mesh.position)
+  .add(carDirection.multiplyScalar(-10)) // 后方偏移距离
+  .add(new THREE.Vector3(0, 5, 0)); // 高度偏移
+
+this.camera.position.lerp(targetCameraPos, 0.01);
+
+this.camera.lookAt(mesh.position);
 ```
 
 ## 参考

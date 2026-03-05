@@ -15,7 +15,6 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ```js
 const material = new THREE.MeshBasicMaterial({
   color?: ColorRepresentation, // 0x00ff00,
-
   map?: Texture, // 贴图
   alphaMap?: Texture, // 透明度贴图，黑色为全透明，白色为不透明
   aoMap?: Texture, // 光照贴图，用于模拟环境光的遮挡，使得物体看起来更加立体
@@ -27,6 +26,11 @@ const material = new THREE.MeshBasicMaterial({
 
   // FrontSide, BackSide, DoubleSide
   side: THREE.DoubleSide, // 显示正面，反面，双面
+
+
+  // 在支持透明的材质中，可以设置透明度
+  transparent: true,
+  opacity: 0.1,
 });
 ```
 

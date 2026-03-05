@@ -8,4 +8,13 @@ Web 常用的模型为 GLTF 和 GLB，使用 [GLTFLoader](/graphics/three/loader
 
 ## API
 
+## 其他
+
+### 获取模型的尺寸
+
+```ts
+const box = new THREE.Box3().setFromObject(model.scene); // 也可以传入mesh
+const size = box.getSize(new THREE.Vector3()); // 获取了尺寸
+```
+
 ## 参考

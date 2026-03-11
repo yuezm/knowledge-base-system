@@ -44,7 +44,20 @@ const material = new THREE.MeshNormalMaterial();
 
 ### MeshStandardMaterial
 
-标准材质，根据光源着色
+标准材质，PBR（Physically Based Rendering），基于物理的渲染模型，常用于木材，金属，石材
+
+PBR 的两大核心理念
+
+1. 能量守恒 (Energy Conservation)：出射光线的总量不能超过入射光线的总量。这意味着高光越亮，漫反射就必须越暗
+2. 微表面模型 (Microfacet Theory)：假设物体表面由无数肉眼看不见的微小镜面组成。表面越粗糙，微镜面的方向越乱，反射光就越分散
+
+参数体系
+
+1. 基础色
+2. 粗糙度
+3. 金属度
+4. 法线
+5. 环境光
 
 ```js
 const material = new THREE.MeshStandardMaterial();
@@ -60,6 +73,18 @@ const lineMat = new THREE.LineBasicMaterial({
 });
 ```
 
+### MeshLambertMaterial
+
+Lambert 光照模型，它会根据光线的方向和物体表面的法线来计算漫反射光，能产生比较自然的光照效果，但不会产生镜面反射
+
+### MeshPhongMaterial
+
+基于 Phong 光照模型，镜面反射，漫反射，环境光
+
+### MeshPhysicalMaterial
+
+物理材质，支持更多的物理参数，模拟更多的表面效果
+
 ## 色彩空间
 
 色彩空间是一种数学模型，用值来表示颜色。THREE 将色彩空间分为如下
@@ -73,3 +98,5 @@ THREE.LinearDisplayP3ColorSpace;
 ```
 
 ## 参考
+
+- [Material](https://threejs.org/docs/index.html#Material)

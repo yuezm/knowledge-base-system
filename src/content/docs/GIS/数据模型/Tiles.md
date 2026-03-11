@@ -183,8 +183,7 @@ function metersToLonLat(x: number, y: number) {
 
 根据地图服务商进行坐标系修正，以 Google Map 和 Web 墨卡托投影为例
 
-![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/d68c7001f55659bc2d4c83aa29478765708aa0d0091bc8c6f1596a3cf64c45f5.jpg)  
-
+![](https://cdn.jsdelivr.net/gh/yuezm/assets@main/d68c7001f55659bc2d4c83aa29478765708aa0d0091bc8c6f1596a3cf64c45f5.jpg)
 
 可以看到，地图服务商（Google Map）的原点位于左上角，而 Web 墨卡托投影的原点位于中心，因此需要修正坐标系
 

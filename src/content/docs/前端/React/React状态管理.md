@@ -33,6 +33,10 @@ const store = configureStore({
 2. 单向数据流
 3. 模板代码较多，RTK 极大的简化了模板代码
 
+### Easy Peasy
+
+底层仍然是 Redux，但大量减少了模板代码
+
 ### Recoil
 
 由 Facebook 推出的原子化状态管理库，核心为 Atoms 和 Selectors。数据存储于各个 Atoms 中，各个 Atoms 可组合使用，当 Atom 数据出现变更，迫使使用过 Atom 的组件更新。

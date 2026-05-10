@@ -167,6 +167,51 @@ gl.enableVertexAttribArray(aUVCoord);
 gl.vertexAttribPointer(aUVCoord, 2, gl.FLOAT, false, 0, 0);
 ```
 
+### 环境纹理
+
+模拟物体表面反射/折射周围的环境，例如可以通过一个玻璃球看到周围的环境。可以按照如下步骤实现
+
+1. 环境贴图：可以使用立方体贴图，球形贴图，全景图
+2. 根据眼睛（相机）的法线，去算反射和折射。因为光路可以，则从眼睛发出的光可以打到物体上，则物体发出的光必然可以被眼睛看到
+3. 根据反射或者折射的方向，去映射到纹理坐标，并采集纹理
+4. 再根据光照和自身材质，算出最终的颜色
+
+优缺点
+
+1. 计算效率高，效果较好
+2. 近似模拟
+3. 无法模拟靠近的动态物体
+
+## 拾取
+
+### 颜色拾取
+
+获取某一个像素的颜色
+
+```ts
+const pixelData = new Uint8Array(4); // RGBA
+
+// 确保 FBO 仍是绑定的读缓冲 (或用 gl.bindFramebuffer(gl.READ_FRAMEBUFFER, pickingFBO))
+gl.readPixels(
+  mouseX, // X coord of pixel to read
+  readY, // Y coord of pixel to read (adjusted)
+  1, // Width of area to read
+  1, // Height of area to read
+  gl.RGBA, // Format
+  gl.UNSIGNED_BYTE, // Type
+  pixelData, // Array to store result
+);
+```
+
+### 射线拾取
+
+获取鼠标和物体相交
+
+1. 获取鼠标的位置经过变换获得真实位置：【像素位置】 --> 裁剪坐标 --> 逆投影矩阵 --> 逆视图矩阵 --> 【真实位置】
+2. 从相机位置触发，沿着鼠标真实位置，绘制一条射线。
+3. 遍历场景的物体，谁可以与射线教相交（包围盒，包围球，三角形）
+4. 计算与与相交点的位置，取最近的一个
+
 ## 其他
 
 ### 处理 devicePixelRatio

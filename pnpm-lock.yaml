@@ -26,6 +26,13 @@ importers:
       sharp:
         specifier: ^0.32.5
         version: 0.32.6
+    devDependencies:
+      prettier:
+        specifier: ^3.8.3
+        version: 3.8.3
+      prettier-plugin-zh:
+        specifier: ^0.7.0
+        version: 0.7.0(prettier@3.8.3)
 
 packages:
 
@@ -1742,6 +1749,16 @@ packages:
   preferred-pm@4.1.1:
     resolution: {integrity: sha512-rU+ZAv1Ur9jAUZtGPebQVQPzdGhNzaEiQ7VL9+cjsAWPHFYOccNXPNiev1CCDSOg/2j7UujM7ojNhpkuILEVNQ==}
     engines: {node: '>=18.12'}
+
+  prettier-plugin-zh@0.7.0:
+    resolution: {integrity: sha512-lzk0IwueqCw397Sfy5Ai3l/8ZeTtFk0pA09OP5jIwIlZXIYkZT9Mxg7rR4ZiRct3kDmS8VxJxXWVvu0EVE0MnA==}
+    peerDependencies:
+      prettier: '>=3'
+
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   prismjs@1.30.0:
     resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
@@ -4444,6 +4461,12 @@ snapshots:
       find-up-simple: 1.0.1
       find-yarn-workspace-root2: 1.2.16
       which-pm: 3.0.1
+
+  prettier-plugin-zh@0.7.0(prettier@3.8.3):
+    dependencies:
+      prettier: 3.8.3
+
+  prettier@3.8.3: {}
 
   prismjs@1.30.0: {}
 

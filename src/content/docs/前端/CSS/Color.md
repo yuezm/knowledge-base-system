@@ -55,6 +55,22 @@ filter: blur(5px);
 backdrop-filter: blur(2px);
 ```
 
+## 色彩模型
+
+常用模型如下，RGB、HLS、YUV 模型
+
+1. RGB: 以三个颜色分量 Red、Blue、Green 来合成颜色，是一种**加色模型**。常用于发光的设备中，例如显示器
+
+2. HLS: 以色相、亮度、对比度来描述颜色。符合人类对于颜色的直观认知
+   - Hue: 色相，用 0~360°来表示色轮上的颜色
+   - Lightness: 亮度，控制颜色明暗。0%时为黑色，100%时为白色，50%时颜色最纯
+   - Saturation: 饱和度，颜色鲜艳程度。0%时灰色，100%时最纯的颜色
+
+3. YUV:以灰度值、蓝色投影分量、红色投影分量来描述颜色。常用于**视频压缩**和黑白电视机兼容
+   - Y（Luma）: 灰度值，如果只有 Y 则图像是黑白的
+   - U（Chroma Blue）:蓝色投影分量
+   - V (Chroma Red): 红色投影分量
+
 ## 参考
 
 - [filter](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)

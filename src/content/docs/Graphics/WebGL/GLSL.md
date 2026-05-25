@@ -78,6 +78,14 @@ void main() {
 
 ## 计算
 
+### ceil
+
+向上取整
+
+```glsl
+result = step($x);
+```
+
 ### step
 
 val 为阈值，x 输出值
@@ -100,6 +108,14 @@ result = fract($x);
 场景
 
 1. 将递增的数，编程周期性的数
+
+### clamp
+
+返回数的整数部分
+
+```glsl
+result = clamp($x);
+```
 
 ### pow
 
@@ -150,4 +166,24 @@ asin($x);
 
 cos($x);
 acos($x);
+```
+
+### normalize
+
+归一化，使得向量的模为 1
+
+```glsl
+result = normalize($1);
+```
+
+### 加减乘除余
+
+```glsl
+// + - * /
+
+result = cross($x, $y); // 叉乘
+
+result = dot($x, $y); // 点乘
+
+result = mod($x, $y);
 ```

@@ -4,6 +4,16 @@ description: GLSL
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ---
 
+
+
+## 宏
+
+```glsl
+#ifdef GL_ES
+precision mediump float;
+#endif
+```
+
 ## 基础数据类型
 
 ## 传递数据
@@ -151,6 +161,8 @@ result = distance($x, $y);
 
 ### length
 
+向量的模
+
 ```glsl
 result = length($x);
 ```
@@ -168,6 +180,7 @@ cos($x);
 acos($x);
 ```
 
+<<<<<<< HEAD
 ### normalize
 
 归一化，使得向量的模为 1
@@ -187,3 +200,38 @@ result = dot($x, $y); // 点乘
 
 result = mod($x, $y);
 ```
+=======
+### 导数
+
+计算变量，相对于屏幕的x,y轴的变化率，即偏导函数
+
+```glsl
+# dFdx(p) 计算的是当前片段的 p 值与屏幕空间中 x 轴正方向相邻片段的 p 值之差
+# dFdy(p) 计算的是当前片段的 p 值与屏幕空间中 y 轴正方向相邻片段的 p 值之差
+Type dFdx(Type p);
+Type dFdy(Type p);
+```
+
+### 纹理
+
+用于边缘检测，例如检测纹理的边缘，用于抗锯齿
+
+```
+vec4 color = texture(image0, uv);
+```
+
+### cross
+
+估算法线
+
+```
+cross(dFdx(position), dFdy(position))
+
+// 估计LOD，需要根据纹理在屏幕上的投影大小选择合适的 Mipmap 层级
+// 通过计算纹理坐标 uv 的屏幕空间导数 dFdx(uv) 和 dFdy(uv)，可以估算出当前片元覆盖了多少纹理像素（Texel）
+```
+
+### discard
+
+抛弃该片元
+>>>>>>> fdf34fae1bd85d604b44f19ebabf36b9fdd3c5a7

@@ -167,6 +167,13 @@ gl.enableVertexAttribArray(aUVCoord);
 gl.vertexAttribPointer(aUVCoord, 2, gl.FLOAT, false, 0, 0);
 ```
 
+### 纹理投影
+
+将纹理投影后，在做为别的图形的纹理。有如下场景
+
+1. 真正的投影纹理：从某个虚拟的投影仪，将一张纹理投影到场景中的任意物体上
+2. 先渲染到一个 Render To Texture，然后将这个渲染结果做为普通纹理铁道物体上
+
 ### 环境纹理
 
 模拟物体表面反射/折射周围的环境，例如可以通过一个玻璃球看到周围的环境。可以按照如下步骤实现
@@ -181,6 +188,13 @@ gl.vertexAttribPointer(aUVCoord, 2, gl.FLOAT, false, 0, 0);
 1. 计算效率高，效果较好
 2. 近似模拟
 3. 无法模拟靠近的动态物体
+
+## 阴影
+
+Shadow Map，场景需要渲染两次
+
+1. 第一次：根据光照，计算出阴影贴图
+2. 第二次：根据阴影贴图，计算出每个区域是否有阴影
 
 ## 拾取
 

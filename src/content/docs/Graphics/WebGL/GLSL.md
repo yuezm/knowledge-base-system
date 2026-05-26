@@ -88,6 +88,14 @@ void main() {
 
 ## 计算
 
+### ceil
+
+向上取整
+
+```glsl
+result = step($x);
+```
+
 ### step
 
 val 为阈值，x 输出值
@@ -110,6 +118,14 @@ result = fract($x);
 场景
 
 1. 将递增的数，编程周期性的数
+
+### clamp
+
+返回数的整数部分
+
+```glsl
+result = clamp($x);
+```
 
 ### pow
 
@@ -164,6 +180,27 @@ cos($x);
 acos($x);
 ```
 
+<<<<<<< HEAD
+### normalize
+
+归一化，使得向量的模为 1
+
+```glsl
+result = normalize($1);
+```
+
+### 加减乘除余
+
+```glsl
+// + - * /
+
+result = cross($x, $y); // 叉乘
+
+result = dot($x, $y); // 点乘
+
+result = mod($x, $y);
+```
+=======
 ### 导数
 
 计算变量，相对于屏幕的x,y轴的变化率，即偏导函数
@@ -197,3 +234,4 @@ cross(dFdx(position), dFdy(position))
 ### discard
 
 抛弃该片元
+>>>>>>> fdf34fae1bd85d604b44f19ebabf36b9fdd3c5a7

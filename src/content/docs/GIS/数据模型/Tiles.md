@@ -4,9 +4,9 @@ description: 瓦片
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 ---
 
-## 什么是瓦片地图
+## 什么是瓦片
 
-瓦片地图是将整个世界地图，根据地图层级，分割成小地图（瓦片）。在使用时，将小地图再拼接成大地图。
+瓦片是将整个世界地图，根据地图层级，分割成小地图（瓦片）。在使用时，将小地图再拼接成大地图。
 
 ## 为什么需要瓦片地图
 
@@ -33,7 +33,7 @@ tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
 Web Mercator 投影有如下特点
 
 1. Web Mercator 当地球是一个球形而非椭球，球体半径等于 WGS84 长半轴的长度，即 6378137 米，投影出来的地图是一个正方形
-2. Web Mercator 数据覆盖范围在经度（-180° ～ 180°），纬度（-85.051129° ～ 85.051129°）
+2. Web Mercator 数据覆盖范围在经度（-180°～180°），纬度（-85.051129°～85.051129°）
 3. Web Mercator 的坐标系
    - 原点：0° 纬线和 0° 经线的交点，位于投影地图的中心点
    - X 轴：水平，向东（右）为正
@@ -57,13 +57,13 @@ Web Mercator 投影有如下特点
 
 #### WMS
 
-OGC 定义的协议，用于请求任意区域的渲染地图图像。服务端根据客户端提供的限制条件，返回符合限制条件的地图图像。
+Web Mapping Service 是 OGC（Open Geospatial Consortium，开放地理空间联盟）定义的协议，用于请求任意区域的渲染地图图像。服务端根据客户端提供的限制条件，返回符合限制条件的地图图像。
 
 WMS 主要属于动态地图服务，即地图是服务器在每次接到客户请求时立刻生成的，特别适用于数据在不断被更新的地图服务，当然对服务器的压力比较大
 
 #### WMS-C
 
-WMS-C（Web Mapping Service - Cached）是 OSGeo 创建的 WMS 扩展，目的在于提供一种预先缓存数据的方法，以提升地图请求的速度
+Web Mapping Service - Cached 是 OSGeo 创建的 WMS 扩展，目的在于提供一种预先缓存数据的方法，以提升地图请求的速度
 
 #### TMS
 
@@ -108,7 +108,7 @@ https://sandcastle.cesium.com/CesiumUnminified/Assets/Textures/NaturalEarthII/0/
 
 #### WMTS
 
-WMTS（Web map tile service）是 OGC 创建的协议。支持 EPSG:3857（WGS84） and EPSG:4326（Web Mercator）
+WMTS（Web map tile service）是 OGC 创建的协议。支持 EPSG:3857（WGS84）and EPSG:4326（Web Mercator）
 
 WMTS 的地图是服务器预先制作好的瓦片，这种方法可以提高 Web 服务的性能和伸缩性，特别适合于数据相对静态、不再更新或更新频率很低的数据。
 
@@ -140,6 +140,12 @@ queryString 如下所示
 | service       | string | WMTS          | 服务类型                                                                                       |
 | version       | string | 1.0.0         | 服务版本                                                                                       |
 | request       | string | GetTile       | 方法                                                                                           |
+
+#### WFS
+
+Web Feature Service 是 OGC 定义的协议，用于请求任意区域的矢量数据。服务端根据客户端提供的限制条件，返回符合限制条件的矢量数据
+
+坐标系通常为 WGS84，EPSG:4326
 
 #### XYZ
 
@@ -187,8 +193,8 @@ function metersToLonLat(x: number, y: number) {
 
 可以看到，地图服务商（Google Map）的原点位于左上角，而 Web 墨卡托投影的原点位于中心，因此需要修正坐标系
 
-1. X 坐标：以投影坐标 X + 地球横向长度 / 2 ，即为地图服务商 X 坐标
-2. Y 坐标：地球纵向周长/ 2- 以投影坐标 Y ，即为地图服务商的 Y 坐标
+1. X 坐标：以投影坐标 X + 地球横向长度 / 2，即为地图服务商 X 坐标
+2. Y 坐标：地球纵向周长/ 2- 以投影坐标 Y，即为地图服务商的 Y 坐标
 
 由于在 Web 墨卡托投影中，将地球看作球体，则横、纵向的周长一致，因此可以简化为如下计算公式
 
@@ -232,7 +238,17 @@ const Y = Math.floor(y / resolution / TileSize);
 
 ## 常用的概念
 
-### 矢量瓦片
+### 栅格、矢量瓦片
+
+栅格瓦片是栅格数据，具有如下特点
+
+1. 常见使用 PNG 格式存储（支持透明度）。当然也可以使用 JPEG，用于对透明度没有要求的情况
+2. 地图数据在服务端已经处理完毕了，客户端只需要根据需要拼接即可。所以客户端压力很小、兼容性强，但是无法进行交互（例如点击某个线条修改他它的颜色）、服务端的存储要求较大
+
+矢量瓦片是矢量数据，具有如下特点
+
+1. 常用 GeoJSON 格式存储，当然也有其他格式，例如 Mapbox 的 Mapbox Vector Tiles 格式，通常扩展名为 .pbf 或 .mvt
+2. 服务端只传输属性，由客户端完成渲染。所以客户端压力较大、可以进行交互、动态样式
 
 ## 参考
 

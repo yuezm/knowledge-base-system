@@ -15,7 +15,7 @@ description: FAQ
 
 ### 轨迹处理
 
-1. 坐标转换: 例如WGS84 → GCJ02 / BD09
+1. 坐标转换: 例如 WGS84 → GCJ02 / BD09
 2. 速度 / 加速度计算
 3. 留点检测
 4. 异常过滤
@@ -28,3 +28,35 @@ description: FAQ
 ### 绘制
 
 根据轨迹数据绘制
+
+## Bing 地图的为什么要使用 Quadkey
+
+Quadkey 基于 四叉树（Quadtree）对地图瓦片进行编码，核心是将瓦片的 (x, y, zoom) 三维坐标映射为一个定长字符串
+
+```ts
+function tile2quad(x: number, y: number, z: number) {
+  let quad = "";
+  for (let i = z; i > 0; i--) {
+    let digit = 0;
+    const mask = 1 << (i - 1);
+    if ((x & mask) !== 0) digit += 1;
+    if ((y & mask) !== 0) digit += 2;
+    quad = quad + digit;
+  }
+  return quad;
+}
+```
+
+优势
+
+1. **层次化空间索引**：前缀即父瓦片，对聚合查询尤其高效。不需要额外的空间索引表来维护父子关系，字符串本身即关系，例如
+
+```text
+#  不同缩放级别的同一地理区域共享 quadkey 前缀
+zoom=10: "0312230110"
+zoom=12: "031223011012"
+```
+
+2. 分布式友好：Quadkey 天然适合做 Hash 分片
+3. 存储高效：/a{quadkey}.jpeg 比 /0/0/0/ 更加高效，没有多级目录
+4. 隐私友好：在日志或分析系统中，可以用 quadkey 代替精确坐标，不用暴露的精确坐标

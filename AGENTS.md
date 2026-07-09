@@ -1,6 +1,8 @@
 # 知识库路由
 
 > 知识库根目录: `/home/keven/codes/github/knowledge-base-system/src/content/docs/`
+>
+> 项目元文件（INDEX.md, CHANGELOG.md, SCHEMA.md）位于项目根目录，不在 docs 下。
 
 ## 目录结构
 

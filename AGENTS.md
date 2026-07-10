@@ -21,9 +21,10 @@
 | JSRuntime    | `JSRuntime/`    | 17     | Node.js、Deno、NPM、模块系统                          |
 | Performance  | `Performance/`  | 2      | JS 优化、预加载                                       |
 | ToBeContinue | `ToBeContinue/` | 25     | 待整理主题（算法、协议、深入原理）                    |
+| Tools        | `Tools/`        | 1      | 自托管工具、AI 工具、开源项目分析                          |
 | Utils        | `Utils/`        | 6      | Git、Playwright、Puppeteer                            |
 | 前端         | `前端/`         | 35     | React、Vue、TS、JS、CSS、HTML                         |
-| 杂谈         | `杂谈/`         | 14     | 经验分享、源码解读、工具链                            |
+| 杂谈         | `杂谈/`         | 13     | 经验分享、源码解读、行业观点                            |
 | 跨平台       | `跨平台/`       | 12     | Electron、React Native、小程序                        |
 | 音视频       | `音视频/`       | 1      | 视频处理                                              |
 
@@ -236,6 +237,14 @@ Utils/
 └── (视野) 开源如何保证收入.md, 我的大前端世界观.md
 ```
 
+#### Tools
+
+```
+Tools/
+├── Karakeep-自托管书签全能工具.md  — Karakeep 自托管书签全能工具分析
+└── ...                         ← 持续追加：Perplexica、OpenWebUI、n8n 等
+```
+
 #### 跨平台
 
 ```
@@ -269,6 +278,7 @@ Utils/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/Architecture/MicroFE/微前端.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/CS/NetWork/Application/HTTP/HTTP.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/JSRuntime/Node.js/API/process.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/Tools/Karakeep-自托管书签全能工具.md
 ```
 
 ## 检索命令
@@ -286,6 +296,6 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 
 ## 统计
 
-- **总计一级分类**: 16 个
+- **总计一级分类**: 17 个
 - **总计文件**: ~197 个 `.md` / `.mdx` 文件
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/GRPC/）

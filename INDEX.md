@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **244** 个页面，按分类列出。最后更新：2026-07-09
+> 内容目录。共 **247** 个页面，按分类列出。最后更新：2026-07-13
 
 ## AI - 人工智能
 
@@ -206,14 +206,21 @@ sidebar:
 - [[ToBeContinue/进制转换|进制转换]]
 - [[ToBeContinue/随机算法|随机算法]]
 
-## Utils - 工具链
 
-- [[Utils/Git/Git hooks husky lint-staged|Git hooks husky lint-staged]]
-- [[Utils/Git/Git原理|Git 原理]]
-- [[Utils/Git/Git命令|Git]]
-- [[Utils/Git/Git工作流|Git工作流]]
-- [[Utils/Playwright/Playwright|Playwright]]
-- [[Utils/Puppetter/Puppetter优化|Puppetter优化]]
+## 开发工具链 - 工具链与使用笔记
+
+- [[开发工具链/Git/Git hooks husky lint-staged|Git hooks husky lint-staged]]
+- [[开发工具链/Git/Git原理|Git 原理]]
+- [[开发工具链/Git/Git命令|Git]]
+- [[开发工具链/Git/Git工作流|Git工作流]]
+- [[开发工具链/Playwright/Playwright|Playwright]]
+- [[开发工具链/Puppetter/Puppetter优化|Puppetter优化]]
+
+## 开源项目分析 - 开源项目评估与选型
+
+- [[开源项目分析/自托管书签/Karakeep-自托管书签全能工具|Karakeep — 自托管书签全能工具]]
+- [[开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架|Stagehand — AI 浏览器自动化框架]]
+- [[开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施|Honcho — Agent 记忆基础设施]]
 
 ## 前端
 

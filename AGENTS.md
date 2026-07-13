@@ -21,8 +21,8 @@
 | JSRuntime    | `JSRuntime/`    | 17     | Node.js、Deno、NPM、模块系统                          |
 | Performance  | `Performance/`  | 2      | JS 优化、预加载                                       |
 | ToBeContinue | `ToBeContinue/` | 25     | 待整理主题（算法、协议、深入原理）                    |
-| Tools        | `Tools/`        | 1      | 自托管工具、AI 工具、开源项目分析                          |
-| Utils        | `Utils/`        | 6      | Git、Playwright、Puppeteer                            |
+| 开源项目分析 | `开源项目分析/` | 3      | 开源项目评估、选型分析、工具测评                          |
+| 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
 | 前端         | `前端/`         | 35     | React、Vue、TS、JS、CSS、HTML                         |
 | 杂谈         | `杂谈/`         | 13     | 经验分享、源码解读、行业观点                            |
 | 跨平台       | `跨平台/`       | 12     | Electron、React Native、小程序                        |
@@ -191,10 +191,10 @@ ToBeContinue/
 └── (其他) 大文件如何上传
 ```
 
-#### Utils
+#### 开发工具链
 
 ```
-Utils/
+开发工具链/
 ├── Git/
 │   ├── Git原理.md / Git命令.md / Git工作流.md / Git hooks husky lint-staged.md
 ├── Playwright/
@@ -237,12 +237,17 @@ Utils/
 └── (视野) 开源如何保证收入.md, 我的大前端世界观.md
 ```
 
-#### Tools
+#### 开源项目分析
 
-```
-Tools/
-├── Karakeep-自托管书签全能工具.md  — Karakeep 自托管书签全能工具分析
-└── ...                         ← 持续追加：Perplexica、OpenWebUI、n8n 等
+```md
+开源项目分析/
+├── 自托管书签/
+│   └── Karakeep-自托管书签全能工具.md              — Karakeep 自托管书签全能工具分析
+├── AI浏览器自动化/
+│   └── Stagehand-AI浏览器自动化框架.md            — Stagehand AI 浏览器自动化框架分析
+├── AI记忆基础设施/
+│   └── Honcho-Agent记忆基础设施.md               — Honcho Agent 记忆基础设施分析
+└── ...                                            ← 持续追加：同类型工具放在同子目录下
 ```
 
 #### 跨平台
@@ -273,12 +278,14 @@ Tools/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/前端/React/Hooks.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/前端/Vue/响应式系统.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/Graphics/Three/Texture.md
-/home/keven/codes/github/knowledge-base-system/src/content/docs/Utils/Git/Git工作流.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开发工具链/Git/Git工作流.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/GIS/Cesium/Viewer.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/Architecture/MicroFE/微前端.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/CS/NetWork/Application/HTTP/HTTP.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/JSRuntime/Node.js/API/process.md
-/home/keven/codes/github/knowledge-base-system/src/content/docs/Tools/Karakeep-自托管书签全能工具.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/自托管书签/Karakeep-自托管书签全能工具.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md
 ```
 
 ## 检索命令
@@ -297,5 +304,5 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 ## 统计
 
 - **总计一级分类**: 17 个
-- **总计文件**: ~197 个 `.md` / `.mdx` 文件
+- **总计文件**: ~199 个 `.md` / `.mdx` 文件
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/GRPC/）

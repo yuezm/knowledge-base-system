@@ -10,22 +10,22 @@
 
 | 分类         | 路径            | 文件数 | 内容                                                  |
 | ------------ | --------------- | ------ | ----------------------------------------------------- |
-| AI           | `AI/`           | 5      | ML/DL 模型、训练、Transformer                         |
+| AI           | `AI/`           | 7      | ML/DL 模型、训练、Transformer、Agent 实践               |
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
-| Books        | `Books/`        | 1      | 编程珠玑                                              |
+| Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
 | Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                          |
-| CS           | `CS/`           | 28     | 算法、数据结构、OS、网络、Docker、编码                |
+| CS           | `CS/`           | 27     | 算法、数据结构、OS、网络、Docker、编码                |
 | DB           | `DB/`           | 4      | MongoDB API、索引、权限                               |
 | GIS          | `GIS/`          | 23     | 坐标系、Cesium、Leaflet、3D Tiles                     |
-| Graphics     | `Graphics/`     | 43     | Three.js、Babylon、WebGL、WebGPU、图形学              |
-| JSRuntime    | `JSRuntime/`    | 17     | Node.js、Deno、NPM、模块系统                          |
+| Graphics     | `Graphics/`     | 44     | Three.js、Babylon、WebGL、WebGPU、图形学              |
+| JSRuntime    | `JSRuntime/`    | 20     | Node.js、Deno、NPM、模块系统                          |
 | Performance  | `Performance/`  | 2      | JS 优化、预加载                                       |
 | ToBeContinue | `ToBeContinue/` | 25     | 待整理主题（算法、协议、深入原理）                    |
-| 开源项目分析 | `开源项目分析/` | 3      | 开源项目评估、选型分析、工具测评                          |
+| 开源项目分析 | `开源项目分析/` | 8      | 开源项目评估、选型分析、工具测评、项目阅读             |
 | 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
-| 前端         | `前端/`         | 35     | React、Vue、TS、JS、CSS、HTML                         |
-| 杂谈         | `杂谈/`         | 13     | 经验分享、源码解读、行业观点                            |
-| 跨平台       | `跨平台/`       | 12     | Electron、React Native、小程序                        |
+| 前端         | `前端/`         | 41     | React、Vue、TS、JS、CSS、HTML                         |
+| 杂谈         | `杂谈/`         | 16     | 经验分享、源码解读、行业观点                            |
+| 跨平台       | `跨平台/`       | 14     | Electron、React Native、小程序                        |
 | 音视频       | `音视频/`       | 1      | 视频处理                                              |
 
 ### 📂 二级子目录详情
@@ -34,6 +34,8 @@
 
 ```
 AI/
+├── 1688-Multi-Agent超级组织实践.md
+├── Agent发展.md
 ├── 概览.md
 ├── 机器学习.md
 ├── 模型.md
@@ -64,6 +66,7 @@ Architecture/
 
 ```
 Books/
+├── Books of Shader.md
 └── 编程珠玑.md
 ```
 
@@ -142,7 +145,7 @@ Graphics/
 │   ├── Controls.md / Geometory.md / GUI.md / Helper.md
 │   ├── Light.md / Loader.md / Material.md / Mesh.md
 │   ├── Model.md / Other.md / QA.md / Renderer.md
-│   ├── Scene.md / Texture.md / Transform.md
+│   ├── Scene.md / Texture.md / Transform.md / Extras.md
 ├── Babylon/
 │   ├── Algebra.md / Animation.md / AssetsManager.md / Audio.md
 │   ├── Camera.md / Engine.md / Light.md / Material.md
@@ -208,12 +211,12 @@ ToBeContinue/
 ```
 前端/
 ├── React/
-│   ├── API.md / Hooks.md / React状态管理.md / Scheduler.md / Utils.md
+│   ├── API.md / FAQ.md / Hooks.md / React状态管理.md / Scheduler.md / Utils.md
 │   └── Headless UI 和 React Hooks.md
 ├── Vue/
 │   ├── 响应式系统.md / 组件.md / Vue Router.md
 ├── Typescript/
-│   ├── Typescript.md / 类型.md
+│   ├── Typescript.md / tsconfig.md / 类型.md
 ├── Javascript/
 │   ├── (核心) 作用域.md / 执行上下文.md / Promise.md / Function.md / Event.md
 │   ├── (API) ArrayBuffer.md / Audio.md / Canvas.md / Document.md / File System API.md / Reflect.md / Scheduler.md
@@ -231,8 +234,9 @@ ToBeContinue/
 
 ```
 杂谈/
-├── (调试/排查) Chrome调试.md, JS如何获取精确的时间戳.md, node.js内存泄漏.md, 内存泄漏及排查.md, 如何处理循环引用.md, 常见的问题及解决方案.md
+├── (调试/排查) Chrome调试.md, JS如何获取精确的时间戳.md, node.js内存泄漏.md, 内存泄漏及排查.md, 如何处理循环引用.md, 常见的问题及解决方案.md, 常用的图片格式.md
 ├── (工程) Web截图.md, 网页如何唤醒本地程序.md, 解决ESM Import 过多.md, 软件开发周期.md, 面试复习.md
+├── (安全) 2FA验证原理.md
 ├── (源码) 从egg-helper学习egg源码.md
 └── (视野) 开源如何保证收入.md, 我的大前端世界观.md
 ```
@@ -241,12 +245,22 @@ ToBeContinue/
 
 ```md
 开源项目分析/
+├── 阅读/                                             ← 项目阅读、文章分析类
+│   └── Harness工程-Multi-Agent架构实践.md           — 阿里数据研发 Harness 工程实践总结
+├── 依赖分析工具/
+│   └── dependency-cruiser-JS依赖分析和架构治理工具.md  — JS/TS 依赖分析与架构治理工具
 ├── 自托管书签/
 │   └── Karakeep-自托管书签全能工具.md              — Karakeep 自托管书签全能工具分析
 ├── AI浏览器自动化/
 │   └── Stagehand-AI浏览器自动化框架.md            — Stagehand AI 浏览器自动化框架分析
 ├── AI记忆基础设施/
 │   └── Honcho-Agent记忆基础设施.md               — Honcho Agent 记忆基础设施分析
+├── AI代码审查/
+│   └── Open-Code-Review-阿里AI代码审查工具.md      — 阿里开源 AI 代码审查 CLI 工具，10.5K Stars
+├── AI代码智能/
+│   └── CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md  — 三大代码智能工具全面对比
+├── 提示词工程/                                        ← 提示词工程设计类
+│   └── Claude-Design-System-Prompt-工程的设计协作提示词库.md  — Claude Design 逆向工程提示词库
 └── ...                                            ← 持续追加：同类型工具放在同子目录下
 ```
 
@@ -286,6 +300,8 @@ ToBeContinue/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/自托管书签/Karakeep-自托管书签全能工具.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md
 ```
 
 ## 检索命令
@@ -304,5 +320,5 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 ## 统计
 
 - **总计一级分类**: 17 个
-- **总计文件**: ~199 个 `.md` / `.mdx` 文件
+- **总计文件**: ~251 个 `.md` 文件（含 Home.md 共 252，加 index.mdx 共 253）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/GRPC/）

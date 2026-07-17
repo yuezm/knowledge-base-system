@@ -60,7 +60,7 @@ related: [文件路径] # 相关文件（[[wikilink]] 格式）
 | `graphics`       | 图形学/WebGL/WebGPU | `Graphics/`           |
 | `js-runtime`     | JS 运行时/Node/Deno | `JSRuntime/`          |
 | `performance`    | 性能优化            | `Performance/`        |
-| `devops`         | 工具链/CI           | `Utils/`              |
+| `devops`         | 工具链/CI           | `开发工具链/`         |
 | `frontend`       | 前端工程            | `前端/`               |
 | `react`          | React 框架          | `前端/React/`         |
 | `vue`            | Vue 框架            | `前端/Vue/`           |

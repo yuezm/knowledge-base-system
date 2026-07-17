@@ -6,8 +6,8 @@ sidebar:
 ---
 
 # 知识库索引
-
-> 内容目录。共 **247** 个页面，按分类列出。最后更新：2026-07-13
+>
+> 内容目录。共 **253** 个页面，按分类列出。最后更新：2026-07-17
 
 ## AI - 人工智能
 
@@ -17,6 +17,7 @@ sidebar:
 - [[AI/概览|概览]]
 - [[AI/模型|模型]]
 - [[AI/训练|训练]] — AI 训练全解：从预训练到后训练
+- [[AI/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 1688 数据中心 Multi-Agent 研发小队实战总结
 
 ## Architecture - 架构设计
 
@@ -221,6 +222,11 @@ sidebar:
 - [[开源项目分析/自托管书签/Karakeep-自托管书签全能工具|Karakeep — 自托管书签全能工具]]
 - [[开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架|Stagehand — AI 浏览器自动化框架]]
 - [[开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施|Honcho — Agent 记忆基础设施]]
+- [[开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库|Claude Design System Prompt]] — 逆向工程设计协作提示词库，1700+ Stars，14 个设计技能
+- [[开源项目分析/阅读/Harness工程-Multi-Agent架构实践|Harness Engineering]] — 数据研发 Multi-Agent Harness 工程实践，阿里技术团队
+- [[开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具|Open Code Review]] — 阿里 AI 代码审查 CLI 工具，确定性工程×Agent混合驱动，10.5K Stars
+- [[开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具|dependency-cruiser]] — JS/TS 依赖分析与架构治理工具，可编程规则引擎，6,934 Stars
+- [[开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比|CodeGraph vs GitNexus vs CRG]] — AI 代码智能工具三大明星横向对比，60K/44K/19K Stars
 
 ## 前端
 

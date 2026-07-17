@@ -11,6 +11,23 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-17 fix | 修复 INDEX.md / AGENTS.md / SCHEMA.md 元文件一致性
+
+- 修复 INDEX.md：Claude-Design-System-Prompt 路径从根目录更正为 `提示词工程/` 子目录
+- 修复 SCHEMA.md：`devops` 标签目录从过时的 `Utils/` 更正为 `开发工具链/`
+- 修复 AGENTS.md：更新所有分类文件数（7 个分类有误），补充缺失的文件条目，总计 ~204 → ~251
+- 补充 AGENTS.md Books/ 目录树：添加 `Books of Shader.md`
+- 补充 AGENTS.md Graphics/Three 目录树：添加 `Extras.md`
+- 补充 AGENTS.md 前端目录树：添加 `React/FAQ.md`、`Typescript/tsconfig.md`
+- AGENTS.md 统计行从 ~204 更新为 ~251
+
+## 2026-07-17 ingest | 收录 CodeGraph vs GitNexus vs Code Review Graph 横向对比
+
+- 新增 `开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md` — AI 代码智能工具三大项目全面对比，覆盖基础信息、Agent 支持、MCP 工具、特色功能、选型建议
+- 新建 `AI代码智能/` 子目录，归类 AI 代码理解/代码智能类开源工具
+- 更新 `AGENTS.md`：总览表文件数 7→8，目录树新增子目录，路径示例新增，统计 203→204
+- 更新 `INDEX.md`：开源项目分析区新增条目，页面计数 252→253
+
 ## 2026-07-09 init | 初始化 LLM Wiki 结构
 
 - 创建 `SCHEMA.md` — 知识库规则、约定和标签分类
@@ -42,6 +59,45 @@ sidebar:
 - 更新 `AGENTS.md`：总览表、目录树、路径示例全部换名
 - 更新 `INDEX.md`：章节名、Wiki 链接路径全部换名
 - 明确两目录定位：`开发工具链/` = 工具使用笔记, `开源项目分析/` = 项目评估报告
+
+## 2026-07-14 restructure | 重组 Claude Design System Prompt 分类 + 新建 阅读/ 子目录
+
+- 将 `AI/Claude-Design-System-Prompt-逆向工程的设计协作提示词库.md` 移至 `开源项目分析/`（它是开源项目，不属于 AI 知识）
+- 新建 `开源项目分析/阅读/` 子目录，后续文章类分析归入此处
+- 更新 `AGENTS.md`：AI 文件数 8→7，开源项目分析 3→4，目录树更新
+- 更新 `INDEX.md`：AI 区移除、开源项目分析区新增条目（页数保持 249）
+
+## 2026-07-14 ingest | 收录 Claude Design System Prompt — 逆向工程设计协作提示词库
+
+- 新增 `AI/Claude-Design-System-Prompt-逆向工程的设计协作提示词库.md` — 逆向工程自 Anthropic Claude Design 的系统提示词 + 14 个设计技能库，1700+ Stars
+- 更新 `AGENTS.md`：AI 文件数 7→8，目录树新增条目
+- 更新 `INDEX.md`：AI 区新增条目，页面计数 248→249
+
+## 2026-07-15 ingest | 收录 Harness Engineering — 数据研发 Multi-Agent 架构实践
+
+- 新增 `开源项目分析/阅读/Harness工程-Multi-Agent架构实践.md` — 阿里技术团队 Harness Engineering 文章总结，涵盖三大分层六大支柱
+- 更新 `AGENTS.md`：总览表文件数 4→5，阅读子目录新增条目，统计 200→201
+- 更新 `INDEX.md`：开源项目分析区新增条目，页面计数 249→250
+
+## 2026-07-15 ingest | 收录 Open Code Review — 阿里 AI 代码审查工具
+
+- 新增 `开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md` — 阿里开源 AI 代码审查 CLI 工具，确定性工程 × Agent 混合驱动，10.5K Stars
+- 创建 `AI代码审查/` 子目录，归类 AI 代码审查类开源工具
+- 更新 `AGENTS.md`：总览表文件数 6→7，目录树新增子目录，路径示例更新，统计 202→203
+- 更新 `INDEX.md`：开源项目分析区新增条目，页面计数 251→252
+
+## 2026-07-15 ingest | 收录 dependency-cruiser — JS/TS 依赖分析与架构治理工具
+
+- 新增 `开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具.md` — dependency-cruiser 可编程规则引擎，6,934 Stars
+- 创建 `依赖分析工具/` 子目录，归类代码质量/架构治理类开源工具
+- 更新 `AGENTS.md`：总览表文件数 5→6，目录树新增子目录，统计 201→202
+- 更新 `INDEX.md`：开源项目分析区新增条目，页面计数 250→251
+
+## 2026-07-14 ingest | 收录 1688 Multi-Agent 超级组织实践
+
+- 新增 `AI/1688-Multi-Agent超级组织实践.md` — 1688 数据中心 Multi-Agent 研发小队实录，涵盖 KST 知识工程、Harness/Loop Engineering、Squad 协作模式
+- 更新 `AGENTS.md`：AI 文件数 5→7，目录树新增 Agent发展.md 和 1688-Multi-Agent超级组织实践.md，总计 ~200
+- 更新 `INDEX.md`：AI 区新增条目，页面计数 247→248
 
 ## 2026-07-13 ingest | 收录 Honcho — Agent 记忆基础设施分析
 

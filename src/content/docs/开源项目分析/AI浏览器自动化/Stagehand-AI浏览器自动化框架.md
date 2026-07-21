@@ -1,3 +1,8 @@
+---
+title: Stagehand — AI 浏览器自动化框架
+description: Stagehand — AI 浏览器自动化框架
+---
+
 # Stagehand — AI 浏览器自动化框架
 
 > 仓库：https://github.com/browserbase/stagehand
@@ -7,14 +12,14 @@
 
 ## 项目总览
 
-| 维度 | 评价 |
-|------|------|
-| 项目类型 | AI Browser Agent SDK / 浏览器自动化框架 |
-| 技术壁垒 | 中 — 核心是给 Playwright 套一层 AI 编排层，但 act/extract 的稳定性工程很深 |
-| 学习价值 | 高 — 展示如何用 LLM 桥接自然语言与浏览器操作，架构设计值得借鉴 |
-| 商业价值 | 高 — Browserbase 云浏览器 + Stagehand 形成闭环，企业自动化场景需求明确 |
+| 维度     | 评价                                                                          |
+| -------- | ----------------------------------------------------------------------------- |
+| 项目类型 | AI Browser Agent SDK / 浏览器自动化框架                                       |
+| 技术壁垒 | 中 — 核心是给 Playwright 套一层 AI 编排层，但 act/extract 的稳定性工程很深    |
+| 学习价值 | 高 — 展示如何用 LLM 桥接自然语言与浏览器操作，架构设计值得借鉴                |
+| 商业价值 | 高 — Browserbase 云浏览器 + Stagehand 形成闭环，企业自动化场景需求明确        |
 | 适合人群 | 做网页自动化/数据采集/E2E 测试的前端/全栈/QA；构建 Browser Agent 的 AI 工程师 |
-| 核心创新 | **混合模式** — 开发者决定哪些操作用 AI、哪些写死代码，而非纯 AI Agent 黑盒 |
+| 核心创新 | **混合模式** — 开发者决定哪些操作用 AI、哪些写死代码，而非纯 AI Agent 黑盒    |
 
 ## 核心 API
 
@@ -35,17 +40,17 @@ const { author, title } = await stagehand.extract(
 
 ## 横向对比
 
-| 对比项 | Stagehand | Playwright | Browser Use (Python) |
-|--------|-----------|------------|---------------------|
-| ⭐ Stars | 23,441 | 70,000+ | 62,000+ |
-| 技术栈 | TypeScript + Python | TS/JS/Java/.NET | Python |
-| 核心特色 | 自然语言 ↔ 代码混合驱动 | 跨浏览器自动化标准库 | Agent-first 操作浏览器 |
-| 上手难度 | 低 — `npx create-browser-app` | 中 — 需理解 selector/page API | 低 — pip install |
-| 文档质量 | 好 — docs.stagehand.dev | 极好 — 业界标杆 | 好 |
-| 社区活跃 | 极活跃（2024/3 创建，日更） | 微软稳定维护 | 增长极快 |
-| ✅ 最大优势 | AI 编排 + 代码灵活切换 | 跨浏览器兼容性最强 | Python 生态 + Agent 成熟 |
-| ❌ 最大短板 | 重度依赖 LLM API + Browserbase | 纯代码无 AI 能力 | 纯 AI Agent 不可控性较高 |
-| 🎯 差异化点 | Hybrid — 写代码还是 AI 你说了算 | 工业级测试框架 | Agent-first 设计 |
+| 对比项      | Stagehand                       | Playwright                    | Browser Use (Python)     |
+| ----------- | ------------------------------- | ----------------------------- | ------------------------ |
+| ⭐ Stars    | 23,441                          | 70,000+                       | 62,000+                  |
+| 技术栈      | TypeScript + Python             | TS/JS/Java/.NET               | Python                   |
+| 核心特色    | 自然语言 ↔ 代码混合驱动         | 跨浏览器自动化标准库          | Agent-first 操作浏览器   |
+| 上手难度    | 低 — `npx create-browser-app`   | 中 — 需理解 selector/page API | 低 — pip install         |
+| 文档质量    | 好 — docs.stagehand.dev         | 极好 — 业界标杆               | 好                       |
+| 社区活跃    | 极活跃（2024/3 创建，日更）     | 微软稳定维护                  | 增长极快                 |
+| ✅ 最大优势 | AI 编排 + 代码灵活切换          | 跨浏览器兼容性最强            | Python 生态 + Agent 成熟 |
+| ❌ 最大短板 | 重度依赖 LLM API + Browserbase  | 纯代码无 AI 能力              | 纯 AI Agent 不可控性较高 |
+| 🎯 差异化点 | Hybrid — 写代码还是 AI 你说了算 | 工业级测试框架                | Agent-first 设计         |
 
 ## 技术架构亮点
 

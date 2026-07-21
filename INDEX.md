@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 >
-> 内容目录。共 **253** 个页面，按分类列出。最后更新：2026-07-17
+| 内容目录。共 **257** 个页面，按分类列出。最后更新：2026-07-19
 
 ## AI - 人工智能
 
@@ -17,7 +17,6 @@ sidebar:
 - [[AI/概览|概览]]
 - [[AI/模型|模型]]
 - [[AI/训练|训练]] — AI 训练全解：从预训练到后训练
-- [[AI/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 1688 数据中心 Multi-Agent 研发小队实战总结
 
 ## Architecture - 架构设计
 
@@ -224,9 +223,14 @@ sidebar:
 - [[开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施|Honcho — Agent 记忆基础设施]]
 - [[开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库|Claude Design System Prompt]] — 逆向工程设计协作提示词库，1700+ Stars，14 个设计技能
 - [[开源项目分析/阅读/Harness工程-Multi-Agent架构实践|Harness Engineering]] — 数据研发 Multi-Agent Harness 工程实践，阿里技术团队
+- [[开源项目分析/阅读/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 1688 数据中心 Multi-Agent 研发小队实录，KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
+- [[开源项目分析/阅读/Hermes-Kanban多Profile持久化工作流与SubAgent对比|Hermes Kanban vs SubAgent]] — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
 - [[开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具|Open Code Review]] — 阿里 AI 代码审查 CLI 工具，确定性工程×Agent混合驱动，10.5K Stars
 - [[开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具|dependency-cruiser]] — JS/TS 依赖分析与架构治理工具，可编程规则引擎，6,934 Stars
 - [[开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比|CodeGraph vs GitNexus vs CRG]] — AI 代码智能工具三大明星横向对比，60K/44K/19K Stars
+- [[开源项目分析/AI编码工程化/Trellis-AI编码工程框架|Trellis — AI 编码工程框架]] — 跨平台 AI Coding Agent Harness，4 阶段循环 + spec 学习闭环 + 17 平台适配器，12.8K Stars
+- [[开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发|spec-kit — GitHub 官方规范驱动开发]] — GitHub 官方 Spec-Driven Development 工具集，122K Stars，MIT，含与 Trellis 详细对比
+- [[开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架|Superpowers — AI 编码工程师方法论与 Skills 框架]] — obra/superpowers 13+ composable skills 自动触发，TDD/code review/verification 强约束，257K Stars，MIT
 
 ## 前端
 

@@ -11,6 +11,44 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-19 restructure | 规范 AI 与 开源项目分析 归类边界，迁移 2 篇分析类文章
+
+- **新归类规则**：
+  - `AI/` = AI 底层原理、核心概念、知识图谱（Transformer、机器学习、Agent 架构演进等）
+  - `开源项目分析/阅读/` = 分析性质 / 阅读性质的文章（含公众号文章总结、横向对比、自我体系对比）
+- 移动 `AI/1688-Multi-Agent超级组织实践.md` → `开源项目分析/阅读/`（公众号文章分析）
+- 移动 `AI/Hermes-Kanban多Profile持久化工作流与SubAgent对比.md` → `开源项目分析/阅读/`（自我体系对比）
+- 保留 `AI/Agent发展.md`（AI 架构演进知识图谱，属核心概念）
+- 保留 `AI/概览.md`、`AI/Transformer.md`、`AI/训练.md`、`AI/模型.md`、`AI/机器学习.md`（均为 AI 原理/概念）
+- 更新 `AGENTS.md`：总览表 AI 8→6 且改"内容"列说明，目录树删除 2 条移走的文件
+- 更新 `INDEX.md`：AI 区删除 2 条；开源项目分析区新增 2 条到 `阅读/` 子目录
+- 更新 `SCHEMA.md`：新增"AI 与 开源项目分析 归类边界"规则小节
+
+## 2026-07-19 ingest | 收录 Hermes Kanban 多 Profile 工作流与 SubAgent 对比
+
+- 新增 `AI/Hermes-Kanban多Profile持久化工作流与SubAgent对比.md` — 对比 Hermes Kanban 多 Profile 持久化工作流与 Claude Code / OpenCode SubAgent，覆盖生命周期、专业化方式、任务心智模型、隔离粒度、调度能力等 5 个维度
+- 核心论点：CC/OpenCode SubAgent 是"session 内临时工"，Hermes Kanban 是"多 Profile 持久化工作流"，两者面向不同需求层次
+- 适用场景决策表：临时研究用 CC/OpenCode，长期固化工作流（PM/Coder/QA 接力 + cron 调度）用 Hermes Kanban
+- 更新 `AGENTS.md`：AI 文件数 7→8，目录树新增条目，统计 253→254
+- 更新 `INDEX.md`：AI 区新增条目，页面计数 255→256
+
+## 2026-07-19 ingest | 收录 Trellis 与 spec-kit，AI 编码工程化方向
+
+- 新增 `开源项目分析/AI编码工程化/Trellis-AI编码工程框架.md` — mindfold-ai/Trellis 跨平台 AI Coding Agent Harness,4 阶段循环(Plan→Implement→Verify→Finish)+ spec 学习闭环 + 17 平台适配器,12.8K Stars,AGPL-3.0
+- 新增 `开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发.md` — github/spec-kit 官方 Spec-Driven Development 工具集,5 个 slash command(constitution→specify→plan→tasks→implement),122K Stars,MIT
+- 两份均含完整的"Trellis vs spec-kit"双向对比小节(规模、本质、流程、Spec 演进、多平台、工作记忆、协议等)
+- 新建 `AI编码工程化/` 子目录,归类 spec-driven / agent harness 类 AI 编码工具
+- 更新 `AGENTS.md`:总览表文件数 8→10,目录树新增子目录,路径示例新增,统计 251→253
+- 更新 `INDEX.md`:开源项目分析区新增 2 条目,页面计数 253→255,日期 2026-07-17→2026-07-19
+
+## 2026-07-19 ingest | 收录 Superpowers — AI 编码工程师方法论与 Skills 框架
+
+- 新增 `开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架.md` — obra/superpowers 完整 AI 编码工程师方法论,13+ composable skills 自动触发,TDD/code review/verification 强约束,257K Stars,MIT
+- 通过各 agent 官方 plugin marketplace 安装(Claude Code/Codex/Cursor/OpenCode/Pi/Kimi/Copilot CLI/Factory Droid/Antigravity),定位是"完整的工程师"而非代码生成器
+- 与同目录 Trellis、spec-kit 形成"工程化框架"三角:Superpowers(方法论+skills)/ Trellis(harness 循环+多平台)/ spec-kit(规范驱动+slash command)
+- 更新 `AGENTS.md`:总览表文件数 11→12,`AI编码工程化/` 目录树新增条目,路径示例新增,统计 254→255
+- 更新 `INDEX.md`:开源项目分析区新增条目,页面计数 256→257
+
 ## 2026-07-17 fix | 修复 INDEX.md / AGENTS.md / SCHEMA.md 元文件一致性
 
 - 修复 INDEX.md：Claude-Design-System-Prompt 路径从根目录更正为 `提示词工程/` 子目录

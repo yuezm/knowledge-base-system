@@ -10,7 +10,7 @@
 
 | 分类         | 路径            | 文件数 | 内容                                                  |
 | ------------ | --------------- | ------ | ----------------------------------------------------- |
-| AI           | `AI/`           | 7      | ML/DL 模型、训练、Transformer、Agent 实践               |
+| AI           | `AI/`           | 6      | AI 底层原理、核心概念、知识图谱（不含分析/阅读类文章） |
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
 | Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
 | Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                          |
@@ -21,7 +21,7 @@
 | JSRuntime    | `JSRuntime/`    | 20     | Node.js、Deno、NPM、模块系统                          |
 | Performance  | `Performance/`  | 2      | JS 优化、预加载                                       |
 | ToBeContinue | `ToBeContinue/` | 25     | 待整理主题（算法、协议、深入原理）                    |
-| 开源项目分析 | `开源项目分析/` | 8      | 开源项目评估、选型分析、工具测评、项目阅读             |
+| 开源项目分析 | `开源项目分析/` | 12     | 开源项目评估、选型分析、工具测评、项目阅读             |
 | 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
 | 前端         | `前端/`         | 41     | React、Vue、TS、JS、CSS、HTML                         |
 | 杂谈         | `杂谈/`         | 16     | 经验分享、源码解读、行业观点                            |
@@ -34,7 +34,6 @@
 
 ```
 AI/
-├── 1688-Multi-Agent超级组织实践.md
 ├── Agent发展.md
 ├── 概览.md
 ├── 机器学习.md
@@ -259,6 +258,10 @@ ToBeContinue/
 │   └── Open-Code-Review-阿里AI代码审查工具.md      — 阿里开源 AI 代码审查 CLI 工具，10.5K Stars
 ├── AI代码智能/
 │   └── CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md  — 三大代码智能工具全面对比
+├── AI编码工程化/                                        ← AI 编码 spec-driven / agent harness 类
+│   ├── Trellis-AI编码工程框架.md                        — Trellis 跨平台 AI Coding Agent Harness,4 阶段循环,12.8K Stars
+│   ├── spec-kit-GitHub官方规范驱动开发.md              — spec-kit GitHub 官方规范驱动开发工具,122K Stars, MIT
+│   └── Superpowers-AI编码工程师方法论与Skills框架.md   — obra/superpowers AI 编码工程师方法论,13+ composable skills,257K Stars, MIT
 ├── 提示词工程/                                        ← 提示词工程设计类
 │   └── Claude-Design-System-Prompt-工程的设计协作提示词库.md  — Claude Design 逆向工程提示词库
 └── ...                                            ← 持续追加：同类型工具放在同子目录下
@@ -302,6 +305,9 @@ ToBeContinue/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Trellis-AI编码工程框架.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架.md
 ```
 
 ## 检索命令
@@ -320,5 +326,5 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 ## 统计
 
 - **总计一级分类**: 17 个
-- **总计文件**: ~251 个 `.md` 文件（含 Home.md 共 252，加 index.mdx 共 253）
+- **总计文件**: ~255 个 `.md` 文件（含 Home.md 共 256，加 index.mdx 共 257）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/GRPC/）

@@ -151,6 +151,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"AI/1688-Multi-Agent超级组织实践.md": {
+	id: "AI/1688-Multi-Agent超级组织实践.md";
+  slug: "ai/1688-multi-agent超级组织实践";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "AI/Agent发展.md": {
 	id: "AI/Agent发展.md";
   slug: "ai/agent发展";
@@ -1306,48 +1313,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"Utils/Git/Git hooks husky lint-staged.md": {
-	id: "Utils/Git/Git hooks husky lint-staged.md";
-  slug: "utils/git/git-hooks-husky-lint-staged";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Utils/Git/Git原理.md": {
-	id: "Utils/Git/Git原理.md";
-  slug: "utils/git/git原理";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Utils/Git/Git命令.md": {
-	id: "Utils/Git/Git命令.md";
-  slug: "utils/git/git命令";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Utils/Git/Git工作流.md": {
-	id: "Utils/Git/Git工作流.md";
-  slug: "utils/git/git工作流";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Utils/Playwright/Playwright.md": {
-	id: "Utils/Playwright/Playwright.md";
-  slug: "utils/playwright/playwright";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"Utils/Puppetter/Puppetter优化.md": {
-	id: "Utils/Puppetter/Puppetter优化.md";
-  slug: "utils/puppetter/puppetter优化";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -1638,6 +1603,104 @@ declare module 'astro:content' {
 "前端/动画/Lottie.md": {
 	id: "前端/动画/Lottie.md";
   slug: "前端/动画/lottie";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Git/Git hooks husky lint-staged.md": {
+	id: "开发工具链/Git/Git hooks husky lint-staged.md";
+  slug: "开发工具链/git/git-hooks-husky-lint-staged";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Git/Git原理.md": {
+	id: "开发工具链/Git/Git原理.md";
+  slug: "开发工具链/git/git原理";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Git/Git命令.md": {
+	id: "开发工具链/Git/Git命令.md";
+  slug: "开发工具链/git/git命令";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Git/Git工作流.md": {
+	id: "开发工具链/Git/Git工作流.md";
+  slug: "开发工具链/git/git工作流";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Playwright/Playwright.md": {
+	id: "开发工具链/Playwright/Playwright.md";
+  slug: "开发工具链/playwright/playwright";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开发工具链/Puppetter/Puppetter优化.md": {
+	id: "开发工具链/Puppetter/Puppetter优化.md";
+  slug: "开发工具链/puppetter/puppetter优化";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md": {
+	id: "开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md";
+  slug: "开源项目分析/ai代码审查/open-code-review-阿里ai代码审查工具";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md": {
+	id: "开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md";
+  slug: "开源项目分析/ai代码智能/codegraph-vs-gitnexus-vs-codereviewgraph-代码智能工具横向对比";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架.md": {
+	id: "开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架.md";
+  slug: "开源项目分析/ai浏览器自动化/stagehand-ai浏览器自动化框架";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md": {
+	id: "开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md";
+  slug: "开源项目分析/ai记忆基础设施/honcho-agent记忆基础设施";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具.md": {
+	id: "开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具.md";
+  slug: "开源项目分析/依赖分析工具/dependency-cruiser-js依赖分析和架构治理工具";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库.md": {
+	id: "开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库.md";
+  slug: "开源项目分析/提示词工程/claude-design-system-prompt-工程的设计协作提示词库";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/自托管书签/Karakeep-自托管书签全能工具.md": {
+	id: "开源项目分析/自托管书签/Karakeep-自托管书签全能工具.md";
+  slug: "开源项目分析/自托管书签/karakeep-自托管书签全能工具";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"开源项目分析/阅读/Harness工程-Multi-Agent架构实践.md": {
+	id: "开源项目分析/阅读/Harness工程-Multi-Agent架构实践.md";
+  slug: "开源项目分析/阅读/harness工程-multi-agent架构实践";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

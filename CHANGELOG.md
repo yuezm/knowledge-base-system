@@ -11,6 +11,46 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-27 C 方案 restructure | 升级为个人知识库——MOC + PARA + 双向链接
+
+- **目标**:从"按主题分类的技术博客"升级为"个人知识库"。核心差异:**多维入口(MOC) + 工作维度(PARA) + 双向链接(脚本生成)**。本条是 A(目录清理) + B(分类重组) 之后的第三步。
+- **核心设计原则:无破坏性重构**——**现有 268 篇笔记完全不拆不迁,只加新结构 + 双向链接**。Niklas Luhmann 卡片盒笔记法验证的"渐进式优于一次性重构"。
+- **新建 00-MOC/(6 篇)** — 主题地图(Map of Content)入口
+  - `Home.md` — 知识库总入口(MOC of MOCs)
+  - `AI-技术树.md` `前端-技术树.md` `Graphics-技术树.md` `GIS-技术树.md` `工作流与项目.md`
+  - 用 `[[wikilink]]` 把现有零散笔记串起来,不改任何原笔记
+- **新建 10-项目/(4 篇)** — PARA Projects 维度
+  - `sa_protocol_library.md` `sagc-new-usoa.md` `awesome-toys.md` `knowledge-base-system.md`(自指)
+  - 指针页设计:项目名 + 简介 + 本地路径 + git URL + 知识库中相关笔记 wikilink
+  - **不复制项目内容**——用户明确"他们是独立 git 项目,和知识库没关系",知识库只做"软链入"
+- **新建 20-资源/(3 篇)** — PARA Resources 维度
+  - `AI-工具.md` `前端工具.md` `命令行工具.md` — 工具索引(从现有笔记 wikilink 提取)
+- **新建 30-归档/(1 篇)** — PARA Archive 维度
+  - `README.md` — 归档规则:何时把笔记移到归档(内容已过时 / 已被新文件取代 / 评估性内容失效)
+- **新建 scripts/related.sh** — 反向链接生成脚本
+  - 扫 `src/content/docs/**/*.md` 的 `[[wikilink]]` + frontmatter `related:` 字段
+  - 生成 `_backlinks/index.md` 总索引(Top 20 + 无引用笔记列表) + 25 个关键笔记的独立反向链接页
+  - `_backlinks/` 加入 `.gitignore`(生成产物)
+  - 跑一次 0.14s,282 个文件扫完,**77% 笔记有反向链接,63 个孤儿笔记**(候选归档)
+  - 实际数据:反向链接 Top 1 = `AI/向量检索/概览` (5 反向链接)——健康信号
+- **新笔记 frontmatter 规范**:
+  - `related: [path/to/note]` 字段列 2-5 个强相关笔记
+  - 必加至少 2 个 `[[wikilink]]` 引用现有笔记
+  - 老的"长笔记"不强制拆(遵守"无破坏性"原则)
+- **为什么不迁 Obsidian**:
+  - 现有 Astro 静态站点 + git 工作流不能丢
+  - frontmatter `related` 字段是 Astro 友好 + 兼容 Obsidian
+  - 增量迁移优于全量迁移
+- **更新 AGENTS.md**:总览表 22→25 一级分类(加 00-MOC/10-项目/20-资源/30-归档),新增 5 个二级子树段(00-MOC/10-项目/20-资源/30-归档 + 在 AI 后),统计 268→282(14 篇新增)
+- **更新 INDEX.md**:顶端加"知识库总入口" + 5 主题地图,末尾加 PARA 3 个章节,页面计数 268→282
+- **更新 .gitignore**:加 `_backlinks/`(scripts/related.sh 的生成产物)
+- **未做(留给未来)**:
+  - 现有 268 篇笔记的"原子化拆分"(B 方案踩坑后决定**不拆**,等以后真的需要)
+  - MOC 双向链接脚本的"修复悬空 wikilink"功能(目前只统计,不改)
+  - Daily Notes / 时间维度
+  - AI 时代深度内容(RAG 实战/MCP 协议详解/向量库实测)
+  - 标签体系的细粒度化
+
 ## 2026-07-27 B 方案 restructure | AI/DB 多维分类重组 + 5 个新目录占位
 
 - **目标**:执行"中等重构"——保留现有技术树,扩充 AI 时代分类 + 补 DB/DevOps/Cloud 空白。一阶段 (A) 的目录清理已在上条 commit 完成,本条专注分类重组。

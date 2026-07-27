@@ -130,5 +130,5 @@ description: Hermes Agent Kanban 多 Profile 协作体系与 Claude Code / OpenC
 
 ## 参考
 
-- [[1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 团队级 Multi-Agent 协作的真实工程案例
-- [[Agent发展|AI 系统演进]] — 从规则驱动到 Multi-Agent 的完整脉络
+- [[开源项目分析/阅读/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 团队级 Multi-Agent 协作的真实工程案例
+- [[AI/Agent/Agent发展|AI 系统演进]] — 从规则驱动到 Multi-Agent 的完整脉络

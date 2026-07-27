@@ -132,3 +132,6 @@ dist
 
 wiki
 llm-wiki
+
+# C 方案(2026-07-27)反向链接生成产物,跑 scripts/related.sh 重生成
+_backlinks/

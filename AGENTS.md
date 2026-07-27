@@ -10,6 +10,7 @@
 
 | 分类         | 路径            | 文件数 | 内容                                                  |
 | ------------ | --------------- | ------ | ----------------------------------------------------- |
+| 00-MOC       | `00-MOC/`       | 6      | 知识库总入口 + 5 个主题地图(AI/前端/Graphics/GIS/工作流) |
 | AI           | `AI/`           | 11     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索       |
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
 | Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
@@ -27,6 +28,9 @@
 | 开源项目分析 | `开源项目分析/` | 16     | 开源项目评估、选型分析、工具测评、项目阅读             |
 | 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
 | 前端         | `前端/`         | 54     | React、Vue、TS、JS、CSS、HTML、动画                   |
+| 10-项目      | `10-项目/`      | 4      | PARA Projects 维度——独立 git 项目的指针页(非内容副本)  |
+| 20-资源      | `20-资源/`      | 3      | PARA Resources 维度——工具/库/参考索引                 |
+| 30-归档      | `30-归档/`      | 1      | PARA Archive 维度——过时/废弃内容(占位)               |
 | 跨平台       | `跨平台/`       | 15     | Electron、React Native、小程序、协议桥接              |
 | 音视频       | `音视频/`       | 2      | 视频、流媒体                                          |
 
@@ -52,6 +56,44 @@ AI/
 │   └── 概览.md                                    (图像/视频/音频/3D 待补)
 └── 向量检索/                                      ← 向量检索算法视角
     └── 概览.md                                    (HNSW/IVF/量化/混合检索 待补)
+```
+
+#### 00-MOC（C 方案新增）
+
+```
+00-MOC/
+├── Home.md                                         ← 知识库总入口
+├── AI-技术树.md                                   ← AI 主题 MOC
+├── 前端-技术树.md                                 ← 前端主题 MOC
+├── Graphics-技术树.md                             ← Graphics 主题 MOC
+├── GIS-技术树.md                                  ← GIS 主题 MOC
+└── 工作流与项目.md                                ← 独立项目/工具/归档入口
+```
+
+#### 10-项目（C 方案新增，PARA Projects）
+
+```
+10-项目/
+├── sa_protocol_library.md                         ← 无人机协议库(独立 git)
+├── sagc-new-usoa.md                               ← 无人机地面站(独立 git)
+├── awesome-toys.md                                ← 个人工具集合(独立 git)
+└── knowledge-base-system.md                       ← 知识库自指
+```
+
+#### 20-资源（C 方案新增，PARA Resources）
+
+```
+20-资源/
+├── AI-工具.md
+├── 前端工具.md
+└── 命令行工具.md
+```
+
+#### 30-归档（C 方案新增，PARA Archive）
+
+```
+30-归档/
+└── README.md                                       ← 归档规则
 ```
 
 #### Architecture
@@ -381,8 +423,9 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 
 ## 统计
 
-- **总计一级分类**: 22 个（21 个原分类 + 新增 DevOps/Cloud，删 ToBeContinue/杂谈）
-- **总计文件**: 268 个 `.md` 文件（含 Home.md）
+- **总计一级分类**: 25 个（22 个 B 方案分类 + 00-MOC/10-项目/20-资源/30-归档 4 个 C 方案 PARA + MOC 维度）
+- **总计文件**: 282 个 `.md` 文件（含 Home.md）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
+- **2026-07-27 C 方案**: 升级为"个人知识库"——新建 00-MOC/(6 入口页) + 10-项目/(4 独立 git 项目指针) + 20-资源/(3 工具索引) + 30-归档/(1 规则);新增 scripts/related.sh 反向链接生成脚本(.gitignore 掉 _backlinks/);**14 篇新增,0 篇迁移**(无破坏性重构)
 - **2026-07-27 B 方案**: AI 拆 5 子目录（原理/LLM-应用/Agent/AIGC/向量检索），DB 补 SQL/Redis/向量库 3 子目录，新增 DevOps/Cloud 2 大类；**10 篇新增**(5 个新子目录各 1 概览 + AI/原理/知识地图 1 篇,加原 AI/概览 整体移入 0 增量); **原 AI/概览.md 283 行原创内容保留**(路径 AI/概览.md → AI/原理/概览.md)
 - **2026-07-27 B 方案踩坑记录**: 新建 AI/原理/概览.md 时,git 默认将同名的 AI/概览.md 视为删除。**立刻用 git show HEAD 还原原 283 行原创内容**到 AI/原理/概览.md,新写的知识地图另存为 AI/原理/知识地图.md——教训:新建同名前必须先 cat 旧内容或 git mv 改名

@@ -11,23 +11,47 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-27 B 方案 restructure | AI/DB 多维分类重组 + 5 个新目录占位
+
+- **目标**:执行"中等重构"——保留现有技术树,扩充 AI 时代分类 + 补 DB/DevOps/Cloud 空白。一阶段 (A) 的目录清理已在上条 commit 完成,本条专注分类重组。
+- **AI 重组 (6→11 篇,5 个子目录)**:
+  - 新建 `AI/原理/`(6 篇):Transformer / 训练 / 机器学习 / 模型 + 原 `AI/概览.md` 整体移入(283 行原创内容:AI 定义/符号主义 vs 连接主义/感知与决策) + 新写 `知识地图.md`(监督/无监督/强化/训练范式待学清单)
+  - 新建 `AI/Agent/`(2 篇):Agent 发展(从原 AI/ 移入) + 新写概览 —— Agent 系统架构
+  - 新建 `AI/LLM-应用/`(1 篇):新写概览 —— RAG / Prompt / Function Calling / Embedding / Memory
+  - 新建 `AI/AIGC/`(1 篇):新写概览 —— 图像 / 视频 / 音频 / 3D 多模态生成
+  - 新建 `AI/向量检索/`(1 篇):新写概览 —— HNSW / IVF / 量化 / 混合检索算法视角
+  - `AI/` 顶层原 6 篇 flat 布局 → 5 子目录,语义层级从 1 层升到 2 层
+- **DB 扩展 (4→7 篇,3 个新子目录)**:
+  - 新建 `DB/SQL/` 概览 —— 关系型数据库、查询优化、事务隔离
+  - 新建 `DB/Redis/` 概览 —— 内存数据库、缓存模式、集群
+  - 新建 `DB/向量库/` 概览 —— 向量数据库(DB 视角:选型/部署/运维),与 `AI/向量检索/`(算法视角:索引原理/检索 pipeline)互补并双向 wikilink
+- **新增 2 个一级分类**:
+  - `DevOps/` 概览 —— CI/CD、容器编排、监控、IaC
+  - `Cloud/` 概览 —— AWS/GCP/Azure/阿里云、Serverless、CDN
+- **AI 编码工程化不动的决定**:Trellis / spec-kit / Ralph / Superpowers 4 篇保留在 `开源项目分析/AI编码工程化/`。它们是"具体的开源项目评估",与"AI 应用原理"无冲突;归类边界遵循 2026-07-19 立定的规则(`AI/` = 原理/概念,`开源项目分析/` = 评估/对比/阅读)
+- **关于占位 stub**:5 个新子目录(SQL/Redis/向量库/DevOps/Cloud)+ 4 个 AI 新子目录(LLM-应用/Agent/AIGC/向量检索)各写 1 篇概览页,内含 ① 知识地图 ② TODO 列表(未来要补的关键点) ③ 参考资料链接。**不替用户写实际笔记内容**——stub 是锚点,真实知识靠你自己填
+- **向量库 vs 向量检索 双视角策略**:`DB/向量库/` 走"数据库视角"(Milvus/Qdrant 作为产品怎么选/怎么部署);`AI/向量检索/` 走"算法视角"(HNSW/IVF 原理、混合检索、rerank)。两个概览互相 wikilink 标注,避免未来两个目录都长出"重叠"内容
+- **更新 AGENTS.md**:总览表 19→22 一级分类(加 Cloud/DevOps,改 AI/DB 文件数),AI 二级子树重写为 5 子目录,DB 二级子树加 3 子目录,新增 DevOps/Cloud 子树,统计 258→268(10 篇新增:5 个新子目录各 1 概览 + AI/原理/知识地图 1 篇,加上原 AI/概览 移入无新增)
+- **更新 INDEX.md**:AI 区重写为 5 子分类章节(原理下加知识地图),DB 区补 3 条,新增 Cloud/DevOps 2 个一级章节,页面计数 258→268
+- **未做(留给 B 方案后续或 C 方案)**:MOC 多维入口、Zettelkasten 双向链接改造、PARA 的 Projects/Resources 维度、AI 时代深度内容(RAG 实战/Prompt 调优/MCP 协议详解)、向量库实测对比、DevOps/Cloud 实际内容填充
+
 ## 2026-07-27 restructure | 清空 ToBeContinue/杂谈,41 篇归位 + 4 个新目录
 
 - **目标**:消除两个"腐烂目录"——`ToBeContinue/`(25 篇未归位)+ `杂谈/`(16 篇杂项)。只搬位置不补内容,空白文章保留待后续填充。
 - **删除(1)**: `ToBeContinue/Heap.md` —— 与 `CS/DataStructure/Tree/堆.md` 重复空壳,删
 - **新建 4 个目录**:
-  - `Security/`(从 杂谈/2FA验证原理) —— 认证/安全协议
+  - `Security/`(从 杂谈/2FA 验证原理) —— 认证/安全协议
   - `方法论/`(从 杂谈/开源如何保证收入/我的大前端世界观/软件开发周期/面试复习) —— 职业与思维方法
   - `CS/NetWork/Application/实时通信/`(从 ToBeContinue/前后端实时通信) —— 协议族子目录,未来 SSE/WebSocket/MQTT 都进
   - `音视频/流媒体/`(从 ToBeContinue/直播流) —— 协议族子目录,未来 HLS/RTMP/WebRTC 都进
 - **CS/Algorithm/(11 新增)**: 二分法 / 单调栈 / 博弈算法 / 多米诺和托米诺平铺 / 子序列问题 / 寻找中位数 / 树状数组 / 格雷码 / 贡献度算法 / 进制转换 / 随机算法
-- **CS/Encoding/Base64.md**(从 ToBeContinue/Base64编码)
+- **CS/Encoding/Base64.md**(从 ToBeContinue/Base64 编码)
 - **CS/OS/时区.md**(从 ToBeContinue/时区)
-- **JSRuntime/Node.js/ 加 2 篇**: node.js内存泄漏 / Framework/从egg-helper学习egg源码
-- **Performance/ 加 4 篇**: Chrome调试 / JS如何获取精确的时间戳 / Web截图 / 内存泄漏及排查
-- **前端/Javascript/ 加 8 篇**: CJS+ESM+Webpack, Import maps, JSON和Javascript, Javascript正则, 大文件如何上传(重命名), 如何处理循环引用, 常见的问题及解决方案, 解决ESM Import 过多
-- **前端/React/ 加 3 篇**: React 事件 / React 的错误捕获 / 为啥react没有keep-alive
-- **前端/Typescript/ 加 1 篇**: 从d.ts了解typescript
+- **JSRuntime/Node.js/ 加 2 篇**: node.js 内存泄漏 / Framework/从 egg-helper 学习 egg 源码
+- **Performance/ 加 4 篇**: Chrome 调试 / JS 如何获取精确的时间戳 / Web 截图 / 内存泄漏及排查
+- **前端/Javascript/ 加 8 篇**: CJS+ESM+Webpack, Import maps, JSON 和Javascript, Javascript 正则, 大文件如何上传(重命名), 如何处理循环引用, 常见的问题及解决方案, 解决 ESM Import 过多
+- **前端/React/ 加 3 篇**: React 事件 / React 的错误捕获 / 为啥 react 没有 keep-alive
+- **前端/Typescript/ 加 1 篇**: 从 d.ts 了解 typescript
 - **前端/CSS/ 加 1 篇**: 常用的图片格式
 - **跨平台/ 加 1 篇**: 网页唤醒本地程序
 - **wikilink 替换(2 处)**: `开源项目分析/阅读/htmx-与AI协作的具体案例.md` 中 `[[杂谈/我的大前端世界观|...]]` → `[[方法论/我的大前端世界观|...]]`;`Medal-W-Key-...md` 中 `[[杂谈/解决ESM Import 过多|...]]` → `[[前端/Javascript/解决ESM Import 过多|...]]`
@@ -158,7 +182,7 @@ sidebar:
 - 更新 `INDEX.md`：章节名、Wiki 链接路径全部换名
 - 明确两目录定位：`开发工具链/` = 工具使用笔记, `开源项目分析/` = 项目评估报告
 
-## 2026-07-14 restructure | 重组 Claude Design System Prompt 分类 + 新建 阅读/ 子目录
+## 2026-07-14 restructure | 重组 Claude Design System Prompt 分类 + 新建 阅读/ 子目录$$
 
 - 将 `AI/Claude-Design-System-Prompt-逆向工程的设计协作提示词库.md` 移至 `开源项目分析/`（它是开源项目，不属于 AI 知识）
 - 新建 `开源项目分析/阅读/` 子目录，后续文章类分析归入此处
@@ -194,7 +218,7 @@ sidebar:
 ## 2026-07-14 ingest | 收录 1688 Multi-Agent 超级组织实践
 
 - 新增 `AI/1688-Multi-Agent超级组织实践.md` — 1688 数据中心 Multi-Agent 研发小队实录，涵盖 KST 知识工程、Harness/Loop Engineering、Squad 协作模式
-- 更新 `AGENTS.md`：AI 文件数 5→7，目录树新增 Agent发展.md 和 1688-Multi-Agent超级组织实践.md，总计 ~200
+- 更新 `AGENTS.md`：AI 文件数 5→7，目录树新增 Agent 发展.md 和 1688-Multi-Agent 超级组织实践.md，总计 ~200
 - 更新 `INDEX.md`：AI 区新增条目，页面计数 247→248
 
 ## 2026-07-13 ingest | 收录 Honcho — Agent 记忆基础设施分析

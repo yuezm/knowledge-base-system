@@ -7,16 +7,35 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **258** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
+> 内容目录。共 **268** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
 
 ## AI - 人工智能
 
-- [[AI/Agent发展|AI 系统演进]]
-- [[AI/Transformer|Transformer]]
-- [[AI/机器学习|机器学习]]
-- [[AI/概览|概览]]
-- [[AI/模型|模型]]
-- [[AI/训练|AI 训练全解：从预训练到后训练]]
+### 原理（AI 底层原理，不依赖 LLM）
+
+- [[AI/原理/概览|概览]] — AI 定义 / 符号主义 vs 连接主义 / 感知与决策（283 行原创）
+- [[AI/原理/知识地图|知识地图]] — 监督 / 无监督 / 强化 / 训练范式 待学清单
+- [[AI/原理/Transformer|Transformer]]
+- [[AI/原理/训练|AI 训练全解：从预训练到后训练]]
+- [[AI/原理/机器学习|机器学习]]
+- [[AI/原理/模型|模型]]
+
+### LLM-应用（LLM 工程化技术）
+
+- [[AI/LLM-应用/概览|概览]] — RAG / Prompt / Function Calling / Embedding / Memory
+
+### Agent（Agent 系统）
+
+- [[AI/Agent/概览|概览]] — MCP / Tool Use / 工作流 / 记忆
+- [[AI/Agent/Agent发展|AI 系统演进]]
+
+### AIGC（多模态生成）
+
+- [[AI/AIGC/概览|概览]] — 图像 / 视频 / 音频 / 3D
+
+### 向量检索（算法视角）
+
+- [[AI/向量检索/概览|概览]] — HNSW / IVF / 量化 / 混合检索
 
 ## Architecture - 架构设计
 
@@ -39,6 +58,10 @@ sidebar:
 - [[Browser/Performance|Devtools之Performance]]
 - [[Browser/浏览器多进程模型|浏览器多进程模型]]
 - [[Browser/浏览器指纹|浏览器指纹]]
+
+## Cloud - 云计算
+
+- [[Cloud/概览|概览]] — AWS/GCP/Azure/阿里云、Serverless、CDN（占位）
 
 ## CS - 计算机基础
 
@@ -90,6 +113,13 @@ sidebar:
 - [[DB/MongoDB/MongoDB|MongoDB]]
 - [[DB/MongoDB/权限|权限]]
 - [[DB/MongoDB/索引|索引]]
+- [[DB/SQL/概览|SQL 概览]] — 关系型数据库、查询优化、事务（占位）
+- [[DB/Redis/概览|Redis 概览]] — 内存数据库、缓存模式（占位）
+- [[DB/向量库/概览|向量库概览]] — Milvus / Qdrant / Weaviate / pgvector（DB 视角）
+
+## DevOps - 运维与基础设施
+
+- [[DevOps/概览|概览]] — CI/CD、容器编排、监控、IaC（占位）
 
 ## GIS - 地理信息系统
 
@@ -229,7 +259,7 @@ sidebar:
 - [[开源项目分析/阅读/Hermes-Kanban多Profile持久化工作流与SubAgent对比|Hermes Kanban vs SubAgent]] — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
 - [[开源项目分析/阅读/Medal-W-Key-前端基础设施现代化复盘|Medal W-Key 前端基础设施现代化]] — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径，barrel file 与 tree-shaking 实战权衡
 - [[开源项目分析/阅读/htmx-与AI协作的具体案例|htmx 与 AI 协作的具体案例]] — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程，AI 调查/测试强、方案设计弱，技术债指数增长论
-- [[开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具|Open Code Review]] — 阿里 AI 代码审查 CLI 工具，确定性工程×Agent混合驱动，10.5K Stars
+- [[开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具|Open Code Review]] — 阿里 AI 代码审查 CLI 工具，确定性工程×Agent 混合驱动，10.5K Stars
 - [[开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具|dependency-cruiser]] — JS/TS 依赖分析与架构治理工具，可编程规则引擎，6,934 Stars
 - [[开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比|CodeGraph vs GitNexus vs CRG]] — AI 代码智能工具三大明星横向对比，60K/44K/19K Stars
 - [[开源项目分析/AI编码工程化/Trellis-AI编码工程框架|Trellis — AI 编码工程框架]] — 跨平台 AI Coding Agent Harness，4 阶段循环 + spec 学习闭环 + 17 平台适配器，12.8K Stars

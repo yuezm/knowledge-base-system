@@ -51,16 +51,25 @@ related: [文件路径] # 相关文件（[[wikilink]] 格式）
 | 标签             | 说明                | 对应目录              |
 | ---------------- | ------------------- | --------------------- |
 | `ai`             | 人工智能/ML/DL      | `AI/`                 |
+| `ai-principle`   | AI 底层原理          | `AI/原理/`            |
+| `llm-app`        | LLM 工程化应用        | `AI/LLM-应用/`        |
+| `ai-agent`       | Agent 系统           | `AI/Agent/`           |
+| `aigc`           | 多模态生成           | `AI/AIGC/`            |
+| `vector-search`  | 向量检索             | `AI/向量检索/`,`DB/向量库/` |
 | `architecture`   | 架构模式/设计       | `Architecture/`       |
 | `book`           | 读书笔记            | `Books/`              |
 | `browser`        | 浏览器原理          | `Browser/`            |
+| `cloud`          | 云计算              | `Cloud/`              |
 | `cs`             | 计算机基础          | `CS/`                 |
 | `db`             | 数据库              | `DB/`                 |
+| `sql`            | 关系型数据库         | `DB/SQL/`             |
+| `redis`          | Redis 内存数据库     | `DB/Redis/`           |
 | `gis`            | 地理信息            | `GIS/`                |
 | `graphics`       | 图形学/WebGL/WebGPU | `Graphics/`           |
 | `js-runtime`     | JS 运行时/Node/Deno | `JSRuntime/`          |
 | `performance`    | 性能优化            | `Performance/`        |
 | `devops`         | 工具链/CI           | `开发工具链/`         |
+| `devops-pro`     | DevOps 进阶（容器/编排/监控） | `DevOps/`        |
 | `frontend`       | 前端工程            | `前端/`               |
 | `react`          | React 框架          | `前端/React/`         |
 | `vue`            | Vue 框架            | `前端/Vue/`           |

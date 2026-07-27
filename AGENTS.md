@@ -10,12 +10,14 @@
 
 | 分类         | 路径            | 文件数 | 内容                                                  |
 | ------------ | --------------- | ------ | ----------------------------------------------------- |
-| AI           | `AI/`           | 6      | AI 底层原理、核心概念、知识图谱（不含分析/阅读类文章） |
+| AI           | `AI/`           | 11     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索       |
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
 | Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
 | Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                          |
 | CS           | `CS/`           | 41     | 算法、数据结构、OS、网络、Docker、编码、实时通信       |
-| DB           | `DB/`           | 4      | MongoDB API、索引、权限                               |
+| Cloud        | `Cloud/`        | 1      | AWS/GCP/Azure/阿里云、Serverless、CDN（占位）         |
+| DB           | `DB/`           | 7      | MongoDB / SQL / Redis / 向量库                       |
+| DevOps       | `DevOps/`       | 1      | CI/CD、容器编排、监控、IaC（占位）                    |
 | GIS          | `GIS/`          | 23     | 坐标系、Cesium、Leaflet、3D Tiles                     |
 | Graphics     | `Graphics/`     | 44     | Three.js、Babylon、WebGL、WebGPU、图形学              |
 | JSRuntime    | `JSRuntime/`    | 22     | Node.js、Deno、NPM、模块系统、Egg 源码                 |
@@ -34,12 +36,22 @@
 
 ```
 AI/
-├── Agent发展.md
-├── 概览.md
-├── 机器学习.md
-├── 模型.md
-├── 训练.md
-└── Transformer.md
+├── 原理/                                          ← AI 底层原理（不依赖 LLM）
+│   ├── 概览.md（283 行原创内容：AI 定义/符号主义 vs 连接主义/感知与决策）
+│   ├── 知识地图.md（待学清单：监督/无监督/强化/训练范式）
+│   ├── Transformer.md
+│   ├── 训练.md
+│   ├── 机器学习.md
+│   └── 模型.md
+├── LLM-应用/                                      ← LLM 工程化技术
+│   └── 概览.md                                    (RAG / Prompt / Function Calling / Embedding / Memory 待补)
+├── Agent/                                         ← Agent 系统
+│   ├── 概览.md
+│   └── Agent发展.md                                ← Agent 架构演进知识图谱
+├── AIGC/                                          ← 多模态生成
+│   └── 概览.md                                    (图像/视频/音频/3D 待补)
+└── 向量检索/                                      ← 向量检索算法视角
+    └── 概览.md                                    (HNSW/IVF/量化/混合检索 待补)
 ```
 
 #### Architecture
@@ -113,11 +125,31 @@ CS/
 
 ```
 DB/
-└── MongoDB/
-    ├── MongoDB.md
-    ├── API.md
-    ├── 权限.md
-    └── 索引.md
+├── MongoDB/
+│   ├── MongoDB.md
+│   ├── API.md
+│   ├── 权限.md
+│   └── 索引.md
+├── SQL/                                            ← 关系型数据库（占位）
+│   └── 概览.md
+├── Redis/                                          ← 内存数据库（占位）
+│   └── 概览.md
+└── 向量库/                                         ← 向量数据库（DB 视角）
+    └── 概览.md                                    （算法视角见 AI/向量检索/）
+```
+
+#### DevOps
+
+```
+DevOps/
+└── 概览.md                                        ← CI/CD、容器、监控、IaC（占位）
+```
+
+#### Cloud
+
+```
+Cloud/
+└── 概览.md                                        ← AWS/GCP/Azure/阿里云、Serverless、CDN（占位）
 ```
 
 #### GIS
@@ -316,6 +348,16 @@ Security/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/AI/原理/Transformer.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/AI/Agent/Agent发展.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/AI/LLM-应用/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/AI/AIGC/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/AI/向量检索/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/DB/SQL/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/DB/Redis/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/DB/向量库/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/DevOps/概览.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/Cloud/概览.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Trellis-AI编码工程框架.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop.md
@@ -339,7 +381,8 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 
 ## 统计
 
-- **总计一级分类**: 19 个（17 个原分类 + 新增 Security/方法论,删 ToBeContinue/杂谈）
-- **总计文件**: 257 个 `.md` 文件（删 Heap 重复空壳 1 篇,含 Home.md 共 258）
+- **总计一级分类**: 22 个（21 个原分类 + 新增 DevOps/Cloud，删 ToBeContinue/杂谈）
+- **总计文件**: 268 个 `.md` 文件（含 Home.md）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
-- **2026-07-27 restructure**: 41 篇从 ToBeContinue/(25) + 杂谈/(16) 归位到正式分类,新建 Security/方法论/CS-NetWork-Application-实时通信/音视频-流媒体 四个目录
+- **2026-07-27 B 方案**: AI 拆 5 子目录（原理/LLM-应用/Agent/AIGC/向量检索），DB 补 SQL/Redis/向量库 3 子目录，新增 DevOps/Cloud 2 大类；**10 篇新增**(5 个新子目录各 1 概览 + AI/原理/知识地图 1 篇,加原 AI/概览 整体移入 0 增量); **原 AI/概览.md 283 行原创内容保留**(路径 AI/概览.md → AI/原理/概览.md)
+- **2026-07-27 B 方案踩坑记录**: 新建 AI/原理/概览.md 时,git 默认将同名的 AI/概览.md 视为删除。**立刻用 git show HEAD 还原原 283 行原创内容**到 AI/原理/概览.md,新写的知识地图另存为 AI/原理/知识地图.md——教训:新建同名前必须先 cat 旧内容或 git mv 改名

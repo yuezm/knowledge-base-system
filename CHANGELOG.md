@@ -11,6 +11,33 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-27 E 方案 delete | 撤销 10-项目 PARA Projects 维度
+
+- **目标**：撤回 C 方案引入的 `10-项目/` PARA Projects 维度(4 个独立 git 项目指针页),保留 20-资源 / 30-归档 维度。
+- **动机**：
+  1. **个人知识库与项目无关**——10-项目 4 篇(sa_protocol_library / sagc-new-usoa / awesome-toys / knowledge-base-system)放的是"项目指针"(项目名+简介+本地路径+技术栈),属于"项目管理文档"而非"知识库内容"。知识库的价值在于"可复用的知识",项目信息跟这个目标正交。
+  2. **公开仓库路径泄漏**——知识库部署在 GitHub 公开仓库,但 4 个指针页硬编码了 `/home/keven/codes/<name>` 私有路径,泄漏 hostname + 用户名 + 项目名组合,公开暴露内部工作目录结构。
+- **删除清单**(4 篇,`git rm`)：
+  - `src/content/docs/10-项目/sa_protocol_library.md`
+  - `src/content/docs/10-项目/sagc-new-usoa.md`
+  - `src/content/docs/10-项目/awesome-toys.md`
+  - `src/content/docs/10-项目/knowledge-base-system.md`
+- **反向引用清理**(8 处编辑)：
+  - `00-MOC/Home.md` — 删 PARA 入口段中 10-项目 行
+  - `00-MOC/工作流与项目.md` — 删"独立代码项目(10-项目/)"小节(整个),头部描述改写
+  - `00-MOC/GIS-技术树.md` — 删 `[[10-项目/sagc-new-usoa|...]]` 一行
+  - `scripts/related.sh` — PRIORITY 元组 2 处删除 "10-项目/"
+- **4 元文件联动**：
+  - `AGENTS.md` — 总览表 10-项目 行删 + 目录树 10-项目 小节删 + 统计 25→24 / 282→278 + 统计段加 E 方案行
+  - `INDEX.md` — 顶部页面计数 282→278 + 删"项目(PARA Projects)"段(4 行)
+  - `SCHEMA.md` — Domain 段 PARA 描述改 + 删 "`10-项目/`(PARA Projects)" 子段(7 行)
+  - `CHANGELOG.md` — 顶部追加本条 E 方案 + D 方案 status 路径规则删 `10-项目/`
+- **影响**：无 wikilink 残留(全部反向引用已清),related.sh 跑一次验证 _backlinks 不再含 10-项目 子树,无破坏性外溢。
+- **原则记录**:
+  - **公开仓库不放私有路径**——任何硬编码 `/home/keven/...` 的笔记都不进 git(知识库/方案/脚本同理)
+  - **PARA 4 维度里 Projects 维度要谨慎**——"个人知识库"场景下资源/归档/方法论比项目指针更核心;若日后要回,只在 `[[wikilink]]` 引用项目名 + 公开仓库 URL,绝不写本地路径
+- **未来**：sa_protocol_library / sagc-new-usoa / awesome-toys 3 个项目的"知识"沉淀(用到的 Cesium/Vue/React/技术栈笔记)仍在原主题目录下保留;只是不再有"项目指针"页
+
 ## 2026-07-27 D 方案 restructure | 引入 status 字段——笔记成熟度标记
 
 - **目标**:为 282 篇笔记引入 `status` 字段,标记内容成熟度与时效性,让 lint 工具能排序"待补全 / 待 review / 稳定区"。
@@ -26,7 +53,7 @@ sidebar:
 - **默认赋值规则** — 路径前缀匹配 + 行数 + 占位标记
   - `AI/原理`、`CS/Algorithm`、`CS/DataStructure`、`CS/数学`、`Architecture/MicroFE`、`方法论`、`Books` → `evergreen`
   - `前端/React`、`前端/Vue`、`Graphics/Three`、`GIS/Cesium`、`JSRuntime`、`开发工具链` 等 → `active`
-  - `00-MOC/` `10-项目/` `20-资源/` `开源项目分析/` → `active`
+  - `00-MOC/` `20-资源/` `开源项目分析/` → `active`(2026-07-27 E 方案:10-项目/ 已撤销,从 active 列表中移除)
   - 文件 < 30 行 或 含"占位/待学" → 强制 `stub`(覆盖路径规则)
   - 16 个路径未匹配文件单独补全(Agent/LLM-应用/Architecture 根/GIS 根/CANON/Home 等)
 - **Lint 用法**
@@ -47,10 +74,6 @@ sidebar:
   - `Home.md` — 知识库总入口(MOC of MOCs)
   - `AI-技术树.md` `前端-技术树.md` `Graphics-技术树.md` `GIS-技术树.md` `工作流与项目.md`
   - 用 `[[wikilink]]` 把现有零散笔记串起来,不改任何原笔记
-- **新建 10-项目/(4 篇)** — PARA Projects 维度
-  - `sa_protocol_library.md` `sagc-new-usoa.md` `awesome-toys.md` `knowledge-base-system.md`(自指)
-  - 指针页设计:项目名 + 简介 + 本地路径 + git URL + 知识库中相关笔记 wikilink
-  - **不复制项目内容**——用户明确"他们是独立 git 项目,和知识库没关系",知识库只做"软链入"
 - **新建 20-资源/(3 篇)** — PARA Resources 维度
   - `AI-工具.md` `前端工具.md` `命令行工具.md` — 工具索引(从现有笔记 wikilink 提取)
 - **新建 30-归档/(1 篇)** — PARA Archive 维度

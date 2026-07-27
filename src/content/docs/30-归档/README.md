@@ -20,6 +20,7 @@ tags: [archive, rules]
 - 标准/规范已更新
 
 **例子(候选)**:
+
 - `前端/Javascript/CJS, ESM, Webpack` — CJS+ESM 过渡期的笔记,现在项目几乎全用 ESM,价值衰减
 - `前端/React/为啥react没有keep-alive` — React 19 已支持类似机制(Offscreen API),需重新评估
 
@@ -30,6 +31,7 @@ tags: [archive, rules]
 - 老文件被 wikilink 引用次数为 0(可通过 `scripts/related.sh` 看反向链接)
 
 **例子(候选)**:
+
 - `前端/Javascript/大文件上传` — 与 `前端/Javascript/常见的问题及解决方案` 有重叠,可考虑合并
 
 ### 3. 评估性内容已失效
@@ -38,6 +40,7 @@ tags: [archive, rules]
 - 当时评估的版本与现在主流版本差异巨大
 
 **例子(候选)**:
+
 - 待评估(目前所有收录的开源项目都还活跃)
 
 ## 不归档(但容易误判)

@@ -8,31 +8,30 @@
 
 ### 📂 一级分类总览
 
-| 分类         | 路径            | 文件数 | 内容                                                  |
-| ------------ | --------------- | ------ | ----------------------------------------------------- |
+| 分类         | 路径            | 文件数 | 内容                                                     |
+| ------------ | --------------- | ------ | -------------------------------------------------------- |
 | 00-MOC       | `00-MOC/`       | 6      | 知识库总入口 + 5 个主题地图(AI/前端/Graphics/GIS/工作流) |
-| AI           | `AI/`           | 11     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索       |
-| Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
-| Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
-| Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                          |
-| CS           | `CS/`           | 41     | 算法、数据结构、OS、网络、Docker、编码、实时通信       |
-| Cloud        | `Cloud/`        | 1      | AWS/GCP/Azure/阿里云、Serverless、CDN（占位）         |
-| DB           | `DB/`           | 7      | MongoDB / SQL / Redis / 向量库                       |
-| DevOps       | `DevOps/`       | 1      | CI/CD、容器编排、监控、IaC（占位）                    |
-| GIS          | `GIS/`          | 23     | 坐标系、Cesium、Leaflet、3D Tiles                     |
-| Graphics     | `Graphics/`     | 44     | Three.js、Babylon、WebGL、WebGPU、图形学              |
-| JSRuntime    | `JSRuntime/`    | 22     | Node.js、Deno、NPM、模块系统、Egg 源码                 |
-| Performance  | `Performance/`  | 6      | Chrome 调试、JS 优化、预加载、内存排查                  |
-| Security     | `Security/`     | 1      | 认证 / 安全协议                                       |
-| 方法论       | `方法论/`       | 4      | 职业、视野、开源经济、软件工程方法论                  |
-| 开源项目分析 | `开源项目分析/` | 16     | 开源项目评估、选型分析、工具测评、项目阅读             |
-| 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
-| 前端         | `前端/`         | 54     | React、Vue、TS、JS、CSS、HTML、动画                   |
-| 10-项目      | `10-项目/`      | 4      | PARA Projects 维度——独立 git 项目的指针页(非内容副本)  |
-| 20-资源      | `20-资源/`      | 3      | PARA Resources 维度——工具/库/参考索引                 |
-| 30-归档      | `30-归档/`      | 1      | PARA Archive 维度——过时/废弃内容(占位)               |
-| 跨平台       | `跨平台/`       | 15     | Electron、React Native、小程序、协议桥接              |
-| 音视频       | `音视频/`       | 2      | 视频、流媒体                                          |
+| AI           | `AI/`           | 11     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索         |
+| Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试    |
+| Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                                |
+| Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                             |
+| CS           | `CS/`           | 41     | 算法、数据结构、OS、网络、Docker、编码、实时通信         |
+| Cloud        | `Cloud/`        | 1      | AWS/GCP/Azure/阿里云、Serverless、CDN（占位）            |
+| DB           | `DB/`           | 7      | MongoDB / SQL / Redis / 向量库                           |
+| DevOps       | `DevOps/`       | 1      | CI/CD、容器编排、监控、IaC（占位）                       |
+| GIS          | `GIS/`          | 23     | 坐标系、Cesium、Leaflet、3D Tiles                        |
+| Graphics     | `Graphics/`     | 44     | Three.js、Babylon、WebGL、WebGPU、图形学                 |
+| JSRuntime    | `JSRuntime/`    | 22     | Node.js、Deno、NPM、模块系统、Egg 源码                   |
+| Performance  | `Performance/`  | 6      | Chrome 调试、JS 优化、预加载、内存排查                   |
+| Security     | `Security/`     | 1      | 认证 / 安全协议                                          |
+| 方法论       | `方法论/`       | 4      | 职业、视野、开源经济、软件工程方法论                     |
+| 开源项目分析 | `开源项目分析/` | 16     | 开源项目评估、选型分析、工具测评、项目阅读               |
+| 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                               |
+| 前端         | `前端/`         | 54     | React、Vue、TS、JS、CSS、HTML、动画                      |
+| 20-资源      | `20-资源/`      | 3      | PARA Resources 维度——工具/库/参考索引                    |
+| 30-归档      | `30-归档/`      | 1      | PARA Archive 维度——过时/废弃内容(占位)                   |
+| 跨平台       | `跨平台/`       | 15     | Electron、React Native、小程序、协议桥接                 |
+| 音视频       | `音视频/`       | 2      | 视频、流媒体                                             |
 
 ### 📂 二级子目录详情
 
@@ -68,16 +67,6 @@ AI/
 ├── Graphics-技术树.md                             ← Graphics 主题 MOC
 ├── GIS-技术树.md                                  ← GIS 主题 MOC
 └── 工作流与项目.md                                ← 独立项目/工具/归档入口
-```
-
-#### 10-项目（C 方案新增，PARA Projects）
-
-```
-10-项目/
-├── sa_protocol_library.md                         ← 无人机协议库(独立 git)
-├── sagc-new-usoa.md                               ← 无人机地面站(独立 git)
-├── awesome-toys.md                                ← 个人工具集合(独立 git)
-└── knowledge-base-system.md                       ← 知识库自指
 ```
 
 #### 20-资源（C 方案新增，PARA Resources）
@@ -321,32 +310,32 @@ Security/
 
 ```md
 开源项目分析/
-├── 阅读/                                             ← 项目阅读、文章分析类
-│   ├── Harness工程-Multi-Agent架构实践.md           — 阿里数据研发 Harness 工程实践总结
-│   ├── 1688-Multi-Agent超级组织实践.md              — 1688 数据中心 Multi-Agent 研发小队实录,KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
-│   ├── Hermes-Kanban多Profile持久化工作流与SubAgent对比.md — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
-│   ├── Medal-W-Key-前端基础设施现代化复盘.md        — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径,barrel file 与 tree-shaking 实战权衡
-│   └── htmx-与AI协作的具体案例.md                   — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程,AI 调查/测试强,方案设计弱
+├── 阅读/ ← 项目阅读、文章分析类
+│ ├── Harness 工程-Multi-Agent 架构实践.md — 阿里数据研发 Harness 工程实践总结
+│ ├── 1688-Multi-Agent 超级组织实践.md — 1688 数据中心 Multi-Agent 研发小队实录,KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
+│ ├── Hermes-Kanban 多Profile 持久化工作流与 SubAgent 对比.md — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
+│ ├── Medal-W-Key-前端基础设施现代化复盘.md — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径,barrel file 与 tree-shaking 实战权衡
+│ └── htmx-与 AI 协作的具体案例.md — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程,AI 调查/测试强,方案设计弱
 ├── 依赖分析工具/
-│   └── dependency-cruiser-JS依赖分析和架构治理工具.md  — JS/TS 依赖分析与架构治理工具
+│ └── dependency-cruiser-JS 依赖分析和架构治理工具.md — JS/TS 依赖分析与架构治理工具
 ├── 自托管书签/
-│   └── Karakeep-自托管书签全能工具.md              — Karakeep 自托管书签全能工具分析
-├── AI浏览器自动化/
-│   └── Stagehand-AI浏览器自动化框架.md            — Stagehand AI 浏览器自动化框架分析
-├── AI记忆基础设施/
-│   └── Honcho-Agent记忆基础设施.md               — Honcho Agent 记忆基础设施分析
-├── AI代码审查/
-│   └── Open-Code-Review-阿里AI代码审查工具.md      — 阿里开源 AI 代码审查 CLI 工具，10.5K Stars
-├── AI代码智能/
-│   └── CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md  — 三大代码智能工具全面对比
-├── AI编码工程化/                                        ← AI 编码 spec-driven / agent harness 类
-│   ├── Trellis-AI编码工程框架.md                        — Trellis 跨平台 AI Coding Agent Harness,4 阶段循环,12.8K Stars
-│   ├── spec-kit-GitHub官方规范驱动开发.md              — spec-kit GitHub 官方规范驱动开发工具,122K Stars, MIT
-│   ├── Superpowers-AI编码工程师方法论与Skills框架.md   — obra/superpowers AI 编码工程师方法论,13+ composable skills,257K Stars, MIT
-│   └── Ralph-Autonomous-AI-Coding-Loop.md             — snarktank/ralph 自主 AI 编码循环,PRD 拆小 story + 每轮 fresh context,21.2K Stars, MIT
-├── 提示词工程/                                        ← 提示词工程设计类
-│   └── Claude-Design-System-Prompt-工程的设计协作提示词库.md  — Claude Design 逆向工程提示词库
-└── ...                                            ← 持续追加：同类型工具放在同子目录下
+│ └── Karakeep-自托管书签全能工具.md — Karakeep 自托管书签全能工具分析
+├── AI 浏览器自动化/
+│ └── Stagehand-AI 浏览器自动化框架.md — Stagehand AI 浏览器自动化框架分析
+├── AI 记忆基础设施/
+│ └── Honcho-Agent 记忆基础设施.md — Honcho Agent 记忆基础设施分析
+├── AI 代码审查/
+│ └── Open-Code-Review-阿里 AI 代码审查工具.md — 阿里开源 AI 代码审查 CLI 工具，10.5K Stars
+├── AI 代码智能/
+│ └── CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md — 三大代码智能工具全面对比
+├── AI 编码工程化/ ← AI 编码 spec-driven / agent harness 类
+│ ├── Trellis-AI 编码工程框架.md — Trellis 跨平台 AI Coding Agent Harness,4 阶段循环,12.8K Stars
+│ ├── spec-kit-GitHub 官方规范驱动开发.md — spec-kit GitHub 官方规范驱动开发工具,122K Stars, MIT
+│ ├── Superpowers-AI 编码工程师方法论与 Skills 框架.md — obra/superpowers AI 编码工程师方法论,13+ composable skills,257K Stars, MIT
+│ └── Ralph-Autonomous-AI-Coding-Loop.md — snarktank/ralph 自主 AI 编码循环,PRD 拆小 story + 每轮 fresh context,21.2K Stars, MIT
+├── 提示词工程/ ← 提示词工程设计类
+│ └── Claude-Design-System-Prompt-工程的设计协作提示词库.md — Claude Design 逆向工程提示词库
+└── ... ← 持续追加：同类型工具放在同子目录下
 ```
 
 #### 跨平台
@@ -429,11 +418,12 @@ subprocess.run(["grep", "-rl", "^status: active", "src/content/docs"])
 
 ## 统计
 
-- **总计一级分类**: 25 个（22 个 B 方案分类 + 00-MOC/10-项目/20-资源/30-归档 4 个 C 方案 PARA + MOC 维度）
-- **总计文件**: 282 个 `.md` 文件（含 Home.md）
+- **总计一级分类**: 24 个（22 个 B 方案分类 + 00-MOC/20-资源/30-归档 3 个 C 方案 PARA + MOC 维度;2026-07-27 E 方案撤销 10-项目 PARA Projects 维度）
+- **总计文件**: 278 个 `.md` 文件（含 Home.md;2026-07-27 E 方案 282→278,删 4 个 10-项目 指针页）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
 - **status 分布**(2026-07-27 D 方案引入): evergreen 33 / active 167 / stub 81 / archived 1
 - **2026-07-27 D 方案**: 引入 `status` 字段(evergreen/active/stub/archived)标记笔记成熟度,281 篇自动赋初值 + SCHEMA.md 加字段说明;4 处元文件联动完成(SCHEMA/AGENTS/INDEX/CHANGELOG)
-- **2026-07-27 C 方案**: 升级为"个人知识库"——新建 00-MOC/(6 入口页) + 10-项目/(4 独立 git 项目指针) + 20-资源/(3 工具索引) + 30-归档/(1 规则);新增 scripts/related.sh 反向链接生成脚本(.gitignore 掉 _backlinks/);**14 篇新增,0 篇迁移**(无破坏性重构)
+- **2026-07-27 E 方案**: 撤销 10-项目 PARA Projects 维度——4 个独立 git 项目指针页整体删除(`git rm`);理由:(1) 个人知识库与项目无关 (2) 公开仓库路径泄漏(`/home/keven/codes/...`);4 元文件联动完成;related.sh PRIORITY 同步移除;**4 篇删除,0 篇迁移**
+- **2026-07-27 C 方案**: 升级为"个人知识库"——新建 00-MOC/(6 入口页) + 10-项目/(4 独立 git 项目指针) + 20-资源/(3 工具索引) + 30-归档/(1 规则);新增 scripts/related.sh 反向链接生成脚本(.gitignore 掉 \_backlinks/);**14 篇新增,0 篇迁移**(无破坏性重构)
 - **2026-07-27 B 方案**: AI 拆 5 子目录（原理/LLM-应用/Agent/AIGC/向量检索），DB 补 SQL/Redis/向量库 3 子目录，新增 DevOps/Cloud 2 大类；**10 篇新增**(5 个新子目录各 1 概览 + AI/原理/知识地图 1 篇,加原 AI/概览 整体移入 0 增量); **原 AI/概览.md 283 行原创内容保留**(路径 AI/概览.md → AI/原理/概览.md)
 - **2026-07-27 B 方案踩坑记录**: 新建 AI/原理/概览.md 时,git 默认将同名的 AI/概览.md 视为删除。**立刻用 git show HEAD 还原原 283 行原创内容**到 AI/原理/概览.md,新写的知识地图另存为 AI/原理/知识地图.md——教训:新建同名前必须先 cat 旧内容或 git mv 改名

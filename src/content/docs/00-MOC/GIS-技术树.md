@@ -48,4 +48,3 @@ status: active
 
 ## 相关项目
 
-- [[10-项目/sagc-new-usoa|sagc-new-usoa]] — 无人机地面站,用到 Cesium/Leaflet

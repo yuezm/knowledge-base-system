@@ -26,9 +26,8 @@ status: active
 
 - [[00-MOC/工作流与项目|工作流与项目]] — 独立代码项目 / 工具资源 / 归档
 
-## 维度入口(PARA)
+## 维度入口(PARA,保留资源 + 归档)
 
-- **[[10-项目/knowledge-base-system|项目]]** — 正在做的独立 git 项目指针(sa_protocol_library / sagc-new-usoa / awesome-toys / 知识库自指)
 - **[[20-资源/AI-工具|资源]]** — 工具/库/参考索引(AI 工具 / 前端工具 / 命令行工具)
 - **[[30-归档/README|归档]]** — 过时/废弃内容(待补)
 

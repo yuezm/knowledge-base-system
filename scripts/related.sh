@@ -9,7 +9,7 @@
 #
 # 输出:
 #   _backlinks/index.md                     ← 总索引(所有笔记的反向链接数 + 无链接列表)
-#   _backlinks/<note>.md                    ← 关键笔记的详细反向链接(只给 MOC + AI/ + 10-项目/ 20-资源/)
+#   _backlinks/<note>.md                    ← 关键笔记的详细反向链接(只给 MOC + AI/ + 20-资源/ + 30-归档/)
 #
 # 不修改 git 状态(输出到 _backlinks/,用户可 gitignore)。
 
@@ -60,7 +60,7 @@ DOCS_ROOT = Path(os.environ.get("DOCS_DIR", "src/content/docs"))
 OUT_ROOT = Path("_backlinks")
 OUT_ROOT.mkdir(exist_ok=True)
 
-PRIORITY = ("00-MOC/", "AI/", "10-项目/", "20-资源/", "30-归档/")
+PRIORITY = ("00-MOC/", "AI/", "20-资源/", "30-归档/")
 
 all_notes = {}
 wikilink_pattern = re.compile(r'\[\[([^\]|]+?)(?:\|[^\]]+)?\]\]')
@@ -129,8 +129,8 @@ for n in no_bl:
 
 (OUT_ROOT / "index.md").write_text(index_md, encoding="utf-8")
 
-# ---- 2. 关键笔记独立页(MOC + AI/ + 10-项目/ + 20-资源/) ----
-PRIORITY = ("00-MOC/", "AI/", "10-项目/", "20-资源/", "30-归档/")
+# ---- 2. 关键笔记独立页(MOC + AI/ + 20-资源/ + 30-归档/) ----
+PRIORITY = ("00-MOC/", "AI/", "20-资源/", "30-归档/")
 for note in sorted(all_notes.keys()):
     if not any(note.startswith(p) for p in PRIORITY):
         continue
@@ -176,7 +176,7 @@ tags: [backlinks]
 print(f"✅ 生成完成,耗时 {time.time()-t0:.2f}s")
 print(f"   - 总笔记: {total}")
 print(f"   - 有反向链接: {total - len(no_bl)}, 无: {len(no_bl)}")
-print(f"   - 关键笔记独立页: 00-MOC/ + AI/ + 10-项目/ + 20-资源/ + 30-归档/ 子树")
+print(f"   - 关键笔记独立页: 00-MOC/ + AI/ + 20-资源/ + 30-归档/ 子树")
 print(f"📁 输出: {OUT_ROOT}/")
 print(f"💡 把 {OUT_ROOT}/ 加入 .gitignore(它是生成产物)")
 PYEOF

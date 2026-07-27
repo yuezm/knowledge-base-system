@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **282** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
+> 内容目录。共 **278** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -360,13 +360,6 @@ sidebar:
 
 - [[音视频/流媒体/直播流|直播流]]
 - [[音视频/视频/视频|视频]]
-
-## 项目（PARA Projects）
-
-- [[10-项目/sa_protocol_library|sa_protocol_library]] — 无人机地空协议管理中心
-- [[10-项目/sagc-new-usoa|sagc-new-usoa]] — 无人机地面站
-- [[10-项目/awesome-toys|awesome-toys]] — 个人工具集合
-- [[10-项目/knowledge-base-system|knowledge-base-system]] — 知识库自指
 
 ## 资源（PARA Resources）
 

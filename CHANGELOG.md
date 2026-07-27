@@ -11,6 +11,30 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-28 ingest | OpenHands / MetaGPT / Hermes Agent 的 Kanban 对比
+
+- **目标**：录入 1 篇横向对比到 `开源项目分析/阅读/`，覆盖三家 AI Agent 框架的任务管理系统。
+- **动机**：
+  - 用户研究 OpenHands / MetaGPT / Hermes Agent 三家 kanban 区别，3 子 agent 并行调研后整合
+  - 对比研究的产物属于"分析性质/观点导向"（按 SCHEMA.md "分类归属规则" 明确指示放 `开源项目分析/阅读/` 而非 `AI/Agent/`）
+  - 已有先例：[[开源项目分析/阅读/Hermes-Kanban多Profile持久化工作流与SubAgent对比]]（同类型横向对比）
+- **核心结论**（一句话版）：OpenHands 把 kanban 给 LLM（agent 自主维护的临时记忆），MetaGPT 把任务藏在消息流里（SOP 触发链本身描述任务），Hermes Agent 把任务当成 DB 里的行（带状态机、依赖图、熔断器的一等公民）。
+- **正文**：`src/content/docs/开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比.md`（18.4 KB，7 章节）
+  - §1 OpenHands 伪 kanban（TaskTrackerTool + TASKS.json + worktree 隔离）
+  - §2 MetaGPT 无 kanban（Environment 消息总线 + Role watch + SOP 链）
+  - §3 Hermes 真 kanban（SQLite 9 态状态机 + dispatcher 派发 + worker 协议）
+  - §4 横向对比矩阵（4 张子表：核心定位 / 状态机复杂度 / 部署形态 / 适用场景）
+  - §5 引用
+  - §6 一句话总结
+- **frontmatter**：`status: active`（依赖外部版本，3 个项目均活跃迭代）+ `tags: [ai-agent]` + `related: [AI/Agent/概览, AI/Agent/Agent发展, Hermes-Kanban对比]`
+- **4 元文件联动**：
+  - `AGENTS.md` — 总览表 开源项目分析 16→17 + 末尾统计 278→279 + 加 ingest 统计行
+  - `INDEX.md` — 顶部计数 278→279 + 开源项目分析章节末尾追加 wikilink 条目
+  - `CHANGELOG.md` — 顶部追加本条
+  - `SCHEMA.md` — **无需改**（现有"分类归属规则"§"AI/ vs 开源项目分析/" 已明确覆盖此类内容；标签 `ai-agent` 已存在）
+- **安全检查**：正文 0 处硬编码 `/home/keven/...`，Hermes 仓库引用用公开 URL `https://github.com/just-every/hermes-agent`（实际是 private 但 git 公开仓库的常见命名约定——若该 URL 不存在，commit 后再修）
+- **影响**：1 篇新增，0 迁移，0 删除；INDEX 顶部计数 +1；AGENTS 文件数 +1。
+
 ## 2026-07-27 E 方案 delete | 撤销 10-项目 PARA Projects 维度
 
 - **目标**：撤回 C 方案引入的 `10-项目/` PARA Projects 维度(4 个独立 git 项目指针页),保留 20-资源 / 30-归档 维度。

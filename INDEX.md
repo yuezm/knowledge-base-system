@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **278** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
+> 内容目录。共 **279** 个页面（含 Home.md），按分类列出。最后更新：2026-07-28
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -280,6 +280,7 @@ sidebar:
 - [[开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发|spec-kit — GitHub 官方规范驱动开发]] — GitHub 官方 Spec-Driven Development 工具集，122K Stars，MIT，含与 Trellis 详细对比
 - [[开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架|Superpowers — AI 编码工程师方法论与 Skills 框架]] — obra/superpowers 13+ composable skills 自动触发，TDD/code review/verification 强约束，257K Stars，MIT
 - [[开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop|Ralph — Autonomous AI Coding Loop]] — snarktank/ralph 自主 AI 编码循环，PRD 拆小 story + 每轮 fresh context，21.2K Stars，MIT
+- [[开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比|OpenHands / MetaGPT / Hermes Agent 的 Kanban 对比]] — 三家 AI Agent 框架任务管理横向对比，OpenHands 伪 kanban（TaskTrackerTool 三态清单）/ MetaGPT 无 kanban（SOP + 消息总线）/ Hermes 真 kanban（SQLite 9 态状态机）
 
 ## 前端
 

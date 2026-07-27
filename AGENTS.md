@@ -14,19 +14,19 @@
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试 |
 | Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                            |
 | Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                          |
-| CS           | `CS/`           | 27     | 算法、数据结构、OS、网络、Docker、编码                |
+| CS           | `CS/`           | 41     | 算法、数据结构、OS、网络、Docker、编码、实时通信       |
 | DB           | `DB/`           | 4      | MongoDB API、索引、权限                               |
 | GIS          | `GIS/`          | 23     | 坐标系、Cesium、Leaflet、3D Tiles                     |
 | Graphics     | `Graphics/`     | 44     | Three.js、Babylon、WebGL、WebGPU、图形学              |
-| JSRuntime    | `JSRuntime/`    | 20     | Node.js、Deno、NPM、模块系统                          |
-| Performance  | `Performance/`  | 2      | JS 优化、预加载                                       |
-| ToBeContinue | `ToBeContinue/` | 25     | 待整理主题（算法、协议、深入原理）                    |
-| 开源项目分析 | `开源项目分析/` | 12     | 开源项目评估、选型分析、工具测评、项目阅读             |
+| JSRuntime    | `JSRuntime/`    | 22     | Node.js、Deno、NPM、模块系统、Egg 源码                 |
+| Performance  | `Performance/`  | 6      | Chrome 调试、JS 优化、预加载、内存排查                  |
+| Security     | `Security/`     | 1      | 认证 / 安全协议                                       |
+| 方法论       | `方法论/`       | 4      | 职业、视野、开源经济、软件工程方法论                  |
+| 开源项目分析 | `开源项目分析/` | 16     | 开源项目评估、选型分析、工具测评、项目阅读             |
 | 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                            |
-| 前端         | `前端/`         | 41     | React、Vue、TS、JS、CSS、HTML                         |
-| 杂谈         | `杂谈/`         | 16     | 经验分享、源码解读、行业观点                            |
-| 跨平台       | `跨平台/`       | 14     | Electron、React Native、小程序                        |
-| 音视频       | `音视频/`       | 1      | 视频处理                                              |
+| 前端         | `前端/`         | 54     | React、Vue、TS、JS、CSS、HTML、动画                   |
+| 跨平台       | `跨平台/`       | 15     | Electron、React Native、小程序、协议桥接              |
+| 音视频       | `音视频/`       | 2      | 视频、流媒体                                          |
 
 ### 📂 二级子目录详情
 
@@ -85,14 +85,17 @@ CS/
 ├── OS/
 │   ├── OS.md
 │   ├── Linux.md
+│   ├── 时区.md
 │   └── Ubuntu/包管理.md
 ├── NetWork/
 │   ├── Network.md
 │   ├── Application/HTTP/  (HTTP, 状态码, RESTful, URI系列)
-│   └── Application/GRPC/GRPC.md
+│   ├── Application/GRPC/GRPC.md
+│   └── Application/实时通信/ (前后端实时通信.md)
 ├── Algorithm/
 │   ├── 压缩算法.md / 快速幂.md / 树形常用算法.md / 线形常用算法.md
-│   └── DP/ (经典扔鸡蛋.md, 股票算法.md)
+│   ├── DP/ (经典扔鸡蛋.md, 股票算法.md)
+│   └── (来自 ToBeContinue) 二分法 / 单调栈 / 博弈算法 / 多米诺和托米诺平铺 / 子序列问题 / 寻找中位数 / 树状数组 / 格雷码 / 贡献度算法 / 进制转换 / 随机算法
 ├── DataStructure/
 │   ├── 数学.md
 │   ├── Linear/ (位图.md, 线形.md)
@@ -102,7 +105,8 @@ CS/
 │   └── Docker.md
 └── Encoding/
     ├── BOM.md
-    └── Unicode.md
+    ├── Unicode.md
+    └── Base64.md
 ```
 
 #### DB
@@ -164,10 +168,10 @@ Graphics/
 JSRuntime/
 ├── Javascript运行时.md
 ├── Node.js/
-│   ├── Node.js 特性.md / CommonJS.md
+│   ├── Node.js 特性.md / CommonJS.md / node.js内存泄漏.md
 │   ├── API/ (buffer, child_process, cluster, console, Error, Module, process, string_decoder, timer)
 │   ├── Deploy/ (node使用docker部署.md)
-│   ├── Framework/ (Egg.md)
+│   ├── Framework/ (Egg.md, 从egg-helper学习egg源码.md)
 │   └── Packages/ (NPM, PNPM, Yarn, package.json, npm和yarn的区别)
 ├── Deno/
 │   └── JSR.md
@@ -178,19 +182,25 @@ JSRuntime/
 ```
 Performance/
 ├── Javascript优化.md
+├── Chrome调试.md / JS如何获取精确的时间戳.md / Web截图.md / 内存泄漏及排查.md
 └── preload, prefetch, prerender.md
 ```
 
-#### ToBeContinue
+#### Security
 
 ```
-ToBeContinue/
-├── (算法类) 二分法, 单调栈, 博弈算法, 多米诺和托米诺平铺, 子序列问题, 寻找中位数, 树状数组, 格雷码, 贡献度算法, 进制转换, 随机算法
-├── (JS/TS) CJS+ESM+Webpack, Import maps, Javascript正则, JSON和Javascript, 从d.ts了解typescript
-├── (React) React 事件, React 的错误捕获, 为啥react没有keep-alive
-├── (网络) 前后端实时通信, 直播流, 时区
-├── (编码) Base64编码, Heap
-└── (其他) 大文件如何上传
+Security/
+└── 2FA验证原理.md
+```
+
+#### 方法论
+
+```
+方法论/
+├── 开源如何保证收入.md
+├── 我的大前端世界观.md
+├── 软件开发周期.md
+└── 面试复习.md
 ```
 
 #### 开发工具链
@@ -211,33 +221,26 @@ ToBeContinue/
 前端/
 ├── React/
 │   ├── API.md / FAQ.md / Hooks.md / React状态管理.md / Scheduler.md / Utils.md
-│   └── Headless UI 和 React Hooks.md
+│   ├── Headless UI 和 React Hooks.md
+│   └── (来自 ToBeContinue) React 事件 / React 的错误捕获 / 为啥react没有keep-alive
 ├── Vue/
 │   ├── 响应式系统.md / 组件.md / Vue Router.md
 ├── Typescript/
 │   ├── Typescript.md / tsconfig.md / 类型.md
+│   └── (来自 ToBeContinue) 从d.ts了解typescript
 ├── Javascript/
 │   ├── (核心) 作用域.md / 执行上下文.md / Promise.md / Function.md / Event.md
 │   ├── (API) ArrayBuffer.md / Audio.md / Canvas.md / Document.md / File System API.md / Reflect.md / Scheduler.md
 │   ├── Number/ (Bigint.md, Javascript浮点数.md, Number.md)
-│   └── Object/ (Array.md, Javascript.md, 面向对象, 属性和方法, RegExp.md, This.md)
+│   ├── Object/ (Array.md, Javascript.md, 面向对象, 属性和方法, RegExp.md, This.md)
+│   └── (来自 ToBeContinue/杂谈) CJS+ESM+Webpack, Import maps, Javascript正则, JSON和Javascript, 大文件如何上传, 如何处理循环引用, 常见的问题及解决方案, 解决ESM Import 过多
 ├── CSS/
 │   ├── CSS.md / Color.md / Grid.md / Selector.md
+│   └── (来自 杂谈) 常用的图片格式.md
 ├── HTML/
 │   ├── HTML.md / meta.md
 └── 动画/
     └── Lottie.md
-```
-
-#### 杂谈
-
-```
-杂谈/
-├── (调试/排查) Chrome调试.md, JS如何获取精确的时间戳.md, node.js内存泄漏.md, 内存泄漏及排查.md, 如何处理循环引用.md, 常见的问题及解决方案.md, 常用的图片格式.md
-├── (工程) Web截图.md, 网页如何唤醒本地程序.md, 解决ESM Import 过多.md, 软件开发周期.md, 面试复习.md
-├── (安全) 2FA验证原理.md
-├── (源码) 从egg-helper学习egg源码.md
-└── (视野) 开源如何保证收入.md, 我的大前端世界观.md
 ```
 
 #### 开源项目分析
@@ -245,7 +248,11 @@ ToBeContinue/
 ```md
 开源项目分析/
 ├── 阅读/                                             ← 项目阅读、文章分析类
-│   └── Harness工程-Multi-Agent架构实践.md           — 阿里数据研发 Harness 工程实践总结
+│   ├── Harness工程-Multi-Agent架构实践.md           — 阿里数据研发 Harness 工程实践总结
+│   ├── 1688-Multi-Agent超级组织实践.md              — 1688 数据中心 Multi-Agent 研发小队实录,KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
+│   ├── Hermes-Kanban多Profile持久化工作流与SubAgent对比.md — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
+│   ├── Medal-W-Key-前端基础设施现代化复盘.md        — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径,barrel file 与 tree-shaking 实战权衡
+│   └── htmx-与AI协作的具体案例.md                   — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程,AI 调查/测试强,方案设计弱
 ├── 依赖分析工具/
 │   └── dependency-cruiser-JS依赖分析和架构治理工具.md  — JS/TS 依赖分析与架构治理工具
 ├── 自托管书签/
@@ -261,7 +268,8 @@ ToBeContinue/
 ├── AI编码工程化/                                        ← AI 编码 spec-driven / agent harness 类
 │   ├── Trellis-AI编码工程框架.md                        — Trellis 跨平台 AI Coding Agent Harness,4 阶段循环,12.8K Stars
 │   ├── spec-kit-GitHub官方规范驱动开发.md              — spec-kit GitHub 官方规范驱动开发工具,122K Stars, MIT
-│   └── Superpowers-AI编码工程师方法论与Skills框架.md   — obra/superpowers AI 编码工程师方法论,13+ composable skills,257K Stars, MIT
+│   ├── Superpowers-AI编码工程师方法论与Skills框架.md   — obra/superpowers AI 编码工程师方法论,13+ composable skills,257K Stars, MIT
+│   └── Ralph-Autonomous-AI-Coding-Loop.md             — snarktank/ralph 自主 AI 编码循环,PRD 拆小 story + 每轮 fresh context,21.2K Stars, MIT
 ├── 提示词工程/                                        ← 提示词工程设计类
 │   └── Claude-Design-System-Prompt-工程的设计协作提示词库.md  — Claude Design 逆向工程提示词库
 └── ...                                            ← 持续追加：同类型工具放在同子目录下
@@ -276,17 +284,20 @@ ToBeContinue/
 │   └── 工具/ (工具.md, 日志.md)
 ├── MiniProgram/
 │   └── 概览.md
-└── RN/
-    ├── ADB.md / 三方库.md / 事件.md / 优化.md
-    ├── 样式.md / 模块.md / 组件.md / 踩坑.md / 配置.md
+├── RN/
+│   ├── ADB.md / 三方库.md / 事件.md / 优化.md
+│   ├── 样式.md / 模块.md / 组件.md / 踩坑.md / 配置.md
+└── (来自 杂谈) 网页唤醒本地程序.md
 ```
 
 #### 音视频
 
 ```
 音视频/
-└── 视频/
-    └── 视频.md
+├── 视频/
+│   └── 视频.md
+└── 流媒体/
+    └── 直播流.md
 ```
 
 ## 常用路径示例
@@ -307,7 +318,10 @@ ToBeContinue/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Trellis-AI编码工程框架.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/Medal-W-Key-前端基础设施现代化复盘.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/htmx-与AI协作的具体案例.md
 ```
 
 ## 检索命令
@@ -325,6 +339,7 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 
 ## 统计
 
-- **总计一级分类**: 17 个
-- **总计文件**: ~255 个 `.md` 文件（含 Home.md 共 256，加 index.mdx 共 257）
-- **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/GRPC/）
+- **总计一级分类**: 19 个（17 个原分类 + 新增 Security/方法论,删 ToBeContinue/杂谈）
+- **总计文件**: 257 个 `.md` 文件（删 Heap 重复空壳 1 篇,含 Home.md 共 258）
+- **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
+- **2026-07-27 restructure**: 41 篇从 ToBeContinue/(25) + 杂谈/(16) 归位到正式分类,新建 Security/方法论/CS-NetWork-Application-实时通信/音视频-流媒体 四个目录

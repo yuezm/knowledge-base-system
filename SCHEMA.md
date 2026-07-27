@@ -73,6 +73,8 @@ related: [文件路径] # 相关文件（[[wikilink]] 格式）
 | `react-native`   | React Native        | `跨平台/RN/`          |
 | `mini-program`   | 小程序              | `跨平台/MiniProgram/` |
 | `media`          | 音视频              | `音视频/`             |
+| `methodology`    | 思考方法论 / 职业   | `方法论/`             |
+| `security`       | 安全协议 / 认证     | `Security/`           |
 
 ### 二级标签（按技术主题）
 

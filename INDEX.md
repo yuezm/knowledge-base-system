@@ -6,8 +6,8 @@ sidebar:
 ---
 
 # 知识库索引
->
-| 内容目录。共 **257** 个页面，按分类列出。最后更新：2026-07-19
+
+> 内容目录。共 **258** 个页面（含 Home.md），按分类列出。最后更新：2026-07-27
 
 ## AI - 人工智能
 
@@ -16,7 +16,7 @@ sidebar:
 - [[AI/机器学习|机器学习]]
 - [[AI/概览|概览]]
 - [[AI/模型|模型]]
-- [[AI/训练|训练]] — AI 训练全解：从预训练到后训练
+- [[AI/训练|AI 训练全解：从预训练到后训练]]
 
 ## Architecture - 架构设计
 
@@ -42,12 +42,23 @@ sidebar:
 
 ## CS - 计算机基础
 
-- [[CS/Algorithm/DP/经典扔鸡蛋|经典扔鸡蛋]]
-- [[CS/Algorithm/DP/股票算法|股票算法]]
+- [[CS/Algorithm/二分法|二分法]]
+- [[CS/Algorithm/单调栈|单调栈]]
+- [[CS/Algorithm/博弈算法|博弈算法]]
+- [[CS/Algorithm/多米诺和托米诺平铺|多米诺和托米诺平铺]]
+- [[CS/Algorithm/子序列问题|子序列问题]]
+- [[CS/Algorithm/寻找中位数|寻找中位数]]
+- [[CS/Algorithm/树状数组|树状数组]]
+- [[CS/Algorithm/格雷码|格雷码]]
+- [[CS/Algorithm/贡献度算法|贡献度算法]]
+- [[CS/Algorithm/进制转换|进制转换]]
+- [[CS/Algorithm/随机算法|随机算法]]
 - [[CS/Algorithm/压缩算法|压缩算法]]
 - [[CS/Algorithm/快速幂|树形常用算法]]
 - [[CS/Algorithm/树形常用算法|树形常用算法]]
 - [[CS/Algorithm/线形常用算法|线形常用算法]]
+- [[CS/Algorithm/DP/经典扔鸡蛋|经典扔鸡蛋]]
+- [[CS/Algorithm/DP/股票算法|股票算法]]
 - [[CS/DataStructure/Linear/位图|位图]]
 - [[CS/DataStructure/Linear/线形|线形]]
 - [[CS/DataStructure/Map/图形|图形]]
@@ -56,8 +67,9 @@ sidebar:
 - [[CS/DataStructure/Tree/并查集|并查集]]
 - [[CS/DataStructure/Tree/构建树|构建树]]
 - [[CS/DataStructure/Tree/树形|树形]]
-- [[CS/DataStructure/数学|数学]]
+- [[CS/数学|数学]]
 - [[CS/Docker/Docker|Docker]]
+- [[CS/Encoding/Base64|Base64]]
 - [[CS/Encoding/BOM|BOM]]
 - [[CS/Encoding/Unicode|Unicode]]
 - [[CS/NetWork/Application/GRPC/GRPC|GRPC]]
@@ -65,9 +77,11 @@ sidebar:
 - [[CS/NetWork/Application/HTTP/HTTP状态码|HTTP状态码]]
 - [[CS/NetWork/Application/HTTP/RESTful API|RESTFUL]] — RESTFUL API
 - [[CS/NetWork/Application/HTTP/URI、URL、URN、Data URI、Object URL|URI、URL、URN、Data URI、Object URL]]
+- [[CS/NetWork/Application/实时通信/前后端实时通信|前后端实时通信]]
 - [[CS/NetWork/Network|HTTP]]
 - [[CS/OS/Linux|Linux]]
 - [[CS/OS/OS|OS]]
+- [[CS/OS/时区|时区]]
 - [[CS/OS/Ubuntu/包管理|包管理]] — 包管理.md
 
 ## DB - 数据库
@@ -166,6 +180,8 @@ sidebar:
 - [[JSRuntime/Node.js/CommonJS|CommonJS]]
 - [[JSRuntime/Node.js/Deploy/node使用docker部署|node使用docker部署]]
 - [[JSRuntime/Node.js/Framework/Egg|Egg]]
+- [[JSRuntime/Node.js/Framework/从egg-helper学习egg源码|从egg-helper学习egg源码]]
+- [[JSRuntime/Node.js/node.js内存泄漏|node.js内存泄漏]]
 - [[JSRuntime/Node.js/Node.js 特性|Node.js 特性]]
 - [[JSRuntime/Node.js/Packages/NPM|NPM]]
 - [[JSRuntime/Node.js/Packages/PNPM|PNPM]]
@@ -175,37 +191,23 @@ sidebar:
 
 ## Performance - 性能优化
 
+- [[Performance/Chrome调试|Chrome调试]]
 - [[Performance/Javascript优化|Javascript优化]]
+- [[Performance/JS如何获取精确的时间戳|JS如何获取精确的时间戳]]
+- [[Performance/Web截图|Web截图]]
+- [[Performance/内存泄漏及排查|内存泄漏及排查]]
 - [[Performance/preload, prefetch, prerender|preload, prefetch, prerender]]
 
-## ToBeContinue - 待整理
+## Security - 安全
 
-- [[ToBeContinue/Base64编码|Base64编码]]
-- [[ToBeContinue/CJS, ESM, Webpack|CJS, ESM, Webpack]]
-- [[ToBeContinue/Heap|Heap]]
-- [[ToBeContinue/Import maps|Import maps]]
-- [[ToBeContinue/JSON和Javascript|JSON和Javascript]]
-- [[ToBeContinue/Javascript正则|Javascript正则]]
-- [[ToBeContinue/React 事件|React 事件]]
-- [[ToBeContinue/React 的错误捕获|React 的错误捕获]]
-- [[ToBeContinue/为啥react没有keep-alive|为啥react没有keep-alive]]
-- [[ToBeContinue/二分法|二分法]]
-- [[ToBeContinue/从d.ts了解typescript|从d.ts了解typescript]]
-- [[ToBeContinue/前后端实时通信|前后端实时通信]]
-- [[ToBeContinue/单调栈|单调栈]]
-- [[ToBeContinue/博弈算法|博弈算法]]
-- [[ToBeContinue/多米诺和托米诺平铺|多米诺和托米诺平铺]]
-- [[ToBeContinue/大文件如何上传|大文件如何上传]]
-- [[ToBeContinue/子序列问题|子序列问题]]
-- [[ToBeContinue/寻找中位数|寻找中位数]]
-- [[ToBeContinue/时区|时区]]
-- [[ToBeContinue/树状数组|树状数组]]
-- [[ToBeContinue/格雷码|格雷码]]
-- [[ToBeContinue/直播流|直播流]]
-- [[ToBeContinue/贡献度算法|贡献度算法]]
-- [[ToBeContinue/进制转换|进制转换]]
-- [[ToBeContinue/随机算法|随机算法]]
+- [[Security/2FA验证原理|2FA验证原理]]
 
+## 方法论 - 思考与职业
+
+- [[方法论/开源如何保证收入|开源如何保证收入]]
+- [[方法论/面试复习|面试复习]]
+- [[方法论/软件开发周期|软件开发周期]]
+- [[方法论/我的大前端世界观|我的大前端世界观]]
 
 ## 开发工具链 - 工具链与使用笔记
 
@@ -225,12 +227,15 @@ sidebar:
 - [[开源项目分析/阅读/Harness工程-Multi-Agent架构实践|Harness Engineering]] — 数据研发 Multi-Agent Harness 工程实践，阿里技术团队
 - [[开源项目分析/阅读/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 1688 数据中心 Multi-Agent 研发小队实录，KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
 - [[开源项目分析/阅读/Hermes-Kanban多Profile持久化工作流与SubAgent对比|Hermes Kanban vs SubAgent]] — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
+- [[开源项目分析/阅读/Medal-W-Key-前端基础设施现代化复盘|Medal W-Key 前端基础设施现代化]] — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径，barrel file 与 tree-shaking 实战权衡
+- [[开源项目分析/阅读/htmx-与AI协作的具体案例|htmx 与 AI 协作的具体案例]] — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程，AI 调查/测试强、方案设计弱，技术债指数增长论
 - [[开源项目分析/AI代码审查/Open-Code-Review-阿里AI代码审查工具|Open Code Review]] — 阿里 AI 代码审查 CLI 工具，确定性工程×Agent混合驱动，10.5K Stars
 - [[开源项目分析/依赖分析工具/dependency-cruiser-JS依赖分析和架构治理工具|dependency-cruiser]] — JS/TS 依赖分析与架构治理工具，可编程规则引擎，6,934 Stars
 - [[开源项目分析/AI代码智能/CodeGraph-vs-GitNexus-vs-CodeReviewGraph-代码智能工具横向对比|CodeGraph vs GitNexus vs CRG]] — AI 代码智能工具三大明星横向对比，60K/44K/19K Stars
 - [[开源项目分析/AI编码工程化/Trellis-AI编码工程框架|Trellis — AI 编码工程框架]] — 跨平台 AI Coding Agent Harness，4 阶段循环 + spec 学习闭环 + 17 平台适配器，12.8K Stars
 - [[开源项目分析/AI编码工程化/spec-kit-GitHub官方规范驱动开发|spec-kit — GitHub 官方规范驱动开发]] — GitHub 官方 Spec-Driven Development 工具集，122K Stars，MIT，含与 Trellis 详细对比
 - [[开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架|Superpowers — AI 编码工程师方法论与 Skills 框架]] — obra/superpowers 13+ composable skills 自动触发，TDD/code review/verification 强约束，257K Stars，MIT
+- [[开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop|Ralph — Autonomous AI Coding Loop]] — snarktank/ralph 自主 AI 编码循环，PRD 拆小 story + 每轮 fresh context，21.2K Stars，MIT
 
 ## 前端
 
@@ -238,15 +243,20 @@ sidebar:
 - [[前端/CSS/Color|Color]]
 - [[前端/CSS/Grid|Grid]]
 - [[前端/CSS/Selector|Selector]]
+- [[前端/CSS/常用的图片格式|常用的图片格式]]
 - [[前端/HTML/HTML|HTML]]
 - [[前端/HTML/meta|meta]]
 - [[前端/Javascript/ArrayBuffer|ArrayBuffer]]
 - [[前端/Javascript/Audio|Audio]]
+- [[前端/Javascript/CJS, ESM, Webpack|CJS, ESM, Webpack]]
 - [[前端/Javascript/Canvas|Canvas]]
 - [[前端/Javascript/Document|Document]]
 - [[前端/Javascript/Event|Event]]
 - [[前端/Javascript/File System API|File System API]]
 - [[前端/Javascript/Function|Function]]
+- [[前端/Javascript/Import maps|Import maps]]
+- [[前端/Javascript/JSON和Javascript|JSON和Javascript]]
+- [[前端/Javascript/Javascript正则|Javascript正则]]
 - [[前端/Javascript/Number/Bigint|Bigint]]
 - [[前端/Javascript/Number/Javascript浮点数|Javascript浮点数]]
 - [[前端/Javascript/Number/Number|Number]]
@@ -259,41 +269,30 @@ sidebar:
 - [[前端/Javascript/Promise|Promise]]
 - [[前端/Javascript/Reflect|Reflect]]
 - [[前端/Javascript/Scheduler|Scheduler]]
+- [[前端/Javascript/大文件上传|大文件上传]]
+- [[前端/Javascript/如何处理循环引用|如何处理循环引用]]
+- [[前端/Javascript/常见的问题及解决方案|常见的问题及解决方案]]
 - [[前端/Javascript/作用域|作用域]]
 - [[前端/Javascript/执行上下文|执行上下文]]
+- [[前端/Javascript/解决ESM Import 过多|解决ESM Import 过多]]
 - [[前端/React/API|API]]
 - [[前端/React/FAQ|FAQ]]
 - [[前端/React/Headless UI 和 React Hooks|Headless UI 和 React Hooks]] — Headless UI 和 React Hooks.md
 - [[前端/React/Hooks|Hooks]]
 - [[前端/React/React状态管理|React状态管理]]
+- [[前端/React/React 事件|React 事件]]
+- [[前端/React/React 的错误捕获|React 的错误捕获]]
 - [[前端/React/Scheduler|Scheduler]]
 - [[前端/React/Utils|Utils]]
+- [[前端/React/为啥react没有keep-alive|为啥react没有keep-alive]]
 - [[前端/Typescript/Typescript|Typescript]]
 - [[前端/Typescript/tsconfig|tsconfig]]
+- [[前端/Typescript/从d.ts了解typescript|从d.ts了解typescript]]
 - [[前端/Typescript/类型|类型]]
 - [[前端/Vue/Vue Router|Vue Router]]
 - [[前端/Vue/响应式系统|响应式系统]]
 - [[前端/Vue/组件|组件]]
 - [[前端/动画/Lottie|Lottie 动画]]
-
-## 杂谈
-
-- [[杂谈/2FA验证原理|2FA验证原理]]
-- [[杂谈/Chrome调试|Chrome调试]]
-- [[杂谈/JS如何获取精确的时间戳|JS如何获取精确的时间戳]]
-- [[杂谈/Web截图|Web截图]]
-- [[杂谈/node.js内存泄漏|node.js内存泄漏]]
-- [[杂谈/从egg-helper学习egg源码|从egg-helper学习egg源码]]
-- [[杂谈/内存泄漏及排查|内存泄漏及排查]]
-- [[杂谈/如何处理循环引用|如何处理循环引用]]
-- [[杂谈/常用的图片格式|常用的图片格式]]
-- [[杂谈/常见的问题及解决方案|常见的问题及解决方案]]
-- [[杂谈/开源如何保证收入|开源如何保证收入]]
-- [[杂谈/我的大前端世界观|我的大前端世界观]]
-- [[杂谈/网页如何唤醒本地程序|网页如何唤醒本地程序]]
-- [[杂谈/解决ESM Import 过多|解决ESM Import 过多]]
-- [[杂谈/软件开发周期|软件开发周期]]
-- [[杂谈/面试复习|面试复习]]
 
 ## 跨平台开发
 
@@ -311,9 +310,11 @@ sidebar:
 - [[跨平台/RN/组件|组件]]
 - [[跨平台/RN/踩坑|踩坑]]
 - [[跨平台/RN/配置|配置]]
+- [[跨平台/网页唤醒本地程序|网页唤醒本地程序]]
 
 ## 音视频
 
+- [[音视频/流媒体/直播流|直播流]]
 - [[音视频/视频/视频|视频]]
 
 ## 根目录文件

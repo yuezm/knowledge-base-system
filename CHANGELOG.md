@@ -11,6 +11,66 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-27 restructure | 清空 ToBeContinue/杂谈,41 篇归位 + 4 个新目录
+
+- **目标**:消除两个"腐烂目录"——`ToBeContinue/`(25 篇未归位)+ `杂谈/`(16 篇杂项)。只搬位置不补内容,空白文章保留待后续填充。
+- **删除(1)**: `ToBeContinue/Heap.md` —— 与 `CS/DataStructure/Tree/堆.md` 重复空壳,删
+- **新建 4 个目录**:
+  - `Security/`(从 杂谈/2FA验证原理) —— 认证/安全协议
+  - `方法论/`(从 杂谈/开源如何保证收入/我的大前端世界观/软件开发周期/面试复习) —— 职业与思维方法
+  - `CS/NetWork/Application/实时通信/`(从 ToBeContinue/前后端实时通信) —— 协议族子目录,未来 SSE/WebSocket/MQTT 都进
+  - `音视频/流媒体/`(从 ToBeContinue/直播流) —— 协议族子目录,未来 HLS/RTMP/WebRTC 都进
+- **CS/Algorithm/(11 新增)**: 二分法 / 单调栈 / 博弈算法 / 多米诺和托米诺平铺 / 子序列问题 / 寻找中位数 / 树状数组 / 格雷码 / 贡献度算法 / 进制转换 / 随机算法
+- **CS/Encoding/Base64.md**(从 ToBeContinue/Base64编码)
+- **CS/OS/时区.md**(从 ToBeContinue/时区)
+- **JSRuntime/Node.js/ 加 2 篇**: node.js内存泄漏 / Framework/从egg-helper学习egg源码
+- **Performance/ 加 4 篇**: Chrome调试 / JS如何获取精确的时间戳 / Web截图 / 内存泄漏及排查
+- **前端/Javascript/ 加 8 篇**: CJS+ESM+Webpack, Import maps, JSON和Javascript, Javascript正则, 大文件如何上传(重命名), 如何处理循环引用, 常见的问题及解决方案, 解决ESM Import 过多
+- **前端/React/ 加 3 篇**: React 事件 / React 的错误捕获 / 为啥react没有keep-alive
+- **前端/Typescript/ 加 1 篇**: 从d.ts了解typescript
+- **前端/CSS/ 加 1 篇**: 常用的图片格式
+- **跨平台/ 加 1 篇**: 网页唤醒本地程序
+- **wikilink 替换(2 处)**: `开源项目分析/阅读/htmx-与AI协作的具体案例.md` 中 `[[杂谈/我的大前端世界观|...]]` → `[[方法论/我的大前端世界观|...]]`;`Medal-W-Key-...md` 中 `[[杂谈/解决ESM Import 过多|...]]` → `[[前端/Javascript/解决ESM Import 过多|...]]`
+- **更新 INDEX.md**: 全量重写章节(原 ToBeContinue 25 + 杂谈 16 条目移除,新 4 个一级分类 + 新归属条目加入),页面总数 258 不变
+- **更新 AGENTS.md**: 总览表 17→19 一级分类(删 ToBeContinue/杂谈,加 Security/方法论),CS 27→41 / JSRuntime 20→22 / Performance 2→6 / 前端 41→54 / 跨平台 14→15 / 音视频 1→2,二级子树同步更新
+- **更新 SCHEMA.md**: Tag Taxonomy 补 `methodology` 和 `security` 两个一级标签
+- **决定记录**:实时通信/直播流走"建协议族子目录"而非"塞进现有大类",理由——这两类未来大概率扩成多篇(WebSocket/SSE/HLS/RTMP),子目录比同层多文件可扩展
+- **后续工作(B 方案候选)**: 补 AI 时代分类(RAG/Prompt/Function Calling/Agent/MCP)、DB 类(SQL/Redis/向量库)、DevOps/Security 充实,本次未动
+
+## 2026-07-27 ingest | 收录 htmx 与 AI 协作的具体案例
+
+- 新增 `开源项目分析/阅读/htmx-与AI协作的具体案例.md` — htmx 作者 Carson Gross 2026-06-29 essay,完整记录用 Claude 修 hyperscript parser bug 的 4 步迭代(3 个失败/不完美方案 + 1 个最终方案)
+- 核心论点:**AI 强在调查 + 测试生成,弱在方案设计** —— 3 个被否方案的共同模式:①先 stringLike fallback(局部 hack,不通类)②全局 noConversions flag(方向错,误伤 go 命令)③follows 思路在共享方法里 over-broad 应用
+- 最终修复精髓:把 `pushFollow("as") / popFollow()` 作用域精确圈在 `FetchCommand.parse()` 内,而不是共享的 `parseURLOrExpression()` —— 上下文敏感性的作用域最小化
+- 反直觉观点:**"技术债按指数增长"**(作者自承无证据,来自一个梦);**"骄傲于不理解代码"是失控不是炫技** —— 与 vibe coding 叙事的根本对立
+- 方法论提炼:"调查+测试"两段委派,"方案"必须自己定;AI 测试生成有隐藏价值(作者明确说"比我自己能写的更全")
+- 横向对比:本文是"实践派+怀疑派"立场,与 vibe coding 派(信任 AI 不必理解)/纯否定派(DHH 风格)三分天下,领域当前主流是"AI 全流程代理",本文属于"早期老炮的清醒"逆主流
+- 4 个参考 wikilink:Hermes-Kanban/Superpowers/Ralph/Medal-W-Key/杂谈·大前端世界观 —— 把同立场(谨慎用 AI)、同论断(技术债严控)、同主题(人+agent 协作)的相关条目串起来
+- 更新 `AGENTS.md`:总览表文件数 14→15,`阅读/` 子目录树新增第 5 条,路径示例新增,统计 257→258(总 258→259)
+- 更新 `INDEX.md`:开源项目分析区"阅读"组末尾新增 htmx 条目,页面计数 258→259,日期 2026-07-22→2026-07-27
+
+## 2026-07-22 ingest | 收录 Ralph Autonomous AI Coding Loop
+
+- 新增 `开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop.md` — snarktank/ralph 自主 AI 编码循环,120 行 bash 循环 + PRD 拆 story + 每轮 fresh context,21.2K Stars
+- 核心机制:**`grep "<promise>COMPLETE</promise>"` 当退出协议**,不解析 JSON,纯字符串匹配 — "对 AI 输出最不信任"的设计
+- 跨 session 记忆三层:git history(代码) + prd.json(任务状态) + progress.txt(append-only 学习笔记) + 各目录 CLAUDE.md/AGENTS.md(项目惯例)
+- 故事硬性约束:必须能塞进单个 context window;2-3 句说不清 = 太大;依赖先于被依赖(schema → backend → UI → dashboard)
+- 自动归档:`branchName` 变化时 cp 上一轮 prd.json + progress.txt 到 `archive/YYYY-MM-DD-feature-name/`
+- 与同赛道 3 兄弟对比:Ralph 是"session-less 派"(每轮全新实例),Trellis/spec-kit/Superpowers 是"session 内编排派"(同会话跑完)
+- 选型建议:**只推荐给已具备 typecheck+test 强 feedback loop + 能拆 N 个独立可验故事的 feature 团队**
+- 更新 `AGENTS.md`:总览表文件数 13→14,`AI编码工程化/` 子目录树新增第 4 条,路径示例新增,统计 256→257(总 257→258)
+- 更新 `INDEX.md`:开源项目分析区新增 Ralph 条目,页面计数 257→258
+
+## 2026-07-22 ingest | 收录 Medal W-Key 前端基础设施现代化复盘
+
+- 新增 `开源项目分析/阅读/Medal-W-Key-前端基础设施现代化复盘.md` — Medal.tv Rick Zhang 的 Electron+Web 前端 Macro→Micro 现代化路径总结,renderer bundle 从 ~44MB 减到 2.7MB(减 94%)
+- 核心论点:**先动基础设施(Macro),再让组件现代化(Micro)水到渠成** —— 关键动作是 PNPM monorepo + Vite/HMR + 规范化 import 路径(禁用 barrel)
+- Bundle 减重数据(单项):删 component barrel -2.6MB / 外置 .wav -3.4MB / ESM 优先 -4MB / 动态 import i18n -13MB(最大) / 路由级 code split -5.4MB
+- 讨论沉淀(独立小节):barrel file 为什么默认禁用、为什么 lodash-es 能保持 tree-shake(5 个条件表)、库 vs 业务的分离策略(桶用 vs 禁用)、单业务"通用组件库"的第三条路(Shadcn 模式)、自建 npm 组件库的硬性配置清单
+- 反直觉观点:Bundle 优化最大单一来源不是 minify/gzip,而是动态 import 大文件;i18n 占减量三分之一
+- 更新 `AGENTS.md`:总览表文件数 12→13,`阅读/` 子目录树新增 4 条(原 1 条),路径示例新增,统计 255→256
+- 更新 `INDEX.md`:开源项目分析区新增 Medal 条目,页面计数 256→257,日期 2026-07-19→2026-07-22
+
 ## 2026-07-19 restructure | 规范 AI 与 开源项目分析 归类边界，迁移 2 篇分析类文章
 
 - **新归类规则**：

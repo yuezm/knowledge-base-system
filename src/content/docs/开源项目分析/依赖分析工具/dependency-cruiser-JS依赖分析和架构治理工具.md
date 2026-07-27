@@ -1,6 +1,7 @@
 ---
 title: dependency-cruiser — JS/TS 依赖分析与架构治理工具
 description: 可编程规则引擎，验证 JS/TS/ CoffeeScript 项目中依赖关系是否合规，支持 CI 集成和多格式可视化输出
+status: active
 ---
 
 # dependency-cruiser — JS/TS 依赖分析与架构治理工具

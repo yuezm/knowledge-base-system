@@ -4,6 +4,7 @@ description: 图形学知识地图——Three.js / Babylon / WebGL / WebGPU
 sidebar:
   order: 3
 tags: [moc, graphics]
+status: active
 ---
 
 # Graphics 技术树

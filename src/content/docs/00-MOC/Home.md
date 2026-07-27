@@ -4,6 +4,7 @@ description: 个人知识库 MOC of MOCs —— 所有主题地图的入口
 sidebar:
   order: 0
 tags: [moc, index]
+status: active
 ---
 
 # 知识库总入口

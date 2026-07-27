@@ -1,6 +1,7 @@
 ---
 title: BOM
 description: BOM
+status: stub
 ---
 
 ## 大端序、小端序

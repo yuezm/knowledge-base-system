@@ -1,6 +1,7 @@
 ---
 title: CodeGraph vs GitNexus vs Code Review Graph — 代码智能工具横向对比
 description: AI 编码助手代码理解赛道三大热门开源项目全面对比：CodeGraph (60K Stars)、GitNexus (44K)、Code Review Graph (19K)
+status: active
 ---
 
 本文对当前 AI 编码辅助领域最热门的三个代码智能/知识图谱工具进行全方位横向对比，帮助你在选型时做出判断。

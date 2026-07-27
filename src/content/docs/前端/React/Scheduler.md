@@ -1,6 +1,7 @@
 ---
 title: Scheduler
 description: Scheduler
+status: stub
 ---
 
 Scheduler 是 React 核心模块，负责调度 React 的更新，其包含如下

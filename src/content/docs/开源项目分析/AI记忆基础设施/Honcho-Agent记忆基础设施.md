@@ -1,6 +1,7 @@
 ---
 title: Honcho — Agent 记忆基础设施
 description: Plastic Labs 出品的 Agent 记忆基础设施，Peer 范式 + 异步推理管线
+status: active
 ---
 
 # Honcho — Agent 记忆基础设施

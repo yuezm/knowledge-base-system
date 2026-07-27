@@ -1,6 +1,7 @@
 ---
 title: Superpowers - AI 编码工程师方法论与 Skills 框架
 description: obra/superpowers 完整 AI 编码工程师方法论,13+ composable skills 自动触发,Anthropic 官方 plugin marketplace 上架,257K Stars
+status: active
 ---
 
 # Superpowers — AI 编码工程师方法论与 Skills 框架

@@ -2,6 +2,7 @@
 title: Material
 description: Material
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Material 用于藐描述物体的表面特性，例如漫反射，镜面反射等等

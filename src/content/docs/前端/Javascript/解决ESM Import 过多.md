@@ -1,6 +1,7 @@
 ---
 title: 解决ESM Import 过多
 description: 解决ESM Import 过多
+status: active
 ---
 
 当一个模块 import 过多模块时，导致 import 语句臃肿，可采取如下优化

@@ -2,6 +2,7 @@
 title: 3D 瓦片
 description: 3D 瓦片
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: stub
 ---
 
 是 Cesium.js 推出的一种 3D 数据标准，目的是在 3D 场景下，提高加载大模型的性能。

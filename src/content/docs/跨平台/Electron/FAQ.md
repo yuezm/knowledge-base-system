@@ -1,6 +1,7 @@
 ---
 title: FAQ
 description: FAQ
+status: stub
 ---
 
 ## 启动报错

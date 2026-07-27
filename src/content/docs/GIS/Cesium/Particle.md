@@ -2,6 +2,7 @@
 title: Particle
 description: Particle
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 粒子系统是小图像的集合，来模拟复杂的物理运动。例如火，烟，水等等

@@ -1,6 +1,7 @@
 ---
 title: 1688 Multi-Agent 超级组织实践
 description: 1688 数据中心从超级个体到超级组织的 Multi-Agent 研发小队实录，涵盖 KST 知识工程、Harness/Loop Engineering、Squad 协作模式
+status: active
 ---
 
 # 1688 Multi-Agent 超级组织实践

@@ -2,6 +2,7 @@
 title: Three
 description: Three
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Three.js 是一个 Javascript 库，用于在网页上创建和显示 3D 图形。它使用 WebGL 来渲染图形，并提供了一组易于使用的 API 来创建和操作 3D 对象、材质、灯光和相机等。

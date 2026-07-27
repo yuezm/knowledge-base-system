@@ -1,6 +1,7 @@
 ---
 title: Devtools之Performance
 description: Devtools之Performance
+status: active
 ---
 
 Chrome Devtools 提供了查看性能的工具 Performance，可以查看如下信息

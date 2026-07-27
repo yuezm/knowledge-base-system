@@ -1,6 +1,7 @@
 ---
 title: FAQ
 description: FAQ
+status: stub
 ---
 
 ## React 库设计原则

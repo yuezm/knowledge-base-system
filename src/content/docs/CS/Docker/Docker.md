@@ -1,6 +1,7 @@
 ---
 title: Docker
 description: Docker
+status: stub
 ---
 
 ## 常见问题

@@ -1,6 +1,7 @@
 ---
 title: package.json
 description: package.json
+status: active
 ---
 
 ## 常用字段

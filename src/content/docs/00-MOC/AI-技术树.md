@@ -4,6 +4,7 @@ description: AI 知识地图——原理 / LLM 应用 / Agent / AIGC / 向量检
 sidebar:
   order: 1
 tags: [moc, ai]
+status: active
 ---
 
 # AI 技术树

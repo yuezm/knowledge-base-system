@@ -1,6 +1,7 @@
 ---
 title: Error
 description: Error
+status: active
 ---
 
 ## Exceptions vs. errors

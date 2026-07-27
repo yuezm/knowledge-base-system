@@ -1,6 +1,7 @@
 ---
 title: node.js内存泄漏
 description: node.js内存泄漏
+status: active
 ---
 
 ## 删除文件缓存致使内存泄漏

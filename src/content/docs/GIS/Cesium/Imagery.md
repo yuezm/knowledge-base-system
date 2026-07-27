@@ -2,6 +2,7 @@
 title: Imagery
 description: Imagery
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 负责给添加影像图层

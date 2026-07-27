@@ -1,6 +1,7 @@
 ---
 title: node使用docker部署
 description: node使用docker部署
+status: active
 ---
 
 # node docker 镜像构建

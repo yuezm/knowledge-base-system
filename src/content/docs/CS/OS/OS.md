@@ -1,6 +1,7 @@
 ---
 title: OS
 description: OS
+status: stub
 ---
 
 ## 运行模式 内核态、用户态

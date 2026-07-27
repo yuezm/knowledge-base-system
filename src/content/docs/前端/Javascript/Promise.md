@@ -1,6 +1,7 @@
 ---
 title: Promise
 description: Promise
+status: active
 ---
 
 what: Promise 是一个新的 API，是一个新的异步任务解决方案

@@ -2,6 +2,7 @@
 title: ADB
 description: ADB
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: stub
 ---
 
 全名 Android Debug Bridge，是 Android SDK 提供的一个命令行工具，用于与 Android 设备进行通信，例如安装应用、调试应用、查看设备信息等

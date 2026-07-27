@@ -2,6 +2,7 @@
 title: Entity
 description: Entity
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Entity API 是 Cesium.js 提供的上层 API，旨在数据驱动，简单易懂。相对来说 Primitive API 则是较为底层的 API，适合具有图形学了解的人使用

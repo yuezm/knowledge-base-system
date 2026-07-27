@@ -2,6 +2,7 @@
 title: Claude Design System Prompt — 逆向工程设计协作提示词库
 description: 一个逆向工程自 Anthropic Claude Design 的系统提示词和技能库，将 LLM 变为有观点、无障碍友好、反 AI 套话的设计协作者
 tags: [Claude, system-prompt, design-system, LLM-agent, skill-library, MIT]
+status: active
 ---
 
 # Claude Design System Prompt

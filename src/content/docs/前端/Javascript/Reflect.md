@@ -1,6 +1,7 @@
 ---
 title: Reflect
 description: Reflect
+status: active
 ---
 
 Reflect 提供给 Javascript 元编程的能力，即使用 ECMAScript 中定义的一系列基本 API 来操作对象。例如

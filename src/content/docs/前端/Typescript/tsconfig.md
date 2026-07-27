@@ -1,6 +1,7 @@
 ---
 title: tsconfig
 description: tsconfig
+status: active
 ---
 
 ## 配置项

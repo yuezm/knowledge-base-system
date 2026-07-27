@@ -4,6 +4,7 @@ description: 无人机地面站——独立 git 项目指针
 sidebar:
   order: 2
 tags: [project, drone, gcs, electron]
+status: active
 ---
 
 # sagc-new-usoa

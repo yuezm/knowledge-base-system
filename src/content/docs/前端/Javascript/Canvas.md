@@ -2,6 +2,7 @@
 title: Canvas
 description: Canvas
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: stub
 ---
 
 ## API

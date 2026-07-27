@@ -4,6 +4,7 @@ description: 知识库自指——本页所在项目
 sidebar:
   order: 4
 tags: [project, knowledge-base, self-reference]
+status: active
 ---
 
 # knowledge-base-system

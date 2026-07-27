@@ -1,6 +1,7 @@
 ---
 title: Open Code Review — 阿里 AI 代码审查工具
 description: 阿里集团内部孵化开源的 AI 代码审查 CLI 工具，确定性工程×Agent 混合驱动
+status: active
 ---
 
 **Open Code Review** 是阿里集团开源的 AI 驱动代码审查 CLI 工具（`ocr` 命令），基于**确定性工程×Agent 混合驱动**架构，结合 Go 实现的工程逻辑与 LLM Agent 的动态决策能力，提供行级精度的代码审查评论。

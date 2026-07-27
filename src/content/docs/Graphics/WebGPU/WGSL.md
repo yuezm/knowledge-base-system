@@ -2,6 +2,7 @@
 title: WGSL
 description: WGSL
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 ## 数据结构

@@ -1,6 +1,7 @@
 ---
 title: Stagehand — AI 浏览器自动化框架
 description: Stagehand — AI 浏览器自动化框架
+status: active
 ---
 
 # Stagehand — AI 浏览器自动化框架

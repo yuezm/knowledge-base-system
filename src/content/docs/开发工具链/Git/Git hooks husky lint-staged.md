@@ -1,6 +1,7 @@
 ---
 title: Git hooks husky lint-staged
 description: Git hooks husky lint-staged
+status: active
 ---
 
 ## Git Hooks

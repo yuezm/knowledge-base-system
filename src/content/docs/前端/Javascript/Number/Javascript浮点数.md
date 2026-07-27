@@ -1,6 +1,7 @@
 ---
 title: Javascript浮点数
 description: Javascript浮点数
+status: active
 ---
 
 有一道很常见的面试题

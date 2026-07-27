@@ -1,6 +1,7 @@
 ---
 title: Books of Shader
 description: Books of Shader
+status: evergreen
 ---
 
 shader（着色器）是运行于 GPU 上的程序，是允许程序员在图形渲染管线中某个阶段，插入自己运行的程序

@@ -3,6 +3,7 @@ title: htmx 与 AI 协作的具体案例
 description: htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 的全过程,演示 AI 在调查/测试环节强,在方案设计环节弱
 sidebar:
   hidden: true
+status: active
 ---
 
 # htmx 与 AI 协作的具体案例

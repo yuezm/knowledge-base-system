@@ -1,6 +1,7 @@
 ---
 title: HTTP
 description: HTTP
+status: stub
 ---
 
 ## 网络分层

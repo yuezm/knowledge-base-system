@@ -1,6 +1,7 @@
 ---
 title: Harness Engineering — 数据研发 Multi-Agent 架构实践
 description: 阿里技术团队从 Prompt Engineering → Context Engineering → Harness Engineering 的演进实践，提出 Agent = Model + Harness 公式，拆解六大支柱
+status: active
 ---
 
 # Harness Engineering — 数据研发 Multi-Agent 架构实践

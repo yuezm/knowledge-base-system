@@ -1,6 +1,7 @@
 ---
 title: meta
 description: meta
+status: stub
 ---
 
 ## Open Graph Protocol

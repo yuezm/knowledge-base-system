@@ -1,6 +1,7 @@
 ---
 title: Document
 description: Document
+status: stub
 ---
 
 文档根 DOM 对象

@@ -2,6 +2,7 @@
 title: Widget
 description: Widget
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Cesium.js 提供的组件

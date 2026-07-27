@@ -1,6 +1,7 @@
 ---
 title: JSR
 description: JSR
+status: stub
 ---
 
 Javascript system registry(JSR) 是一个由 deno 提供的，javascript 包管理平台，兼容 npm。官网是 [https://jsr.io/](https://jsr.io/)

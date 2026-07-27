@@ -3,6 +3,7 @@ title: Medal W-Key 前端基础设施现代化复盘
 description: Medal.tv Electron+Web 前端从 Legacy 组件到 2.7MB renderer bundle 的基础设施现代化路径,以及延伸出的 barrel file 与 tree-shaking 实践权衡
 sidebar:
   hidden: true
+status: active
 ---
 
 # Medal W-Key:Synergizing Technology and Product

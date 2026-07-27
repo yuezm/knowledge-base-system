@@ -1,6 +1,7 @@
 ---
 title: preload, prefetch, prerender
 description: preload, prefetch, prerender
+status: active
 ---
 
 HTML5 引入了 _preload_ 和 _prefetch_ 方式，通过预先获取资源来快速加载

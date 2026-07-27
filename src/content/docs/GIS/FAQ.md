@@ -1,6 +1,7 @@
 ---
 title: FAQ
 description: FAQ
+status: stub
 ---
 
 ## 轨迹采样＆绘制

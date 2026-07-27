@@ -1,6 +1,7 @@
 ---
 title: Git 原理
 description: Git 原理
+status: active
 ---
 
 Git 是一个分布式的版本管理系统，Git 存储区域分为如下

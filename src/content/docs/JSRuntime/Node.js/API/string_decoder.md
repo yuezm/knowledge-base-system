@@ -1,6 +1,7 @@
 ---
 title: string_decoder
 description: string_decoder
+status: active
 ---
 
 保留多字节的 UTF-8、UTF16的 Buffer 转换为字符串

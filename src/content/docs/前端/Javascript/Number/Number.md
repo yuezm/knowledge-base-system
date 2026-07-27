@@ -1,6 +1,7 @@
 ---
 title: Number
 description: Number
+status: active
 ---
 
 # Double

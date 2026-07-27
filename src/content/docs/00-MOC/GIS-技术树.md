@@ -4,6 +4,7 @@ description: 地理信息系统知识地图——Cesium / Leaflet / 3D Tiles
 sidebar:
   order: 4
 tags: [moc, gis]
+status: active
 ---
 
 # GIS 技术树

@@ -1,6 +1,7 @@
 ---
 title: SPA VS MPA
 description: SPA VS MPA
+status: evergreen
 ---
 
 ## SPA

@@ -2,6 +2,7 @@
 title: GUI
 description: GUI
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 ## API

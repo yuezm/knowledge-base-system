@@ -1,6 +1,7 @@
 ---
 title: cluster
 description: cluster
+status: active
 ---
 
 cluster 可以在单线程（node.js 主线程为单线程）运行时，利用计算机的多核优势

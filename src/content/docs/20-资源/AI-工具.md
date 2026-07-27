@@ -4,6 +4,7 @@ description: AI 时代工具索引——按用途分类(编码 / 浏览器 / 记
 sidebar:
   order: 1
 tags: [resource, ai, tools]
+status: active
 ---
 
 # AI 工具

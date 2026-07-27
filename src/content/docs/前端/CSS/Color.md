@@ -1,6 +1,7 @@
 ---
 title: Color
 description: Color
+status: evergreen
 ---
 
 ## API

@@ -1,6 +1,7 @@
 ---
 title: Trellis - AI 编码工程框架
 description: mindfold-ai/Trellis 跨平台 AI Coding Agent Harness,4 阶段循环 + spec 学习闭环 + 17 平台适配器
+status: active
 ---
 
 # Trellis — AI 编码工程框架

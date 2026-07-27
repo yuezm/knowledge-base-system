@@ -11,6 +11,34 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-27 D 方案 restructure | 引入 status 字段——笔记成熟度标记
+
+- **目标**:为 282 篇笔记引入 `status` 字段,标记内容成熟度与时效性,让 lint 工具能排序"待补全 / 待 review / 稳定区"。
+- **动机**:
+  - KB 已 282 篇,大量 CS/Algorithm 子目录笔记只有 5-25 行(算法速记,没补完),无差别浏览效率低
+  - 框架/工具类笔记(React/Vue/Cesium/Three)版本敏感,需要定期 review,但缺少机器可读的标记
+  - 归档区(`30-归档/`)存在但机器无法判断"哪些笔记需要 review",完全靠人
+- **设计** — 4 个值
+  - `evergreen`(33 篇): 知识稳定,长期不过时——原理/算法/方法论/读书笔记
+  - `active`(167 篇): 仍在演进,依赖外部版本/项目状态——框架/工具/开源项目分析/PARA 指针
+  - `stub`(81 篇): 仅有占位/大纲,内容不完整——< 30 行的速记、标注"占位/待学"的页面
+  - `archived`(1 篇): 已过时或被取代,内容仅供历史参考——`30-归档/` 目录
+- **默认赋值规则** — 路径前缀匹配 + 行数 + 占位标记
+  - `AI/原理`、`CS/Algorithm`、`CS/DataStructure`、`CS/数学`、`Architecture/MicroFE`、`方法论`、`Books` → `evergreen`
+  - `前端/React`、`前端/Vue`、`Graphics/Three`、`GIS/Cesium`、`JSRuntime`、`开发工具链` 等 → `active`
+  - `00-MOC/` `10-项目/` `20-资源/` `开源项目分析/` → `active`
+  - 文件 < 30 行 或 含"占位/待学" → 强制 `stub`(覆盖路径规则)
+  - 16 个路径未匹配文件单独补全(Agent/LLM-应用/Architecture 根/GIS 根/CANON/Home 等)
+- **Lint 用法**
+  ```bash
+  # 找出所有 stub 待补全笔记
+  grep -rl "^status: stub" src/content/docs
+  # 找出所有 active 待 review 笔记
+  grep -rl "^status: active" src/content/docs
+  ```
+- **修改范围** — 281 篇 frontmatter 改动(282 总 - 1 已 archived),+ SCHEMA.md 字段定义,+ 4 处元文件联动(SCHEMA/AGENTS/INDEX/CHANGELOG)
+- **无破坏性**:仅追加字段,不改任何笔记正文
+
 ## 2026-07-27 C 方案 restructure | 升级为个人知识库——MOC + PARA + 双向链接
 
 - **目标**:从"按主题分类的技术博客"升级为"个人知识库"。核心差异:**多维入口(MOC) + 工作维度(PARA) + 双向链接(脚本生成)**。本条是 A(目录清理) + B(分类重组) 之后的第三步。

@@ -2,6 +2,7 @@
 title: Property
 description: Property
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Property 允许 Cesium 处理动态数据，特别是和时间相关的，Property 能根据不同的时间来返回不同值

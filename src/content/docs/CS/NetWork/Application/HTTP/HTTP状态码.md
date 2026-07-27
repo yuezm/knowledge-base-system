@@ -1,6 +1,7 @@
 ---
 title: HTTP状态码
 description: HTTP状态码
+status: active
 ---
 
 用于标识请求结果

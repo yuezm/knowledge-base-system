@@ -2,6 +2,7 @@
 title: ArrayBuffer
 description: ArrayBuffer
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 ArrayBuffer[^ArrayBuffer]（数组缓冲区）用来表示原始二进制数据的缓冲区（缓冲区可以理解为临时开辟的内存区域）

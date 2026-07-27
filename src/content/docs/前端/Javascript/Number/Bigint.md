@@ -1,6 +1,7 @@
 ---
 title: Bigint
 description: Bigint
+status: active
 ---
 
 在 Javascript 中，最大的整数 `Number.MIN_SAFE_INTEGER` 值为 9007199254740991，如果一个数大于 `Number.MIN_SAFE_INTEGER` 时，是无法正确表示和正确计算的。为了解决这个问题，可以引用其他的库，例如 [bignumber.js](https://www.npmjs.com/package/bignumber.js)

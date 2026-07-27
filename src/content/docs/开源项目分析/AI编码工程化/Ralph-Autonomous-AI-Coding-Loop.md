@@ -3,6 +3,7 @@ title: Ralph — Autonomous AI Coding Loop
 description: snarktank/ralph 自主 AI 编码循环,跑 Amp/Claude Code 直到 PRD 全完成
 sidebar:
   hidden: true
+status: active
 ---
 
 # Ralph — Autonomous AI Coding Loop

@@ -1,6 +1,7 @@
 ---
 title: PNPM
 description: PNPM
+status: stub
 ---
 
 ## pnpm-workspace.yaml

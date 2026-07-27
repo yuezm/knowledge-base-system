@@ -2,6 +2,7 @@
 title: Lottie 动画
 description: Lottie 动画
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Lottie 是 Airbnb 开源的一种动画格式，具有如下特点

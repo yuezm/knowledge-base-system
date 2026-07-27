@@ -1,6 +1,7 @@
 ---
 title: Unicode
 description: Unicode
+status: evergreen
 ---
 
 Unicode 是一种字符集，它为世界上所有字符提供唯一的编码。例如 \u6211，表示在 Unicode 字符集中，6211 表示的就是中文“我”。Unicode 只是规定了字符集，但是并未规定如何存储，这些表示如何存储就称为编码，编码分为 3 种：UTF-8、UTF-16、UTF-32。

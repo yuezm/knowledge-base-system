@@ -1,6 +1,7 @@
 ---
 title: Web截图
 description: Web截图
+status: active
 ---
 
 ## 纯前端实现

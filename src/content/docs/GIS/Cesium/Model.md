@@ -2,6 +2,7 @@
 title: Model
 description: Model
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 WebGL 常用模型为 glTF 和 gl

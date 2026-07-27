@@ -1,6 +1,7 @@
 ---
 title: Function
 description: Function
+status: active
 ---
 
 ## call、apply、bind

@@ -2,6 +2,7 @@
 title: Sprite
 description: Sprite
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 ## API

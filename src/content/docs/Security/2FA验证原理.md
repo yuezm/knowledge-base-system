@@ -1,6 +1,7 @@
 ---
 title: 2FA验证原理
 description: 2FA验证原理
+status: active
 ---
 
 ## 什么是 2FA

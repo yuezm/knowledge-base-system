@@ -2,6 +2,7 @@
 title: Karakeep - 自托管书签全能工具
 category: 杂谈
 tags: [self-hosted, bookmark-manager, read-it-later, AI, open-source]
+status: active
 ---
 
 # Karakeep 项目分析报告

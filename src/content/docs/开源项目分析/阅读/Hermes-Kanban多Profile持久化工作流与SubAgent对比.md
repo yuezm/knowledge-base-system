@@ -1,6 +1,7 @@
 ---
 title: Hermes Kanban 多 Profile 持久化工作流与 SubAgent 对比
 description: Hermes Agent Kanban 多 Profile 协作体系与 Claude Code / OpenCode SubAgent 的对比，覆盖生命周期、专业化、隔离粒度、调度能力等维度
+status: active
 ---
 
 # Hermes Kanban 多 Profile 持久化工作流与 SubAgent 对比

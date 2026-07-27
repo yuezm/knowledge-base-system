@@ -1,6 +1,7 @@
 ---
 title: RESTFUL
 description: RESTFUL API
+status: active
 ---
 
 ## 定义

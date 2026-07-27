@@ -2,6 +2,7 @@
 title: Renderer
 description: Renderer
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 渲染器

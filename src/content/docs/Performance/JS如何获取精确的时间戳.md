@@ -1,6 +1,7 @@
 ---
 title: JS如何获取精确的时间戳
 description: JS如何获取精确的时间戳
+status: active
 ---
 
 我们一般通过 `Date.now()` 来获取时间戳，该时间戳的精度是毫秒，那如果想获取微秒级别的时间戳

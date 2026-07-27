@@ -4,6 +4,7 @@ description: 无人机地空协议管理中心——独立 git 项目指针
 sidebar:
   order: 1
 tags: [project, drone, protocol]
+status: active
 ---
 
 # sa_protocol_library

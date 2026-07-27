@@ -2,6 +2,7 @@
 title: Post Processing
 description: Post Processing
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 对场景后期的处理，实际上是传入 Fragment Shader，对片元进行处理

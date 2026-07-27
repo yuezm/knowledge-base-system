@@ -419,6 +419,12 @@ read_file(path="/home/keven/codes/github/knowledge-base-system/src/content/docs/
 
 # 按分类搜索
 search_files(pattern="<keyword>", target="content", path="/home/keven/codes/github/knowledge-base-system/src/content/docs/前端/", limit=20)
+
+# 按 status 过滤(2026-07-27 D 方案新增)
+# 找出所有 stub 待补全笔记
+import subprocess; subprocess.run(["grep", "-rl", "^status: stub", "src/content/docs"])
+# 找出所有 active 待 review 笔记
+subprocess.run(["grep", "-rl", "^status: active", "src/content/docs"])
 ```
 
 ## 统计
@@ -426,6 +432,8 @@ search_files(pattern="<keyword>", target="content", path="/home/keven/codes/gith
 - **总计一级分类**: 25 个（22 个 B 方案分类 + 00-MOC/10-项目/20-资源/30-归档 4 个 C 方案 PARA + MOC 维度）
 - **总计文件**: 282 个 `.md` 文件（含 Home.md）
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
+- **status 分布**(2026-07-27 D 方案引入): evergreen 33 / active 167 / stub 81 / archived 1
+- **2026-07-27 D 方案**: 引入 `status` 字段(evergreen/active/stub/archived)标记笔记成熟度,281 篇自动赋初值 + SCHEMA.md 加字段说明;4 处元文件联动完成(SCHEMA/AGENTS/INDEX/CHANGELOG)
 - **2026-07-27 C 方案**: 升级为"个人知识库"——新建 00-MOC/(6 入口页) + 10-项目/(4 独立 git 项目指针) + 20-资源/(3 工具索引) + 30-归档/(1 规则);新增 scripts/related.sh 反向链接生成脚本(.gitignore 掉 _backlinks/);**14 篇新增,0 篇迁移**(无破坏性重构)
 - **2026-07-27 B 方案**: AI 拆 5 子目录（原理/LLM-应用/Agent/AIGC/向量检索），DB 补 SQL/Redis/向量库 3 子目录，新增 DevOps/Cloud 2 大类；**10 篇新增**(5 个新子目录各 1 概览 + AI/原理/知识地图 1 篇,加原 AI/概览 整体移入 0 增量); **原 AI/概览.md 283 行原创内容保留**(路径 AI/概览.md → AI/原理/概览.md)
 - **2026-07-27 B 方案踩坑记录**: 新建 AI/原理/概览.md 时,git 默认将同名的 AI/概览.md 视为删除。**立刻用 git show HEAD 还原原 283 行原创内容**到 AI/原理/概览.md,新写的知识地图另存为 AI/原理/知识地图.md——教训:新建同名前必须先 cat 旧内容或 git mv 改名

@@ -2,6 +2,7 @@
 title: Scene
 description: Scene
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: active
 ---
 
 Scene 是一个三维容器，保存了所需要渲染的对戏。例如灯光，网格，粒子等等，每一次渲染其实就是遍历 Scene 中的对象，然后给它再渲染出来

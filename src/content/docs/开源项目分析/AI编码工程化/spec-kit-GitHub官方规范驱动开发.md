@@ -1,6 +1,7 @@
 ---
 title: spec-kit - GitHub 官方规范驱动开发工具
 description: github/spec-kit 官方规范驱动开发 toolkit,Spec-Driven Development 方法论,5 个 slash command 串行工作流
+status: active
 ---
 
 # spec-kit — GitHub 官方规范驱动开发工具

@@ -1,6 +1,7 @@
 ---
 title: Selector
 description: Selector
+status: stub
 ---
 
 ## API

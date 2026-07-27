@@ -1,6 +1,7 @@
 ---
 title: npm和yarn的区别
 description: npm和yarn的区别
+status: active
 ---
 
 yarn 是由 Google、FaceBook 等联合创建的一个 node.js 包管理器，为了解决 npm 的痛点。那么 npm 是由哪些痛点呢？

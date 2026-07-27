@@ -1,6 +1,7 @@
 ---
 title: URI、URL、URN、Data URI、Object URL
 description: URI、URL、URN、Data URI、Object URL
+status: active
 ---
 
 URI（Uniform Resource Identifier）：统一资源定位符，用于标识互联网的资源。比如标识一本电子书、一张图片、一段音视频。

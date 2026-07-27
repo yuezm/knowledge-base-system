@@ -1,6 +1,7 @@
 ---
 title: Vue Router
 description: Vue Router
+status: stub
 ---
 
 1.  装载，使用 Vue 提供的插件模式，装载 vue-router 

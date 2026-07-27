@@ -1,6 +1,7 @@
 ---
 title: RegExp
 description: RegExp
+status: active
 ---
 
 ## API

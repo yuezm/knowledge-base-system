@@ -1,6 +1,7 @@
 ---
 title: buffer
 description: buffer
+status: active
 ---
 
 在引入 TypedArray 之前，javascript 没有操作内存的 API，node.js 实现了 Buffer，在 TypedArray 后，Buffer 以更优化的方式实现了 Uint8Array

@@ -1,6 +1,7 @@
 ---
 title: console
 description: console
+status: active
 ---
 
 提供一个简单的调试控制台，可以打印一些信息

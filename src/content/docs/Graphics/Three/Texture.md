@@ -2,6 +2,7 @@
 title: 纹理
 description: 纹理
 tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 }
+status: stub
 ---
 
 ## API

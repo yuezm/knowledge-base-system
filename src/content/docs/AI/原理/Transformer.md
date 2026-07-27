@@ -1,6 +1,7 @@
 ---
 title: Transformer
 description: Transformer
+status: evergreen
 ---
 
 Transformer 是由 Google 在 2017 年论文《Attention Is All You Need》中提出的一种深度学习架构

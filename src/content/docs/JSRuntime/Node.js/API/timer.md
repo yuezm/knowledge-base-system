@@ -1,6 +1,7 @@
 ---
 title: timer
 description: timer
+status: stub
 ---
 
 node.js `setInterval、setTimeout、setImmediate` 返回的时 Timer 类的子类，而非原先的句柄了

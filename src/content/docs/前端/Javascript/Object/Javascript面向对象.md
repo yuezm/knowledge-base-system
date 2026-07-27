@@ -1,6 +1,7 @@
 ---
 title: Javascript面向对象
 description: Javascript面向对象
+status: active
 ---
 
 # Javascript 面向对象

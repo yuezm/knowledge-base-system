@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **280** 个页面（含 Home.md），按分类列出。最后更新：2026-07-30
+> 内容目录。共 **281** 个页面（含 Home.md），按分类列出。最后更新：2026-07-30
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -42,6 +42,7 @@ sidebar:
 
 - [[AI/Agent/概览|概览]] — MCP / Tool Use / 工作流 / 记忆
 - [[AI/Agent/Agent发展|AI 系统演进]]
+- [[AI/Agent/语音输入对比|语音输入对比]] — 14 款 Agent 工具语音实现横向对比（端到端 vs STT）
 
 ### AIGC（多模态生成）
 

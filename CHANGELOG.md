@@ -11,6 +11,16 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-30 ingest | 国内外 Agent 工具语音输入对比（14 款横向对比）
+
+- 录入 1 篇横向对比 — `AI/Agent/语音输入对比.md`
+- 覆盖产品：ChatGPT / Claude / Gemini / Perplexity / Cursor / Codex / WorkBuddy（国外 7）+ 文心 / 通义 / Kimi / 豆包 / 元宝 / 智谱 / 秘塔（国内 7）
+- 6 维度矩阵：语音入口 / 技术路线 / 流式打断 / TTS 输出 / 底层模型 / 典型场景
+- 关键结论：① 端到端多模态 vs STT→LLM→TTS 两大流派分化明显 ② 国内大厂豆包/通义/文心走自研端到端+硬件集成路线 ③ 编码 Agent（Cursor/Codex/WorkBuddy）几乎都没原生语音
+- tags: [ai-agent, voice-input, multimodal, stt, realtime-api]
+- related → AI/Agent/概览 + AI/Agent/Agent发展
+- 4 元文件联动：AGENTS.md（AI 段 11→12 + 目录树 +1 + 末尾统计 280→281 + 顶部 ingest 条目）；INDEX.md（顶部 280→281 + Agent 章节 +1 条）；CHANGELOG.md（本条）；SCHEMA.md 不变（`ai-agent` 标签已存在）
+
 ## 2026-07-30 ingest | WOFF 16 年演进史与 IFT 未来方向（W3C 官方阅读）
 
 - **目标**：录入 1 篇 W3C 官方博客回顾到 `开源项目分析/阅读/`，覆盖 Web 字体格式 16 年标准史与未来方向。

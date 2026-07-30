@@ -11,7 +11,7 @@
 | 分类         | 路径            | 文件数 | 内容                                                     |
 | ------------ | --------------- | ------ | -------------------------------------------------------- |
 | 00-MOC       | `00-MOC/`       | 6      | 知识库总入口 + 5 个主题地图(AI/前端/Graphics/GIS/工作流) |
-| AI           | `AI/`           | 11     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索         |
+| AI           | `AI/`           | 12     | AI 底层原理 / LLM 应用 / Agent / AIGC / 向量检索         |
 | Architecture | `Architecture/` | 8      | 架构模式、SPA/MPA、微前端、Monorepo、构建、权限、测试    |
 | Books        | `Books/`        | 2      | 编程珠玑、Books of Shader                                |
 | Browser      | `Browser/`      | 3      | 浏览器多进程模型、指纹、性能                             |
@@ -50,7 +50,8 @@ AI/
 │   └── 概览.md                                    (RAG / Prompt / Function Calling / Embedding / Memory 待补)
 ├── Agent/                                         ← Agent 系统
 │   ├── 概览.md
-│   └── Agent发展.md                                ← Agent 架构演进知识图谱
+│   ├── Agent发展.md                                ← Agent 架构演进知识图谱
+│   └── 语音输入对比.md                              ← 14 款 Agent 工具语音实现横向对比（端到端 vs STT）
 ├── AIGC/                                          ← 多模态生成
 │   └── 概览.md                                    (图像/视频/音频/3D 待补)
 └── 向量检索/                                      ← 向量检索算法视角
@@ -423,9 +424,9 @@ subprocess.run(["grep", "-rl", "^status: active", "src/content/docs"])
 ## 统计
 
 - **总计一级分类**: 24 个（22 个 B 方案分类 + 00-MOC/20-资源/30-归档 3 个 C 方案 PARA + MOC 维度;2026-07-27 E 方案撤销 10-项目 PARA Projects 维度）
-- **总计文件**: 280 个 `.md` 文件（含 Home.md;2026-07-30 ingest 1 篇 279→280 WOFF 字体阅读;2026-07-28 ingest 1 篇 278→279;2026-07-27 E 方案 282→278,删 4 个 10-项目 指针页）
+- **总计文件**: 281 个 `.md` 文件（含 Home.md;2026-07-30 ingest 1 篇 280→281 语音输入对比;此前 2026-07-30 ingest 1 篇 279→280 WOFF 字体阅读;2026-07-28 ingest 1 篇 278→279;2026-07-27 E 方案 282→278,删 4 个 10-项目 指针页）
 - **2026-07-30 ingest**: 录入 1 篇 W3C 官方阅读 — `开源项目分析/阅读/WOFF-16年演进史与IFT未来方向.md`(微信公众号转载 W3C Blog:纪念 WOFF 1.0 公开草案 16 周年;覆盖 WOFF 1.0/2.0 演进、DRM 放弃、艾美奖、IFT 增量传输未来方向;按 SCHEMA.md "分类归属规则" 文章类放 `开源项目分析/阅读/`);4 元文件联动完成
-- **2026-07-28 ingest**: 录入 1 篇横向对比 — `开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比.md`(三家 AI Agent 框架 kanban 任务管理系统对比:OpenHands 伪 kanban/TaskTrackerTool、MetaGPT 无 kanban/消息总线 + SOP、Hermes 真 kanban/SQLite 9 态状态机);3 个子 agent 并行调研,基于实测源码;tags [ai-agent],related 指向 AI/Agent/概览 + AI/Agent/Agent发展 + Hermes-Kanban 对比;4 元文件联动完成
+- **2026-07-30 ingest**: 录入 1 篇横向对比 — `AI/Agent/语音输入对比.md`(14 款国内外 Agent 工具语音输入实现对比:ChatGPT/Claude/Gemini/Perplexity/Cursor/Codex/WorkBuddy + 文心/通义/Kimi/豆包/元宝/智谱/秘塔;6 维度矩阵表 + 端到端多模态 vs STT 路线分析 + 选型建议);tags [ai-agent, voice-input, multimodal, stt, realtime-api],related 指向 AI/Agent/概览 + AI/Agent/Agent发展;4 元文件联动完成(AGENTS 表格 11→12,AI/Agent 目录树 +1,INDEX 顶部 280→281)
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
 - **status 分布**(2026-07-27 D 方案引入): evergreen 33 / active 167 / stub 81 / archived 1
 - **2026-07-27 D 方案**: 引入 `status` 字段(evergreen/active/stub/archived)标记笔记成熟度,281 篇自动赋初值 + SCHEMA.md 加字段说明;4 处元文件联动完成(SCHEMA/AGENTS/INDEX/CHANGELOG)

@@ -25,7 +25,7 @@
 | Performance  | `Performance/`  | 6      | Chrome 调试、JS 优化、预加载、内存排查                   |
 | Security     | `Security/`     | 1      | 认证 / 安全协议                                          |
 | 方法论       | `方法论/`       | 4      | 职业、视野、开源经济、软件工程方法论                     |
-| 开源项目分析 | `开源项目分析/` | 17     | 开源项目评估、选型分析、工具测评、项目阅读               |
+| 开源项目分析 | `开源项目分析/` | 18     | 开源项目评估、选型分析、工具测评、项目阅读               |
 | 开发工具链   | `开发工具链/`   | 6      | Git、Playwright、Puppeteer                               |
 | 前端         | `前端/`         | 54     | React、Vue、TS、JS、CSS、HTML、动画                      |
 | 20-资源      | `20-资源/`      | 3      | PARA Resources 维度——工具/库/参考索引                    |
@@ -315,7 +315,9 @@ Security/
 │ ├── 1688-Multi-Agent 超级组织实践.md — 1688 数据中心 Multi-Agent 研发小队实录,KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
 │ ├── Hermes-Kanban 多 Profile 持久化工作流与 SubAgent 对比.md — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比
 │ ├── Medal-W-Key-前端基础设施现代化复盘.md — Medal.tv Electron+Web 前端 Macro→Micro 现代化路径,barrel file 与 tree-shaking 实战权衡
-│ └── htmx-与 AI 协作的具体案例.md — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程,AI 调查/测试强,方案设计弱
+│ ├── htmx-与 AI 协作的具体案例.md — htmx 作者 Carson Gross 用 Claude 修 hyperscript parser bug 全过程,AI 调查/测试强,方案设计弱
+│ ├── OpenHands-MetaGPT-Hermes-Kanban 对比.md — 三家 AI Agent 框架 kanban 任务管理横向对比,OpenHands 伪 kanban / MetaGPT 无 kanban / Hermes 真 kanban(SQLite 9 态状态机)
+│ ├── WOFF-16 年演进史与 IFT 未来方向.md — W3C 官方纪念 WOFF 1.0 公开草案 16 周年:Web 字体格式标准史(WOFF 1.0→2.0)、DRM 争议、艾美奖、IFT 增量传输未来方向
 ├── 依赖分析工具/
 │ └── dependency-cruiser-JS 依赖分析和架构治理工具.md — JS/TS 依赖分析与架构治理工具
 ├── 自托管书签/
@@ -395,6 +397,8 @@ Security/
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/Medal-W-Key-前端基础设施现代化复盘.md
 /home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/htmx-与AI协作的具体案例.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比.md
+/home/keven/codes/github/knowledge-base-system/src/content/docs/开源项目分析/阅读/WOFF-16年演进史与IFT未来方向.md
 ```
 
 ## 检索命令
@@ -419,7 +423,8 @@ subprocess.run(["grep", "-rl", "^status: active", "src/content/docs"])
 ## 统计
 
 - **总计一级分类**: 24 个（22 个 B 方案分类 + 00-MOC/20-资源/30-归档 3 个 C 方案 PARA + MOC 维度;2026-07-27 E 方案撤销 10-项目 PARA Projects 维度）
-- **总计文件**: 279 个 `.md` 文件（含 Home.md;2026-07-28 ingest 1 篇 278→279;2026-07-27 E 方案 282→278,删 4 个 10-项目 指针页）
+- **总计文件**: 280 个 `.md` 文件（含 Home.md;2026-07-30 ingest 1 篇 279→280 WOFF 字体阅读;2026-07-28 ingest 1 篇 278→279;2026-07-27 E 方案 282→278,删 4 个 10-项目 指针页）
+- **2026-07-30 ingest**: 录入 1 篇 W3C 官方阅读 — `开源项目分析/阅读/WOFF-16年演进史与IFT未来方向.md`(微信公众号转载 W3C Blog:纪念 WOFF 1.0 公开草案 16 周年;覆盖 WOFF 1.0/2.0 演进、DRM 放弃、艾美奖、IFT 增量传输未来方向;按 SCHEMA.md "分类归属规则" 文章类放 `开源项目分析/阅读/`);4 元文件联动完成
 - **2026-07-28 ingest**: 录入 1 篇横向对比 — `开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比.md`(三家 AI Agent 框架 kanban 任务管理系统对比:OpenHands 伪 kanban/TaskTrackerTool、MetaGPT 无 kanban/消息总线 + SOP、Hermes 真 kanban/SQLite 9 态状态机);3 个子 agent 并行调研,基于实测源码;tags [ai-agent],related 指向 AI/Agent/概览 + AI/Agent/Agent发展 + Hermes-Kanban 对比;4 元文件联动完成
 - **最深嵌套**: 4 层（CS/NetWork/Application/HTTP/ 和 CS/NetWork/Application/实时通信/）
 - **status 分布**(2026-07-27 D 方案引入): evergreen 33 / active 167 / stub 81 / archived 1

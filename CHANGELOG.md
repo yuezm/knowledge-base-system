@@ -11,6 +11,24 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-07-30 ingest | WOFF 16 年演进史与 IFT 未来方向（W3C 官方阅读）
+
+- **目标**：录入 1 篇 W3C 官方博客回顾到 `开源项目分析/阅读/`，覆盖 Web 字体格式 16 年标准史与未来方向。
+- **动机**：
+  - 用户分享微信公众号链接（mp.weixin.qq.com/s/1rWevyHMcHiwlyuQIAA5wQ），按 skill 走"行动导向模式"分支
+  - 内容是 W3C 纪念 WOFF 1.0 公开草案 16 周年的官方博客——属"文章/博客类阅读材料"，按 SCHEMA.md "分类归属规则" 明确放 `开源项目分析/阅读/` 而非 `AI/` 或 `Browser/`
+  - 用 curl + 桌面 Chrome UA 下载 HTML（避免微信反爬触发 captcha），从 `id="js_content"` 提取 4542 字纯文本
+- **核心结论**（一句话版）：WOFF 1.0（2010）成功靠的是**放弃 DRM**的政治抉择而非技术炫酷；WOFF 2.0（2024-08 正式 Rec）已占 2025 年字体请求 ~65%；IFT 增量传输是 CJK/慢网场景的下一个量级提升。
+- **正文**：`src/content/docs/开源项目分析/阅读/WOFF-16年演进史与IFT未来方向.md`（10.3 KB，5 章节 + 横向对比表）
+  - §1 核心技术栈（WOFF 1.0/2.0 决策史 + 关键人物）
+  - §2 实践启示录（马上能用：`font-display:swap`+`preload`+`unicode-range` 三件套；避坑：WOFF1 vs WOFF2 mime 配置、子集化不能砍过头、字体授权风险）
+  - §3 核心片段（2009-2010 合并时刻的决策时间线 + 3 条反直觉观点）
+  - §4 横向对比（WOFF 1.0/2.0/TTF/EOT/IFT 五方对比表）
+  - §5 关键数字一览（2025 WOFF2 占比 65% / 88% 网站用 Web 字体 / 2024-08 Rec）
+  - 参考：[[开源项目分析/阅读/htmx-与AI协作的具体案例]] 同为"非项目仓库阅读材料"先例
+- **4 元文件联动完成**：AGENTS.md（总览表 17→18 + 阅读/ 树追加 + 路径示例 + 统计 279→280 + 新增 ingest 摘要行） / INDEX.md（279→280 + 阅读/ 章节追加） / CHANGELOG.md（本条）
+- **tags**: [web-standard], [w3c], [font], [performance]
+
 ## 2026-07-28 ingest | OpenHands / MetaGPT / Hermes Agent 的 Kanban 对比
 
 - **目标**：录入 1 篇横向对比到 `开源项目分析/阅读/`，覆盖三家 AI Agent 框架的任务管理系统。

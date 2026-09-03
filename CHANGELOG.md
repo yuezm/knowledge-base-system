@@ -11,6 +11,82 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-03 ingest | 收录 GitHub Copilot 降本实践（GitHub Blog）
+
+- **目标**：将 GitHub Blog 文章《How we make AI coding more cost efficient without sacrificing task quality》收录到 `开源项目分析/AI编码工程化/`
+- **动机**：用户分享 AIHOT 收录页链接（cmtkfkfvl03garobqyr0vwpth）要求「收藏到知识库，记录原文链接和 AIHOT 链接」
+- **核心结论**：四项降本改动 = 选择性压缩工具输出（约 -5.5%，保留恢复路径当评估信号）/ 移除 view 行号前缀（线下推理 -5%、线上用户日均 -3%）/ 压缩 task-tool 提示词（每轮 -1300 token、每活跃小时 -2.9%）/ 后台任务结果直投免取回轮次（AI Credits -2.3%）；核心原则 = 以任务最终结果而非单次调用 token 数为优化目标；踩坑 = RTK 式局部压缩导致全局更贵、提示词压缩致子智能体串行（提示词行为必须有测试兜底）
+- **frontmatter**：`status: active`（依赖外部项目演进）+ `tags: [ai, ai-agent, coding-agent, cost-optimization, prompt-engineering, github-copilot]` + related 3 条 wikilink（Trellis / spec-kit / Superpowers）
+- **3 元文件联动**：INDEX.md（共 286→287 个页面，日期更新 + 新增 wikilink 行）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版无需更新
+- **影响范围**：无破坏性变更
+
+## 2026-09-02 ingest | 收录 PixVerse R2 实时世界模型技术解读
+
+- **目标**：将公众号「苍何」文章《原来世界模型，已经能边玩边生成了》（解读爱诗科技 PixVerse R2 技术报告）收录到 `开源项目分析/阅读/`
+- **动机**：用户分享微信文章链接要求「学习并记录到知识库」；按 SCHEMA.md 分类归属规则，公众号文章解读属阅读类，放 `开源项目分析/阅读/`（非 `AI/` —— AIGC 概念类才入 AI/）
+- **核心结论**：PixVerse R2 用「一个实时世界模型 + Director Agent + Runtime」同时撑起空间探索/互动影游/数字人三种玩法；技术要点 = Omni Causal AR 两段式训练收敛（替代多阶段蒸馏流水线，减少能力折损）+ Dynamic Chunk 自适应切分 + 多尺度记忆（Sink/Rolling/Object KV）+ Hybrid TF/DF + Error Bank（错误回灌训练，亮度漂移 -35.8%）+ 实时加速三件套（DDMD 对抗正则 / Block-sparse Attention 稀疏 90%+ / Pyramid 少步蒸馏）
+- **frontmatter**：`status: active`（该项目持续演进，需定期 review）+ `tags: [aigc, ai, world-model, video-generation, real-time]`
+- **3 元文件联动**：INDEX.md（共 285→286 个页面，日期更新 + 新增 wikilink 行）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版无需更新
+- **影响范围**：无破坏性变更
+
+## 2026-08-12 ingest | 迁移补录：AI 浏览器自动化三强对比 + Matt Pocock 演讲笔记
+
+- **目标**：将两篇此前误归档到 `C:\Users\yuezm\knowledge\` 的笔记迁入正确位置
+  - `AI浏览器自动化三强对比-Playwright-Stagehand-browser-use.md` → `开源项目分析/AI浏览器自动化/`（与 Stagehand 同子目录，方便同赛道对比）
+  - `MattPocock-AI时代软件基础四本书.md` → `开源项目分析/阅读/`（公众号/演讲提炼类）
+- **动机**：2026-08-11/12 两次归档会话误判知识库路径（写入 `C:\Users\yuezm\knowledge\`），本次按 SCHEMA.md 补 frontmatter 并迁入正式目录；误归档位的旧副本保留待用户确认清理
+- **影响范围**：INDEX.md（+2 页面，283→285）、CHANGELOG.md；无破坏性变更
+
+## 2026-08-07 ingest | ponytail — "少写代码" AI agent skill + 自带 4-arm benchmark
+
+- **目标**：将 DietrichGebert/ponytail 收录到 `开源项目分析/AI编码工程化/`(与 [[Superpowers-AI编码工程师方法论与Skills框架]] / [[Trellis-AI编码工程框架]] / [[spec-kit-GitHub官方规范驱动开发]] / [[Ralph-Autonomous-AI-Coding-Loop]] 同子目录,方便未来同赛道对比阅读)
+- **动机**:
+  - 用户分享 https://github.com/DietrichGebert/ponytail,要求"介绍下这个项目"
+  - 按 SCHEMA.md "分类归属规则":这是具体 AI 编码 agent skill 仓库,归 `开源项目分析/`,而非 `AI/`(概念)或 `开发工具链/`(本地工具)
+  - AI 编码工程化 子目录已存在,且已收录 Superpowers/Trellis/spec-kit/Ralph,ponytail 是该赛道第 5 个收录项目;不再新建子目录
+- **核心结论**(一句话版):ponytail 把"少写代码"工程化成 7 层 ladder(YAGNI → 仓库内已有 → stdlib → 平台原生 → 已装依赖 → 1 行 → 才写最少代码),配 `ponytail:` 注释 + debt ledger 回收;
+  - **自带公开 benchmark**(关键差异化):真实 Claude Code 2.1.177 headless,在 tiangolo/full-stack-fastapi-template @ cd83fc1 上跑 12 工单 × n=4,4 个 arm 对照(baseline/caveman/ponytail/yagni-oneliner,即 Issue #126 中 Colin Eberhardt 直接挑战的 7 字 prompt)
+  - 数据汇总:LOC **-54%** / tokens **-22%** / 成本 **-20%** / 时间 **-27%**,date picker 单点 -94%(用 `<input type="date">` 替手搓组件),后端 CRUD 持平(已不可压缩)
+  - 安全独立打分(对照 4 个 arm 各自跑 adversarial 4 项):baseline/caveman/ponytail **100%**,yagni-oneliner **95%** —— ponytail 是赛道里唯一诚实承认"对照组之一不达标"的项目
+  - 自查发现 + 公开承认的污染 bug:SessionStart hook 在 baseline 也被触发,差点放出 4% 错的结论;**用 `--plugin-dir` 单独装载每个 plugin 才隔离干净**
+- **诚实立场区分**:`/ponytail-gain` 明确拒绝打印"本仓库省了多少"(unbuilt version 永远没被写,无真实 baseline 可减)—— 只有 `/ponytail-debt` ledger 给真数字
+- **数字采集**(全部用 GitHub API 直抓,0 估算):stars **97,461** / forks **5,354** / open issues **157** / 体积 **2.2 MB** / 创建 **2026-06-12** / 最近推送 **2026-07-15** / release **v4.8.4** / 协议 **MIT**
+  - 同赛道对照(同一时间点的精确数):Superpowers **268,125** / spec-kit **122,246** / GStack **126,652** / anthropics/skills **166,724**
+- **frontmatter**:`status: active`(项目活跃维护中,仍在快速演进)+ `tags: [agent, ai-coding, claude-code, opencode, prompt-engineering, skill]`
+- **wikilink**:5 条内联 — [[Superpowers-AI编码工程师方法论与Skills框架]] / [[Trellis-AI编码工程框架]] / [[spec-kit-GitHub官方规范驱动开发]] / [[Ralph-Autonomous-AI-Coding-Loop]] / [[AI/Agent/概览]] / [[AI/LLM-应用/概览]]
+- **双向交叉引用**:本次新增 ponytail 文档时,在该子目录内已收录的 4 个项目**没有**反向引用 ponytail(它们互相两两引用),符合"中心新增→边界点单向链回"模式,不强行修改既有文档
+- **3 元文件联动**(注:本次未更新 AGENTS.md,因其内容已是精简路由版——详见 2026-08-04 条目说明):
+  - `INDEX.md` — 顶部计数 282→**283** + `开源项目分析/AI编码工程化/` 子目录追加 1 条 wikilink(跟在 Ralph 行后,保持 5 项目连续)
+  - `CHANGELOG.md`(本条)
+  - `SCHEMA.md` 不变(归属路径未新增标签)
+- **正文**:`src/content/docs/开源项目分析/AI编码工程化/ponytail-编码效率技能集与多Agent适配.md`(11.9 KB,7 节:项目总览/核心理念/机制/6 skills/20+ 适配/Benchmark/坑/总结/备查数据/参考)
+
+## 2026-08-04 ingest | 知识管理不是建一个知识库 ——《Knowledge Management Dynamics》九章读后
+
+- **目标**：录入 1 篇公众号书评提炼到 `开源项目分析/阅读/`,覆盖论文集《Knowledge Management Dynamics in a Transformative Environment》九章核心观点。
+- **动机**:
+  - 用户分享微信公众号链接(mp.weixin.qq.com/s/Qo32owsd-GGKP6HYKhCf8Q),希望"学习"这篇文章
+  - 按 SCHEMA.md "分类归属规则":文章属于"观点导向 / 公众号文章分析"(并非"X 是什么 / 怎么工作"),应放 `开源项目分析/阅读/` 而非 `AI/` 或 `Books/`
+  - 用 curl + 桌面 Chrome UA 下载 HTML(避免微信反爬触发 captcha),从 `id="js_content"` 提取正文 124KB,清洗标签后保留原文结构
+- **核心结论**(一句话版):知识管理不是建一个知识库,而是处理七个转换过程(表示/连接/学习/传播/共享/迁移/行动);任何知识管理问题第一步应是"卡点诊断",而非"工具选型"。
+- **正文**:`src/content/docs/开源项目分析/阅读/Knowledge-Management-Dynamics-九章读后.md`(9.7 KB,九章核心论点 + 5 条自我提炼 + 一句话总结)
+  - §1 本体(保存信息 ≠ 保存意义)
+  - §2 先验知识喂给深度学习(提示词的价值不在长)
+  - §3 南非农户(知识到了手机里 ≠ 已经真正到达)
+  - §4 组织知识共享(知道答案的人不愿说)
+  - §5 大语言模型(能打通孤岛,但不能证明跨过来的知识是对的)
+  - §6 知识共享理论(分享本身有成本)
+  - §7 绿色知识管理(环保也是知识管理问题)
+  - §8 七种工作 + 卡点诊断表
+  - §9 怎么读这本书
+  - 提炼:5 条在原文之上的二次加工(对象是转换/卡点诊断先于工具/隐性知识靠人和流程/AI 既降本又增险/激励比系统更基础)
+- **frontmatter**:`status: active`(观点性,可能随个人方法论演化)+ `tags: [methodology, knowledge-management, ai, llm-app]` + `related: [AI/LLM-应用/概览, AI/Agent/概览, 1688-Multi-Agent超级组织实践, Harness工程-Multi-Agent架构实践]`
+- **wikilink**:正文嵌入 3 个内联引用 [[AI/LLM-应用/概览]] + [[AI/Agent/概览]] + [[开源项目分析/阅读/1688-Multi-Agent超级组织实践]],符合 C 方案"至少 2 个"规则
+- **3 元文件联动**(注:本次未更新 AGENTS.md,因其内容已是简化版——CHANGELOG 早期条目描述的"总览表 17→18 / 阅读/ 树追加"等动作是过往表述,当前 AGENTS.md 只保留路由说明):
+  - `INDEX.md` — 顶部计数 281→282 + 阅读章节末尾追加 1 条 wikilink
+  - `CHANGELOG.md`(本条)
+  - `SCHEMA.md` 不变(本笔记归属路径已在 SCHEMA 中明确定义,无需新增标签或规则)
+
 ## 2026-07-30 ingest | 国内外 Agent 工具语音输入对比（14 款横向对比）
 
 - 录入 1 篇横向对比 — `AI/Agent/语音输入对比.md`
@@ -18,7 +94,7 @@ sidebar:
 - 6 维度矩阵：语音入口 / 技术路线 / 流式打断 / TTS 输出 / 底层模型 / 典型场景
 - 关键结论：① 端到端多模态 vs STT→LLM→TTS 两大流派分化明显 ② 国内大厂豆包/通义/文心走自研端到端+硬件集成路线 ③ 编码 Agent（Cursor/Codex/WorkBuddy）几乎都没原生语音
 - tags: [ai-agent, voice-input, multimodal, stt, realtime-api]
-- related → AI/Agent/概览 + AI/Agent/Agent发展
+- related → AI/Agent/概览 + AI/Agent/Agent 发展
 - 4 元文件联动：AGENTS.md（AI 段 11→12 + 目录树 +1 + 末尾统计 280→281 + 顶部 ingest 条目）；INDEX.md（顶部 280→281 + Agent 章节 +1 条）；CHANGELOG.md（本条）；SCHEMA.md 不变（`ai-agent` 标签已存在）
 
 ## 2026-07-30 ingest | WOFF 16 年演进史与 IFT 未来方向（W3C 官方阅读）
@@ -36,7 +112,7 @@ sidebar:
   - §4 横向对比（WOFF 1.0/2.0/TTF/EOT/IFT 五方对比表）
   - §5 关键数字一览（2025 WOFF2 占比 65% / 88% 网站用 Web 字体 / 2024-08 Rec）
   - 参考：[[开源项目分析/阅读/htmx-与AI协作的具体案例]] 同为"非项目仓库阅读材料"先例
-- **4 元文件联动完成**：AGENTS.md（总览表 17→18 + 阅读/ 树追加 + 路径示例 + 统计 279→280 + 新增 ingest 摘要行） / INDEX.md（279→280 + 阅读/ 章节追加） / CHANGELOG.md（本条）
+- **4 元文件联动完成**：AGENTS.md（总览表 17→18 + 阅读/ 树追加 + 路径示例 + 统计 279→280 + 新增 ingest 摘要行）/ INDEX.md（279→280 + 阅读/ 章节追加）/ CHANGELOG.md（本条）
 - **tags**: [web-standard], [w3c], [font], [performance]
 
 ## 2026-07-28 ingest | OpenHands / MetaGPT / Hermes Agent 的 Kanban 对比
@@ -84,7 +160,7 @@ sidebar:
   - `INDEX.md` — 顶部页面计数 282→278 + 删"项目(PARA Projects)"段(4 行)
   - `SCHEMA.md` — Domain 段 PARA 描述改 + 删 "`10-项目/`(PARA Projects)" 子段(7 行)
   - `CHANGELOG.md` — 顶部追加本条 E 方案 + D 方案 status 路径规则删 `10-项目/`
-- **影响**：无 wikilink 残留(全部反向引用已清),related.sh 跑一次验证 _backlinks 不再含 10-项目 子树,无破坏性外溢。
+- **影响**：无 wikilink 残留(全部反向引用已清),related.sh 跑一次验证 \_backlinks 不再含 10-项目 子树,无破坏性外溢。
 - **原则记录**:
   - **公开仓库不放私有路径**——任何硬编码 `/home/keven/...` 的笔记都不进 git(知识库/方案/脚本同理)
   - **PARA 4 维度里 Projects 维度要谨慎**——"个人知识库"场景下资源/归档/方法论比项目指针更核心;若日后要回,只在 `[[wikilink]]` 引用项目名 + 公开仓库 URL,绝不写本地路径
@@ -192,7 +268,7 @@ sidebar:
 - **CS/OS/时区.md**(从 ToBeContinue/时区)
 - **JSRuntime/Node.js/ 加 2 篇**: node.js 内存泄漏 / Framework/从 egg-helper 学习 egg 源码
 - **Performance/ 加 4 篇**: Chrome 调试 / JS 如何获取精确的时间戳 / Web 截图 / 内存泄漏及排查
-- **前端/Javascript/ 加 8 篇**: CJS+ESM+Webpack, Import maps, JSON 和Javascript, Javascript 正则, 大文件如何上传(重命名), 如何处理循环引用, 常见的问题及解决方案, 解决 ESM Import 过多
+- **前端/Javascript/ 加 8 篇**: CJS+ESM+Webpack, Import maps, JSON 和 Javascript, Javascript 正则, 大文件如何上传(重命名), 如何处理循环引用, 常见的问题及解决方案, 解决 ESM Import 过多
 - **前端/React/ 加 3 篇**: React 事件 / React 的错误捕获 / 为啥 react 没有 keep-alive
 - **前端/Typescript/ 加 1 篇**: 从 d.ts 了解 typescript
 - **前端/CSS/ 加 1 篇**: 常用的图片格式

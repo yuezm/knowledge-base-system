@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **287** 个页面（含 Home.md），按分类列出。最后更新：2026-09-03
+> 内容目录。共 **288** 个页面（含 Home.md），按分类列出。最后更新：2026-09-15
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -270,6 +270,7 @@ sidebar:
 - [[开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use|AI 浏览器自动化三强对比]] — Playwright/Stagehand/browser-use 横向对比，三强均自研 CDP 驱动，附 qa-use 参考实现评估
 - [[开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施|Honcho — Agent 记忆基础设施]]
 - [[开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库|Claude Design System Prompt]] — 逆向工程设计协作提示词库，1700+ Stars，14 个设计技能
+- [[开源项目分析/提示词工程/AI时代的思维框架-潜空间地形模型与提示技巧|AI 时代的思维框架 — 潜空间地形模型与提示技巧]] — LINUX DO 论坛长文（Henry_He）：把 LLM 多步生成类比为非平衡统计力学中「地形上的小球」，KV Cache 即地形，导出语义漂移/注意力稀释/语义惯性/语义壁垒/相变/特征纠缠 6 条性质与显式配平/隐式提纯/掺杂剂/催化剂等技巧
 - [[开源项目分析/阅读/Harness工程-Multi-Agent架构实践|Harness Engineering]] — 数据研发 Multi-Agent Harness 工程实践，阿里技术团队
 - [[开源项目分析/阅读/1688-Multi-Agent超级组织实践|1688 Multi-Agent 超级组织实践]] — 1688 数据中心 Multi-Agent 研发小队实录，KST 三层知识工程 + Harness/Loop Engineering + Squad 协作模式
 - [[开源项目分析/阅读/Hermes-Kanban多Profile持久化工作流与SubAgent对比|Hermes Kanban vs SubAgent]] — Hermes Kanban 多 Profile 持久化工作流与 CC/OpenCode SubAgent 5 维对比

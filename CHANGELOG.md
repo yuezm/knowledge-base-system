@@ -11,6 +11,16 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-15 ingest | 收录 LINUX DO 长文《AI 时代的思维框架》
+
+- **目标**：将 LINUX DO 论坛帖《AI 时代的思维框架》（Henry_He，<https://linux.do/t/topic/2538870>）收录到 `开源项目分析/提示词工程/`
+- **动机**：用户分享帖子链接要求「收藏」；按 SCHEMA.md 分类归属规则，本文的实用载荷是提示词 / 上下文工程技巧（按内容主题而非信源类型归类），故放 `提示词工程/` 与 [[开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库]] 同目录，而非公众号长文默认的 `阅读/`
+- **核心结论**：Transformer 的 Softmax 与玻尔兹曼分布数学等价 → 多步生成不是平衡马尔可夫链，用「三维地形上的小球（朗之万动力学）」类比，KV Cache 即地形状态；6 条性质 = 语义漂移（噪声 token 累积、偏差非线性）/ 注意力稀释（长对话淡化设定，核心指令需反复强调）/ 语义惯性（换任务应开新会话）/ 语义壁垒（COT、先规划后推理 = 在陡坡上修阶梯）/ 相变（废话在临界点起决定作用）/ 特征纠缠（`严谨` 与古板学术共现，高维下 token 是一片区域）；技巧 = 语义退火 / 先推理后结论 / 入戏与共振采样 / 轨道弹弓（越狱测试视角，自带免责）/ 显式配平（弊端：知识冗余、注意力劫持、认知降维）/ 隐式提纯（引导采样与回滚、案例好于说明）/ 掺杂剂（逻辑符号、剧本标记、会计学语义）/ 催化剂（`通俗易懂`、`奥卡姆剃刀`、`第一性原理`）
+- **frontmatter**：`status: active`（依赖训练范式未变革这一前提，且为观点性长文）+ `tags: [ai, prompt-engineering, llm-app, methodology, context-engineering]` + related 4 条 wikilink（Claude Design System Prompt / AI 原理 Transformer / AI LLM-应用概览 / MattPocock AI 时代软件基础）
+- **原文元信息**：blockquote 块含原文链接 + 作者 + 来源板块 + 原文发布时间（2026-07-07）+ 收录时间（2026-09-15）+ 续篇链接（t/topic/2588749）；正文未迁移原帖配图，标注需回原文查看
+- **3 元文件联动**：INDEX.md（共 287→288 个页面，日期更新 + `开源项目分析/提示词工程/` 段落新增 wikilink 行）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版无需更新
+- **影响范围**：无破坏性变更；未回帖、未向原站提交任何内容
+
 ## 2026-09-03 ingest | 收录 GitHub Copilot 降本实践（GitHub Blog）
 
 - **目标**：将 GitHub Blog 文章《How we make AI coding more cost efficient without sacrificing task quality》收录到 `开源项目分析/AI编码工程化/`

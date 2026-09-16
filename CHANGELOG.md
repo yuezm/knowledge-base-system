@@ -11,6 +11,17 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-16 ingest | 收录 LINUX DO 长文《如何写一个好的 skill》+ skill-based-architecture 项目
+
+- **目标**：将 LINUX DO 论坛帖《如何写一个好的 skill 让你的效率加倍!》（woji_666，<https://linux.do/t/topic/1923706>）及其配套开源项目 `WoJiSama/skill-based-architecture` 收录到 `开源项目分析/AI编码工程化/`
+- **动机**：用户分享帖子链接要求「学习并收藏」；按内容主题归类，本文的实用载荷是给 AI 编码 agent 写项目级 Skill 的工程方法（薄壳 / hook / 任务闭环），与同目录 [[开源项目分析/AI编码工程化/Superpowers-AI编码工程师方法论与Skills框架]]、[[开源项目分析/AI编码工程化/Trellis-AI编码工程框架]] 形成方法论对照，故不按信源类型退回 `阅读/`
+- **核心结论**：三句核心 = 结构服务于内容 / 激活优于存储 / 结构可复用内容禁止预制；三要素 = Prompt（description 是唯一前置判据）+ Context（三级渐进披露）+ Harness（拦截 / 自动化验证 / 真实压力测试）；长会话根因 = 自然语言「去读 X」会被压缩器丢弃 + 跨任务不重走路由 → 解 = 薄壳三块（Quick Routing 表 / Auto-Triggers / Red Flags STOP，≤60 行）+ SessionStart hook（startup|clear|compact 重注 SKILL.md）+ PreToolUse gate（exit 2 取消 Edit）+ Session Discipline 原则+检验句；闭环 = AAR 4 问 + 借口表（只能抄真实失败）+ 2/3 录入门槛（可重复 / 代价高 / 代码不可见）；工程化 = templates 两条铁律（结构可预制内容禁止预制、两个真实项目同意测试）+ anti-templates 清单 + smoke-test(48 项) / test-trigger(触发率) 脚本兜底
+- **数据**：原帖 13,965 浏览 / 1,823 点赞 / 317 帖 / 166 参与 / 7,445 词（2026-04-08 发布，2026-09-10 最后活跃）；项目 580 Stars / 49 Forks / MIT / Shell，2026-08-14 最近推送（2026-09-16 API 直抓，非记忆估计）；对比表内 Superpowers 287,187 / spec-kit 137,069 / ponytail 139,422 / Karpathy Skills 213,227（该仓库已迁至 multica-ai）同为当日 API 实抓
+- **frontmatter**：`status: active`（方法论随 harness 能力演进）+ `tags: [skill, agent, ai-coding, prompt-engineering, context-engineering, claude-code]` + related 5 条 wikilink（Superpowers / Trellis / spec-kit / ponytail / AI 时代的思维框架）
+- **原文元信息**：blockquote 块含原帖链接 + 作者 + 来源板块（文档共建）+ 原帖数据 + 配套项目 + 续篇链接（t/topic/1930416《skill 的自我进化之路(1)》）+ 收录时间；正文未迁移原帖配图，标注需回原文查看；按语写明「仅本地归档，未回帖原站」
+- **3 元文件联动**：INDEX.md（共 288→289 个页面，日期更新 + `开源项目分析/` 段落新增 wikilink 行，与磁盘 `find -name "*.md" | wc -l` 实数核对吻合）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版无需更新
+- **影响范围**：无破坏性变更；未回帖、未向原站提交任何内容
+
 ## 2026-09-15 ingest | 收录 LINUX DO 长文《AI 时代的思维框架》
 
 - **目标**：将 LINUX DO 论坛帖《AI 时代的思维框架》（Henry_He，<https://linux.do/t/topic/2538870>）收录到 `开源项目分析/提示词工程/`

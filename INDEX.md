@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **288** 个页面（含 Home.md），按分类列出。最后更新：2026-09-15
+> 内容目录。共 **289** 个页面（含 Home.md），按分类列出。最后更新：2026-09-16
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -285,6 +285,7 @@ sidebar:
 - [[开源项目分析/AI编码工程化/Ralph-Autonomous-AI-Coding-Loop|Ralph — Autonomous AI Coding Loop]] — snarktank/ralph 自主 AI 编码循环，PRD 拆小 story + 每轮 fresh context，21.2K Stars，MIT
 - [[开源项目分析/AI编码工程化/ponytail-编码效率技能集与多Agent适配|ponytail — 编码效率技能集与多 Agent 适配]] — DietrichGebert/ponytail "lazy senior dev" 人格 + 7 层 ladder，自带 4-arm 公开 benchmark + 安全独立打分，97K Stars，MIT，适配 20+ agent
 - [[开源项目分析/AI编码工程化/GitHub-Copilot-降本实践-任务质量优先|GitHub Copilot 降本实践]] — GitHub 官方四项降本改动（选择性压缩输出 / 移除行号 / 压缩提示词 / 后台结果直投），核心原则「以任务最终结果而非单次调用 token 数为优化目标」，附 RTK 局部压缩陷阱与提示词行为测试教训
+- [[开源项目分析/AI编码工程化/Skill-Based-Architecture-项目级Skill编写方法论|SBA — 项目级 Skill 编写方法论]] — LINUX DO 长文《如何写一个好的 skill》+ WoJiSama/skill-based-architecture：薄壳路由 + SessionStart/PreToolUse 双 hook + AAR 任务闭环 + 2/3 录入门槛 + templates/smoke-test 兜底，580 Stars，MIT
 - [[开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比|OpenHands / MetaGPT / Hermes Agent 的 Kanban 对比]] — 三家 AI Agent 框架任务管理横向对比，OpenHands 伪 kanban（TaskTrackerTool 三态清单）/ MetaGPT 无 kanban（SOP + 消息总线）/ Hermes 真 kanban（SQLite 9 态状态机）
 - [[开源项目分析/阅读/WOFF-16年演进史与IFT未来方向|WOFF 16 年演进史与 IFT 未来方向]] — W3C 官方纪念 WOFF 1.0 公开草案 16 周年：Web 字体格式标准史（WOFF 1.0→2.0）、DRM 放弃、艾美奖、IFT 增量传输未来方向
 - [[开源项目分析/阅读/MattPocock-AI时代软件基础四本书|Matt Pocock：AI 时代软件基础]] — AI Engineer Summit 演讲：Spec-to-Code 陷阱、经典理论映射、Grill Me 等五技巧、两种范式对比

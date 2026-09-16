@@ -7,9 +7,9 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **289** 个页面（含 Home.md），按分类列出。最后更新：2026-09-16
+> 内容目录。共 **290** 个页面（含 Home.md），按分类列出。最后更新：2026-09-16
 >
-> **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 167 篇) / `stub`(待补全 81 篇) / `archived`(归档 1 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
+> **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 176 篇) / `stub`(待补全 81 篇) / `archived`(归档 0 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
 ## 知识库总入口
 
@@ -291,6 +291,7 @@ sidebar:
 - [[开源项目分析/阅读/MattPocock-AI时代软件基础四本书|Matt Pocock：AI 时代软件基础]] — AI Engineer Summit 演讲：Spec-to-Code 陷阱、经典理论映射、Grill Me 等五技巧、两种范式对比
 - [[开源项目分析/阅读/Knowledge-Management-Dynamics-九章读后|知识管理不是建一个知识库]] — 论文集《Knowledge Management Dynamics》九章读后：把"知识管理"还原为七个转换过程（表示/连接/学习/传播/共享/迁移/行动），卡点诊断先于工具选型
 - [[开源项目分析/阅读/PixVerse-R2-实时世界模型解读|PixVerse R2 — 实时世界模型解读]] — 爱诗科技 R2 技术报告解读：一个模型撑起空间/故事/角色三种玩法，Omni Causal AR 两段式训练收敛 + Dynamic Chunk + 多尺度记忆 + Error Bank + 实时加速三件套
+- [[开源项目分析/AI-Agent框架/Pydantic-AI-类型安全的Python-Agent框架|Pydantic AI — 类型安全的 Python Agent 框架]] — Pydantic 团队出品的 Python Agent 框架，V2 用 capability 单原语统一全部扩展点，全厂商适配 + 端到端类型安全，19,976 Stars，MIT，含官方 10 篇竞品对比页与 V2 破坏性升级踩坑清单
 
 ## 前端
 

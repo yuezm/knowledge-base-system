@@ -11,6 +11,17 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-16 ingest | 收录 Pydantic AI（Python 类型安全 Agent 框架）
+
+- **目标**：将 `pydantic/pydantic-ai` 收录到 `开源项目分析/AI-Agent框架/`（本次新建的子目录）
+- **动机**：用户分享 GitHub 链接先「了解」后「收藏」；同类 Agent 框架此前没有框架级子目录（对比类内容散落在 `阅读/`，概念类在 `AI/Agent/`），故新建 `AI-Agent框架/` 承载具体框架评估，后续同类项目（OpenAI Agents SDK / LangGraph / CrewAI / Google ADK）可并入形成同赛道对照
+- **核心结论**：定位已从「agent 框架」升格为「How Python does AI」的 Python AI SDK；V2 的三个关键设计 = ① capability 成为唯一扩展原语（V1 散落在 `Agent(...)` 上的十多个参数全部收编，一个 capability 捆绑 tools+instructions+hooks+模型设置，支持 `defer_loading` 按需加载，与 Claude Skills 同构）② 成品 Agent 不是黑盒（`Coder()` 与 `[FileSystem, Shell, RepoContext, Planning, SubAgents, ...]` 是同一套 API，可整体用也可拆开用——最值得借鉴的设计）③ 端到端类型 + 全接口（结构化输出 / 类型化依赖注入 / 类型化工具；同一 agent 跑 CLI、Web chat、Realtime 语音、AG-UI、ACP；OTel + Logfire 可观测；Temporal/DBOS/Prefect/Restate durable execution）；配套 `pydantic-ai-harness` 是独立包，memory/subagents/planning/skills/guardrails/coding agent 都在里面
+- **数据**：19,976 Stars / 2,719 Forks / 476 Contributors（非匿名）/ 创建 2024-06-21 / 最近 push 2026-09-16（当天）/ 累计 PR 4,884 / 已关闭 issue 2,584 / 未关闭 633 issues + 266 PRs；v2.43.0（2026-09-12），V2.0.0 GA 2026-06-23，PyPI 331 个 release（周级发版）；同级竞品同为当日 API 实抓——LangGraph 41,737 / CrewAI 58,637 / OpenAI Agents SDK 29,478 / Google ADK 21,548 / smolagents 29,344 / Agno 42,195；pydantic-ai-harness 893 Stars（2026-03 建仓）、Logfire 4,476 Stars（2026-09-16 实抓，非记忆估计）
+- **踩坑记录（写入正文「潜在坑」）**：V2 破坏性升级（`Agent('gpt-5')` 必须写 `'openai:gpt-5'` 否则抛 `UserError`；泛型默认 `None`→`object`；`GeminiModel`→`GoogleModel`；`OpenAIModel`→`OpenAIChatModel`；`builtin_tools=`→`capabilities=[NativeTool(...)]`）；核心库与 Harness 分属两个包；周级发版需锁精确版本；社区热度仅为头部 1/3，第三方教程少；社区渠道是 Slack 非 Discord；团队 2026-09-15 前后连续合并 OpenAI Agents SDK / Google ADK / Vercel AI SDK 迁移 skill（抢滩信号）；pypistats 当日连续 429，下载量未核实故不写估算数字
+- **frontmatter**：`status: active`（依赖外部框架版本与项目状态） + `tags: [ai, ai-agent, llm-app, agent-framework, python, ai-sdk]` + related 5 条 wikilink（Harness Engineering / SBA 项目级 Skill 方法论 / OpenHands-MetaGPT-Hermes-Kanban 对比 / AI 浏览器自动化三强对比 / AI/Agent/Agent发展）
+- **原文元信息**：顶部 blockquote 块含仓库链接 + 官方文档 + PyPI + 配套 Harness 仓库 + 采集时间（2026-09-16）；正文全部数字标注为当日 API 实抓，未混入记忆估值
+- **3 元文件联动**：INDEX.md（共 289→290 个页面，日期原本已是 2026-09-16；`开源项目分析/` 段落追加 wikilink 行，与磁盘 `find -name "*.md" | wc -l` 实数 290 核对吻合；顺带按磁盘实测把 status 计数由 `active 167 / archived 1` 校正为 `active 176 / archived 0`——原值与 `grep -rl "^status: "` 实测不符，属历史漂移）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版（9 行，仅链路引用四元文件、不枚举分类），故无需更新
+- **影响范围**：新增 1 个子目录 `开源项目分析/AI-Agent框架/` + 1 个页面；无破坏性变更、无文件移动、未向任何外部站点提交内容
 ## 2026-09-16 ingest | 收录 LINUX DO 长文《如何写一个好的 skill》+ skill-based-architecture 项目
 
 - **目标**：将 LINUX DO 论坛帖《如何写一个好的 skill 让你的效率加倍!》（woji_666，<https://linux.do/t/topic/1923706>）及其配套开源项目 `WoJiSama/skill-based-architecture` 收录到 `开源项目分析/AI编码工程化/`

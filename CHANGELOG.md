@@ -11,6 +11,21 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-18 restructure | 确立「同赛道多工具」组织规则，收口 AI浏览器自动化/
+
+- **目标**：回答用户提问「同类功能的工具该怎么收藏——同类存到一起末尾加对比，还是各自分文件维护？」，把答案固化为 SCHEMA 规则，并立刻用它收口 `开源项目分析/AI浏览器自动化/`
+- **动机**：盘点后发现本库已无意识地并存三套模式且各有坏味道——模式 A（AI编码工程化：7 篇单页、1430 行、无跨家全景表，对比寄生在 spec-kit 一篇里）；模式 B（AI浏览器自动化：对比页 + 2 个单页，非对称）；模式 C（AI代码智能：只有对比页、三家皆无单页）。需要一条可机械执行的判据
+- **确立的规则（写入 SCHEMA.md 新节「同赛道多工具的目录组织」）**：按同赛道**家数**决定结构——1 家仅单页 / 2 家两份单页互链不建对比页 / **≥3 家建独立赛道页 + 单工具页双向指针**。命名：2–3 家 `<赛道>-<A>-<B>横向对比.md`，≥4 家 `<赛道>赛道对比.md`。分层边界：**赛道页**放定位/硬数据/分歧点/选型/趋势/核验口径，**单工具页**放项目总览/架构/核心设计/上手/坑/参考，两边不复制长表只给指针。**核心判据是更新频率而非主题**：单工具自身的事实更新慢、寿命长；赛道选型结论每家一变就过时、寿命短。两条禁止：❌ 全塞一个文件（撞 400 行拆分阈值 + 高频与低频内容互相拖累）❌ 只有单页没有赛道页（≥3 家时读者要点开 N 个文件才能拼出"该选哪个"）
+- **收口动作 1｜改名**：`git mv` 对比页 → `AI浏览器自动化赛道对比.md`。原命名「三强对比-Playwright-Stagehand-browser-use」在扩展后名实不符
+- **收口动作 2｜赛道页重写（113 → 154 行）**：覆盖范围由 3 家扩到 **7 家**（新增 browser-harness、chrome-devtools-mcp、playwright-mcp）；删除原文里过时的 stars（原为 2026-08-12 口径）→ 七家硬数据**同一时间窗（2026-09-18）实抓**；新增「三个范式」（确定性驱动 / SDK 编排 / 已登录真浏览器桥接）、「四个关键分歧点」（隔离怎么解决：架构 vs 纪律 vs 配置；表达力上限 vs 审计下限；人机接力有无协议；规模化归谁）、「单工具页索引」（显式标注哪几家无单页，说明按规则不算缺陷）、「领域趋势」加一条：**2026 下半年新收敛 = CLI + 往 harness 装 SKILL.md + 接你自己的真实浏览器**（browser-harness `skill` / browser-use `skill install` / bsk `install-skill` 三家接口同构）。保留 qa-use 附录并精简
+- **收口动作 3｜Stagehand 单页重写为纯事实层（79 → 95 行）**：**修正两处已失效的核心内容**——① 原文「底层封装 Playwright 的 CDP 协议」在 v4 后不成立（证据：`packages/sdk-ts/package.json` 的 dependencies 仅 browserbasehq/sdk + otel×2 + zod，**无 playwright**；README 原话 "Playwright was built for testing. Stagehand is built for agents"）② 原文示例代码里的 `stagehand.agent().execute()` 是 v4 **已移除**的编排器。补现行 API（`Stagehand.create()` + `localBrowser.launch()` + observe/act/extract）、`observe()` 只回 selector 而凭据不经过模型的安全设计、v4 新增 `userDataDir` 持久登录（口径：另建独立 profile ≠ 接管你正在用的浏览器）、Node >= 22.18.0、三语言 SDK 同仓不同发包版本可能不同步、文档 v2/v3/v4 并存易搜错。按新规则把长对比表迁至赛道页，本页只留指针
+- **收口动作 4｜BrowserSkill 单页**：同日复采更新（Stars 4,177 → **4,259**，数小时内 +82，说明该赛道数字保鲜期以天计），统一到与赛道页同一时间窗；对比表按规则缩为「最易混淆三家（browser-harness / MCP 系）」精简表 + 指向赛道页；**纠正初版误判**——原写「复用已登录态 = BrowserSkill 核心卖点且为各家所无」，对 MCP 系与 SDK 系成立、**对 browser-harness 不成立**（其自我描述首句即 "Connect an LLM directly to your real browser"），真正的差异化是**隔离 + 人机接力的协议化**与「受管机器禁用调试端口时仍可用（走扩展）」；选型建议同步改写，并加一句"仅『复用登录态』不足以构成选型理由"
+- **数据口径**：本次三页内全部数字为 2026-09-18 同一时间窗 GitHub API 实抓。另更正上一版（2026-08-12）的一条过时结论——当时记「browser-use 与 Stagehand 均无 LICENSE 文件（API `license: null`）」，本次实抓两家均为 **MIT**
+- **教训（已并入规则）**：单工具页会静默腐烂。Stagehand 那 79 行里两处核心事实（Playwright 依赖、agent() 编排器）在 v4 后全部失效，却因"没到 400 行拆分阈值、也没人回头读"而长期躺着；而赛道页因为全是相对判断，一旦过时更容易被察觉。故规则中额外约定：**对某一家做深度分析时，顺手复核其单工具页**，优先更新事实层而非只在赛道页补数字
+- **元文件联动**：SCHEMA.md（新增一节规则，7790 → 8706 字符）；INDEX.md（对比页条目改名 + 描述由「三强」扩为「七家全景 + 三个范式」，Stagehand 条目补描述，BrowserSkill 条目数字同步为 4,259；**页面数不变 = 291**，本次为改名+重写而非新增，与磁盘 `find -name "*.md" | wc -l` 实数核对吻合）；CHANGELOG.md（本条目）；AGENTS.md 为 9 行精简路由版无需更新
+- **连带修正**：`开源项目分析/AI-Agent框架/Pydantic-AI-类型安全的Python-Agent框架.md` 的 `related` 与参考里指向旧文件名的 wikilink（改名后即断裂）已同步为新路径，显示名一并更新
+- **影响范围**：1 次 `git mv` 改名 + 3 个页面重写 + 1 处 SCHEMA 规则新增；无文件删除、无页面增减、无破坏性变更；未向任何外部站点提交内容
+
 ## 2026-09-18 ingest | 收录 BrowserSkill（复用真实登录态浏览器给 Agent）
 
 - **目标**：将 `Tencent/BrowserSkill` 收录到 `开源项目分析/AI浏览器自动化/`（沿用既有子目录，与 Stagehand、三强对比形成同赛道对照）

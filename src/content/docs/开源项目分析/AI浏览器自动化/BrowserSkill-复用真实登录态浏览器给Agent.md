@@ -4,7 +4,7 @@ description: 腾讯开源 bsk CLI + Chromium 扩展，把用户已登录的真�
 status: active
 tags: [browser, ai-agent, agent-tool, browser-automation, automation, mcp]
 related:
-  - 开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use
+  - 开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比
   - 开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架
   - 开源项目分析/AI编码工程化/Skill-Based-Architecture-项目级Skill编写方法论
   - 开发工具链/Playwright/Playwright
@@ -14,12 +14,12 @@ related:
 # BrowserSkill — 复用真实登录态浏览器给 Agent
 
 > 仓库：https://github.com/Tencent/BrowserSkill
-> Stars: ⭐ 4,177 | Forks: 296 | Watchers: 13 | Contributors: 16 | Open issues: 51
+> Stars: ⭐ 4,259 | Forks: 300 | Watchers: 13 | Contributors: 16 | Open issues: 51
 > 语言：TypeScript（3.50 MB）+ Rust（1.70 MB）| 许可证：MIT
 > 创建：2026-06-22 | 最近推送：2026-09-17（活跃）| 最新版本：cli-v0.3.0（2026-09-17）/ ext-v0.3.0（2026-09-16）
 > 支持系统：macOS（Apple Silicon + Intel）/ Linux（x64 + ARM64）/ Windows x64
 > 支持浏览器：Chrome + Microsoft Edge（其他 Chromium 系未打包扩展可用）；Firefox 计划中
-> 采集时间：2026-09-18（数字均为当日 GitHub API 实抓，非记忆估计）
+> 采集时间：**2026-09-18**（当日 GitHub API 实抓）；同日复采时 Star 已由 4,177 涨至 4,259（数小时内 +82），本页统一采用复采值，与同目录 [[开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比|赛道对比页]] 处于**同一时间窗**，横向可比
 
 ## 一句话
 
@@ -74,27 +74,23 @@ Agent harness ──shell: bsk ...──> bsk CLI ──IPC──> bsk daemon �
 3. **harness 无关**。README 明确列出 Cursor / Claude Code / Codex / OpenClaw / CodeBuddy / WorkBuddy / Pi / **Hermes Agent** / DeepSeek Harness，机制就是 `bsk install-skill` 往各 harness 的 skills 目录写一份 `SKILL.md`——不绑定模型、不绑定框架、不绑定 MCP。dsh 另有原生插件（npm `@wxg-prc-cpg/browser-skill-dsh-plugin`，注入 `browser_*` 工具 + Web UI 会话视图）。
 4. **传输事务是有状态机的**。文件上传/下载路径分阶段说明（pre-dispatch 由 CLI 回滚、post-dispatch 归 session），浏览器侧操作回报 `effect_state`（`none` / `committed` / `unknown`）、`phase`、`cleanup_state`——**`unknown` 必须跨超时保留且不能盲目重试**。这套"确认成功优先于迟到取消"的设计，是 agent 工具做副作用操作时的正确姿势。
 
-## 横向对比（数字均为 2026-09-18 GitHub API 实抓）
+## 差异化定位（七家全景见赛道页）
 
-| 对比项       | BrowserSkill   | chrome-devtools-mcp | playwright-mcp | Stagehand v4 | browser-use |
-| ------------ | -------------- | ------------------- | -------------- | ------------ | ----------- |
-| ⭐ Stars     | 4,177          | 52,208              | 37,212         | 24,323       | 114,992     |
-| 语言/形态    | Rust + TS，CLI+扩展+守护 | TS，MCP server | TS，MCP server | TS，SDK | Python，SDK |
-| 复用已登录态 | ✅ 核心卖点     | ⚠️ 需自行连已有 CDP | ⚠️ 需自行连已有 CDP | ⚠️ 需自备 profile | ⚠️ 需自备 profile |
-| 不打断用户   | ✅ 独立 Agent Window | ✅ 独立实例 | ❌ 会抢用/新起 | ➖ 取决于你写的代码 | ➖ 同上 |
-| 人机接力     | ✅ `request-help` 内置 | ➖ 无 | ➖ 无 | ➖ 无 | ➖ 无 |
-| harness 绑定 | 无（能调 shell 即可） | MCP 客户端 | MCP 客户端 | 代码级集成 | 代码级集成 |
-| 最近推送     | 2026-09-17     | 2026-09-17          | 2026-09-17     | 2026-09-18   | 2026-09-15  |
+七家横向对比的完整表在 [[开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比|AI 浏览器自动化赛道对比]]。本页只保留**最容易与它混淆的三家**的区分点：
 
-| 维度        | BrowserSkill | MCP 系（chrome-devtools-mcp / playwright-mcp） | SDK 系（Stagehand / browser-use） |
-| ----------- | ------------ | ---------------------------------------------- | --------------------------------- |
-| ✅ 最大优势 | 登录态复用 + 不打扰 + 人机接力三位一体；harness 无关 | 生态即插即用（任何 MCP 客户端）；微软/Chrome 官方维护 | 可在产品代码里嵌入编排逻辑；社区与教程体量最大 |
-| ❌ 最大短板 | 需装浏览器扩展（受管企业浏览器可能受限）；Stars 比 MCP 系低一个数量级 | 不解决"用我的登录态且不打扰我"；调试向而非办公向 | 要写代码；属于做产品而非自用 |
-| 🎯 差异化点 | 标签页所有权协议 | 协议标准化 | 库能力可编程 |
+| 差异点 | BrowserSkill | browser-harness | MCP 系（chrome-devtools-mcp / playwright-mcp） |
+| --- | --- | --- | --- |
+| 接你的真实浏览器 | ✅ 装扩展即可，**不需要开远程调试端口** | ✅ 直连 CDP 端点，需 `chrome://inspect` 打勾授权 | ➖ 通常指向某个实例，默认不带你的登录态 |
+| 隔离 | ✅ 强制：独立 Agent Window + borrow 批准 | ❌ 无：共享同一浏览器 lane，靠串行化纪律 | ➖ 取决于怎么配 |
+| 人机接力 | ✅ `request-help` 协议 | ➖ 无协议化交接 | ➖ 无 |
+| 表达力 | ❌ 有限：`bsk` 子命令 + 21 个 tool | ✅ 无限：agent 直接 exec Python 并落盘 helper | ➖ 取决于工具集 |
+| 云与规模 | ➖ 仅自托管 remote mode，无云 | ✅ Browser Use Cloud（并行/代理/隐身/CAPTCHA） | ➖ 无 |
+
+> ⚠️ **一个必须纠正的常见误判**：本页初版曾把「复用已登录态」写成 BrowserSkill 独有的卖点——**对着 MCP 系与 SDK 系成立，对着 browser-harness 不成立**（它的自我描述第一句就是 "Connect an LLM directly to your real browser"）。BrowserSkill 真正的差异化是**隔离 + 人机接力的协议化**，以及「受管机器禁用调试端口时仍可用（走扩展）」。
 
 ## 选型建议
 
-- ✅ **选 BrowserSkill 当**：要让 agent 操作你**已登录**的站点（后台、内网系统、需登录 SaaS），且你希望同时继续用自己的浏览器干活。
+- ✅ **选 BrowserSkill 当**：要让 agent 操作你**已登录**的站点，且 ① 需要多 agent 并行 ② 要「不批准就不能碰我的标签页」的强约束 ③ 需要正规人机接力点 ④ 受管机器禁用远程调试端口但允许装扩展。**注意：仅「复用登录态」不足以构成理由——browser-harness 也能。**
 - ✅ **选 chrome-devtools-mcp / playwright-mcp 当**：纯开发调试、性能分析、CI 里的确定性自动化——不需要你的登录态，只需要一个能跑脚本的浏览器。
 - ✅ **选 Stagehand / browser-use 当**：你要在自己的 Python/TS 代码里嵌入浏览器 agent 编排逻辑，做的是产品而非自用工具。
 - 🔀 **组合拳**：BrowserSkill 管"已登录的真实世界"，MCP 系管"干净的开发调试世界"，两者不冲突。
@@ -139,8 +135,8 @@ Skill 的 agent 工作流固定四步：`session start --json` 拿 id → `navig
 
 ## 参考
 
-- [[开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use|AI 浏览器自动化三强对比]] — 同赛道三强的定位/架构/选型对比，本篇补的是"复用真实登录态"这一被三强集体回避的细分场景
-- [[开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架|Stagehand — AI 浏览器自动化框架]] — SDK 系代表，与 BrowserSkill 的 CLI+扩展桥接路线形成"库 vs 基础设施"对照
+- [[开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比|AI 浏览器自动化赛道对比]] — 七家全景、三个范式与关键分歧点；本篇是该页范式三（已登录真浏览器桥接）中 BrowserSkill 一侧的事实层
+- [[开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架|Stagehand — AI 浏览器自动化框架]] — SDK 系代表（用 `userDataDir` 另建持久 profile），与 BrowserSkill 的 CLI+扩展桥接路线形成「库 vs 基础设施」对照
 - [[开源项目分析/AI编码工程化/Skill-Based-Architecture-项目级Skill编写方法论|SBA — 项目级 Skill 编写方法论]] — BrowserSkill 用 `install-skill` 把 `SKILL.md` 分发进 9 个 harness，并做了"内容基线比对 + 本地编辑保护"的托管更新，是项目级 skill 分发的一个真实工业样本
 - [[开发工具链/Playwright/Playwright|Playwright]] — BrowserSkill 走自研 CDP 而非 Playwright，正是因为要接管"用户已存在的浏览器进程"，这正是 Playwright 的架构边界之外
 - [[Browser/浏览器多进程模型|浏览器多进程模型]] — 理解 Agent Window 隔离与 CDP 按 target 操作的底层前提

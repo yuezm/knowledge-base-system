@@ -7,7 +7,7 @@ related:
   - 开源项目分析/阅读/Harness工程-Multi-Agent架构实践
   - 开源项目分析/AI编码工程化/Skill-Based-Architecture-项目级Skill编写方法论
   - 开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比
-  - 开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use
+  - 开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比
   - AI/Agent/Agent发展
 ---
 
@@ -130,5 +130,5 @@ capabilities = [
 - [[开源项目分析/阅读/Harness工程-Multi-Agent架构实践|Harness Engineering]] — 「Harness」这个词的同源对照：数据研发 Multi-Agent Harness 工程实践，可与 pydantic-ai-harness 的能力分层设计互参
 - [[开源项目分析/AI编码工程化/Skill-Based-Architecture-项目级Skill编写方法论|SBA — 项目级 Skill 编写方法论]] — Pydantic AI 的 deferred capability 与 Claude Skills 同构，该文给出的 skill 工程方法论可直接迁移到 capability 设计
 - [[开源项目分析/阅读/OpenHands-MetaGPT-Hermes-Kanban对比|OpenHands / MetaGPT / Hermes Agent 对比]] — 另外三家 Agent 框架的任务管理层横向对比，与本篇的框架选型维度互补
-- [[开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use|AI 浏览器自动化三强对比]] — 同赛道横向对比的写法参照；其中 Stagehand 内部也在用 Pydantic
+- [[开源项目分析/AI浏览器自动化/AI浏览器自动化赛道对比|AI 浏览器自动化赛道对比]] — 同赛道横向对比的写法参照（七家全景 + 三个范式）；其中 Stagehand 内部也在用 Pydantic
 - [[AI/Agent/Agent发展|Agent 发展]] — Agent 架构演进知识图谱，本篇的框架能力项可回填到该图谱的「工具/记忆/编排」分支

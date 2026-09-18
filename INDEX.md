@@ -7,7 +7,7 @@ sidebar:
 
 # 知识库索引
 
-> 内容目录。共 **290** 个页面（含 Home.md），按分类列出。最后更新：2026-09-16
+> 内容目录。共 **291** 个页面（含 Home.md），按分类列出。最后更新：2026-09-18
 >
 > **status 字段**(2026-07-27 D 方案引入): 每篇笔记 frontmatter 标记 `evergreen`(知识稳定 33 篇) / `active`(仍在演进 176 篇) / `stub`(待补全 81 篇) / `archived`(归档 0 篇)。可通过 `grep -rl "^status: stub" src/content/docs` 找出待补全笔记列表。
 
@@ -268,6 +268,7 @@ sidebar:
 - [[开源项目分析/自托管书签/Karakeep-自托管书签全能工具|Karakeep — 自托管书签全能工具]]
 - [[开源项目分析/AI浏览器自动化/Stagehand-AI浏览器自动化框架|Stagehand — AI 浏览器自动化框架]]
 - [[开源项目分析/AI浏览器自动化/AI浏览器自动化三强对比-Playwright-Stagehand-browser-use|AI 浏览器自动化三强对比]] — Playwright/Stagehand/browser-use 横向对比，三强均自研 CDP 驱动，附 qa-use 参考实现评估
+- [[开源项目分析/AI浏览器自动化/BrowserSkill-复用真实登录态浏览器给Agent|BrowserSkill — 复用真实登录态浏览器给 Agent]] — 腾讯开源 bsk CLI + Chromium 扩展：Agent Window 沙箱 + 显式 tab borrow 归还协议 + request-help 人机接力，harness 无关（官方支持 Hermes Agent），4,177 Stars，MIT
 - [[开源项目分析/AI记忆基础设施/Honcho-Agent记忆基础设施|Honcho — Agent 记忆基础设施]]
 - [[开源项目分析/提示词工程/Claude-Design-System-Prompt-工程的设计协作提示词库|Claude Design System Prompt]] — 逆向工程设计协作提示词库，1700+ Stars，14 个设计技能
 - [[开源项目分析/提示词工程/AI时代的思维框架-潜空间地形模型与提示技巧|AI 时代的思维框架 — 潜空间地形模型与提示技巧]] — LINUX DO 论坛长文（Henry_He）：把 LLM 多步生成类比为非平衡统计力学中「地形上的小球」，KV Cache 即地形，导出语义漂移/注意力稀释/语义惯性/语义壁垒/相变/特征纠缠 6 条性质与显式配平/隐式提纯/掺杂剂/催化剂等技巧

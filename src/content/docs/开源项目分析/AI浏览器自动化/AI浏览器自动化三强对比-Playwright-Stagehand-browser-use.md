@@ -110,3 +110,4 @@ Playwright 是确定性测试框架(零 AI),Stagehand 是 agent 原语 SDK(白�
 ## 参考
 
 - [[MattPocock-AI时代软件基础四本书|Matt Pocock:AI 时代软件基础]] — "设计接口,委托实现"与 Stagehand code mode / browser-use skill 化是同一方法论在浏览器自动化上的落地
+- [[BrowserSkill-复用真实登录态浏览器给Agent|BrowserSkill]] — 腾讯开源的本地桥接层，走的是三强都没走的第四条路：不自起浏览器，而是借用户**已登录**的真实浏览器（Agent Window 沙箱 + tab borrow 归还协议 + request-help 人机接力）

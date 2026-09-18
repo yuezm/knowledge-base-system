@@ -11,6 +11,19 @@ sidebar:
 > 格式：`## YYYY-MM-DD 操作 | 主题`
 > 操作类型：init, ingest, update, lint, restructure, archive, delete
 
+## 2026-09-18 ingest | 收录 BrowserSkill（复用真实登录态浏览器给 Agent）
+
+- **目标**：将 `Tencent/BrowserSkill` 收录到 `开源项目分析/AI浏览器自动化/`（沿用既有子目录，与 Stagehand、三强对比形成同赛道对照）
+- **动机**：用户分享 GitHub 链接先「学习」后「收藏」；按 SCHEMA.md 分类归属规则，这是具体开源仓库的项目评估（非 AI 知识概念），故归 `开源项目分析/` 而非 `Browser/` 或 `AI/`。它补的正是同目录已有两份文档集体回避的细分场景——**复用用户已登录的真实浏览器且不打断用户**（三强对比与 Stagehand 都建立在"自备/新起浏览器"的前提上），放同目录便于后续做赛道全景阅读
+- **核心结论**：定位不是又一个浏览器 agent 框架，而是 **Agent ↔ 真实浏览器 的本地桥接层**（Rust `bsk` CLI + 本地 daemon + Chromium MV3 扩展，三段式：CLI↔daemon 走 UDS/命名管道 JSON Lines，daemon↔扩展走 loopback WS 52800，扩展↔浏览器走 CDP）。四个核心设计 = ① **标签页所有权协议**（Agent Window 沙箱 + 显式 borrow/归还，agent 只能在自己的窗口里动手，碰用户标签页必须批准）② **人机接力是一等公民**（`request-help` 让验证码/登录/确认弹窗能明确交还用户，做完继续）③ **harness 无关**（README 明列 Cursor / Claude Code / Codex / OpenClaw / CodeBuddy / WorkBuddy / Pi / **Hermes Agent** / DeepSeek Harness，机制是 `bsk install-skill` 往各 harness 写 SKILL.md，不绑模型不绑 MCP；dsh 另有原生 npm 插件）④ **副作用操作有状态机**（文件传输 pre-dispatch 由 CLI 回滚 / post-dispatch 归 session；浏览器侧回报 `effect_state` none|committed|unknown，`unknown` 跨超时保留且禁止盲目重试）。会话模型：session = 4 小写字母 ID + 独占 Agent Window + session 级 ref-store + borrow 表；写操作默认沙箱内，多 session 完全隔离
+- **数据**：4,177 Stars / 296 Forks / 13 Watchers / 16 Contributors / 51 open issues；创建 2026-06-22，最近推送 2026-09-17（活跃）；MIT；语言构成 TS 3.50 MB + Rust 1.70 MB（另有 JS/PowerShell/CSS/Shell/HTML）；最新 cli-v0.3.0（2026-09-17）/ ext-v0.3.0（2026-09-16）；平台 macOS(ARM+Intel) / Linux(x64+ARM64) / Windows x64，浏览器仅 Chrome + Edge（Firefox 计划中）。竞品同为当日 API 实抓——chrome-devtools-mcp 52,208 / playwright-mcp 37,212 / Stagehand 24,323 / browser-use 114,992。**所有数字均 2026-09-18 当日拉取，未混入记忆估值**
+- **踩坑记录（写入正文「潜在坑」）**：0.3.0 破坏性变更（`--unattended` / `tab borrow --no-confirm` / `BSK_REQUEST_HELP=off` 已废弃且**不能覆盖**扩展设置，无人值守必须改到扩展 popup 的两个 profile 级开关，老脚本升级会卡住）；沙箱型 agent 需宿主持久任务托管 daemon 且每条命令带 `BSK_HOME`+`BSK_AUTO_START=0`，且"权限错误/超时/非法响应"不能证明 daemon 缺失；远程模式下上传/下载返回 `unsupported`；扩展商店版本可能落后 CLI（dsh 插件不自动更新）；扩展 popup 改端口会终止现有会话；`session stop` 是强制动作、idle timeout 5 分钟只是兜底；`@eN` 引用导航后必然失效
+- **frontmatter**：`status: active`（依赖外部项目版本与维护状态） + `tags: [browser, ai-agent, agent-tool, browser-automation, automation, mcp]` + related 5 条 wikilink（三强对比 / Stagehand / SBA 项目级 Skill 方法论 / Playwright / 浏览器多进程模型）
+- **原文元信息**：顶部 blockquote 含仓库链接 + Stars/Forks/Watchers/Contributors/open issues + 语言与 License + 创建与最近推送 + 版本 + 支持平台与浏览器 + 采集时间（2026-09-18）；正文全部数字标注为当日 API 实抓
+- **双向交叉引用**：本篇「参考」指向三强对比与 Stagehand；同时在三强对比篇末追加一行指针、给 Stagehand 篇补 `## 参考` 章节（原文缺此章节），使从任一入口进入都能看到完整赛道关系
+- **3 元文件联动**：INDEX.md（共 **290→291** 个页面，日期 2026-09-16→2026-09-18；`开源项目分析/` 段落紧接三强对比行新增 wikilink 行；顺带按磁盘实测复核 status 计数，`active 176` 与 `grep -a -rl "^status: active"` 结果吻合——**注意用 `grep -rl` 会把 `方法论/面试复习.md` 与 `Performance/Chrome调试.md` 判为 binary 而漏计，复核需加 `-a`**）；CHANGELOG.md（本条目）；AGENTS.md 为精简路由版（9 行，仅链路引用四元文件、不枚举分类），故无需更新
+- **影响范围**：新增 1 个页面，未新建目录、未移动文件；无破坏性变更；未向任何外部站点提交内容
+
 ## 2026-09-16 ingest | 收录 Pydantic AI（Python 类型安全 Agent 框架）
 
 - **目标**：将 `pydantic/pydantic-ai` 收录到 `开源项目分析/AI-Agent框架/`（本次新建的子目录）

@@ -72,3 +72,8 @@ const { author, title } = await stagehand.extract(
 - ⚠️ 最佳体验需要 Browserbase 云浏览器
 - ⚠️ 跨浏览器支持未明确强调，AI 层可能只在 Chromium 上最佳
 - ⚠️ TypeScript 和 Python 是独立仓库，版本可能不同步
+
+## 参考
+
+- [[AI浏览器自动化三强对比-Playwright-Stagehand-browser-use|AI 浏览器自动化三强对比]] — Stagehand 与 Playwright / browser-use 的定位、架构与选型对比
+- [[BrowserSkill-复用真实登录态浏览器给Agent|BrowserSkill]] — 同为浏览器自动化，但路线相反：Stagehand 是嵌入代码的 SDK（需自备浏览器与登录态），BrowserSkill 是 harness 无关的本地桥接层（直接借用户已登录的真实浏览器）
